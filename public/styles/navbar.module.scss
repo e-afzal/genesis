@@ -1,0 +1,229 @@
+@import "./variables.module.scss";
+
+header#header_nav {
+  max-width: 1920px;
+  background-color: #111;
+  border-bottom: 1px solid #1e1e1e;
+  min-height: 6.9rem;
+  // NAV: DESKTOP
+  nav.nav_desktop {
+    height: 6.9rem;
+    max-width: 1350px;
+    margin-inline: auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 9fr;
+    column-gap: 2.5rem;
+
+    a.logo_link {
+      padding-top: 0.8rem;
+      display: inline-block;
+    }
+
+    .nav__flex_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button.nav_btn {
+        margin-right: 2rem;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-family: "Jost-Regular", sans-serif;
+        color: $color-white;
+        border: none;
+        font-size: 1.5rem;
+        letter-spacing: 0.55px;
+        cursor: pointer;
+
+        span {
+          margin-right: 0.6rem;
+          pointer-events: none;
+        }
+        img.nav_btn_chevron {
+          padding-bottom: 1px;
+          pointer-events: none;
+        }
+      }
+      .nav_right {
+        button.owners_btn {
+          border-right: 1px solid #4d4d4d;
+          margin-right: 0;
+          padding-right: 0.8rem;
+        }
+        button.retailer_btn {
+          margin-right: 0;
+          margin-left: 0.8rem;
+        }
+      }
+    }
+  }
+
+  // MODEL DIALOG
+  .nav_model_dialog {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    height: calc(100vh - 7.35rem);
+    display: none;
+    .nav_dialog_grid {
+      display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      column-gap: 3rem;
+      place-items: center;
+      padding-block: 3rem;
+      row-gap: 4.8rem;
+      a.nav_dialog_card {
+        max-width: 330px;
+        .model_content {
+          img.card_model_image {
+            max-width: 100%;
+            display: block;
+            margin-inline: auto;
+          }
+          span.car_year {
+            font-size: 1.3rem;
+            color: $color-silver;
+            font-family: "Jost-Regular", sans-serif;
+            display: block;
+          }
+          h3.car_model_name {
+            font-size: 3.6rem;
+            color: $color-grey-body;
+            font-family: "Jost-Light", sans-serif;
+          }
+          p.car_model_price {
+            margin-top: 0.35rem;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.6rem;
+            color: $color-grey-body;
+            letter-spacing: 1px;
+            span {
+              position: relative;
+
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                right: 0;
+                background-color: $color-grey-body;
+                width: 100%;
+                height: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // SHOPPING DIALOG
+  .nav_shop_dialog {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    height: calc(100vh - 7.35rem);
+    display: none;
+    .nav_dialog_grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      justify-content: space-around;
+      justify-items: center;
+      height: 100%;
+
+      .shop_tools,
+      .shop_offers {
+        padding-block: 6rem;
+        h3.shop_title,
+        h3.offers_title {
+          font-family: "Jost-Regular", sans-serif;
+          text-transform: uppercase;
+          font-size: 2.6rem;
+          color: $color-grey-body;
+        }
+        ul.shop_list_grid,
+        ul.offers_list {
+          margin-top: 4.2rem;
+
+          li.shop_list_item,
+          li.offers_list_item {
+            font-family: "Jost-Regular", sans-serif;
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            a {
+              display: flex;
+              align-items: center;
+              font-size: 1.6rem;
+              color: $color-grey-body;
+              letter-spacing: -0.05px;
+              img {
+                margin-right: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      .shop_tools {
+        width: 100%;
+        ul.shop_list_grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .shop_offers {
+        padding-left: 5rem;
+        width: 100%;
+        background-color: #f8f8f8;
+      }
+    }
+  }
+
+  // BRAND DIALOG
+  .nav_brand_dialog {
+    background-color: #fff;
+    width: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    height: calc(100vh - 7.35rem);
+    display: none;
+
+    .nav_dialog_grid {
+      padding-block: 6.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+      justify-items: center;
+      row-gap: 4.5rem;
+      .brand_card {
+        img.brand_image {
+          border-radius: 7px;
+        }
+        h3.brand_card_title {
+          margin-top: 2rem;
+          font-size: 3.2rem;
+          color: $color-grey-body;
+          font-family: "Jost-Light", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  header#header_nav nav.nav_desktop {
+    padding-inline: 8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header#header_nav nav.nav_desktop {
+    padding-inline: 3rem;
+  }
+}

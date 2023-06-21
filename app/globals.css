@@ -1,5 +1,11 @@
+/* FONT WEIGHTS */
+/* JOST - 200 | 300 | 400 */
+/* @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap"); */
+/* ROBOTO - 400 */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+
 :root {
-  --max-width: 1200px;
+  --max-width: 1190px;
   --border-radius: 12px;
   --foreground-rgb: 0, 0, 0;
 }
@@ -12,11 +18,30 @@
 
 /* FONT IMPORTS */
 @font-face {
-  /* font-family: "Inter-Bold"; */
-  /* src: url(/fonts/Inter-Bold.woff2); */
-  /* font-display: swap; */
+  font-family: "Jost-ExtraLight";
+  src: url(/fonts/Jost-ExtraLight.ttf);
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "Jost-Light";
+  src: url(/fonts/Jost-Light.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost-Regular";
+  src: url(/fonts/Jost-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(/fonts/Roboto-Regular.woff2);
+  font-display: swap;
+}
+
+/* LAYOUT */
 * {
   padding: 0;
   margin: 0;
@@ -28,7 +53,7 @@
 html,
 body {
   box-sizing: border-box;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   overflow-x: hidden;
   margin-inline: auto;
   font-size: 62.5%;
@@ -56,6 +81,8 @@ h1 {
   /* font-family: "Inter-Bold", sans-serif; */
   font-weight: 100;
   font-size: clamp(4rem, 8vw, 15rem);
+  font-family: "Jost-ExtraLight", sans-serif;
+  /* font-weight: 200; */
 }
 
 h2 {

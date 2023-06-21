@@ -1,10 +1,17 @@
 // STYLES
 import styles from "@/public/styles/home.module.scss";
 
+// COMPONENTS
+import Navbar from "./components/Navbar";
+import NavbarMobile from "./components/NavbarMobile";
+
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.main_heading}>Hello world</h1>
-    </main>
+    <>
+      <Navbar />
+      <NavbarMobile />
+      <main className={styles.main}>
+      </main>
+    </>
   );
 }

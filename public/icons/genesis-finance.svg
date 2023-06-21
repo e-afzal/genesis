@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="23px" viewBox="0 0 26 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/genesis finance</title>
+    <g id="1920-Client-Approved" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="OPT1_NAV_SHOPPING" transform="translate(-1262.000000, -305.000000)" fill="#141414">
+            <g id="Tex" transform="translate(280.000000, 70.000000)">
+                <g id="GENESIS-FINANCE" transform="translate(981.000000, 214.000000)">
+                    <g id="Group" transform="translate(1.000000, 21.000000)">
+                        <polygon id="Fill-1" points="0 0 0 22.709 18.28 22.709 18.28 15.73 17.439 16.571 17.439 21.867 0.842 21.867 0.842 0.842 17.439 0.842 17.439 6.864 18.28 6.024 18.28 0"></polygon>
+                        <path d="M10.843,18.3565 L13.318,18.3565 L21.949,9.7245 L19.475,7.2505 L10.843,15.8815 L10.843,18.3565 Z M13.666,19.1975 L10.002,19.1975 L10.002,15.5335 L19.475,6.0605 L23.139,9.7245 L13.666,19.1975 Z" id="Fill-2"></path>
+                        <path d="M21.3689,5.3136 L23.8439,7.7886 L25.0439,6.5876 C25.1979,6.4326 25.1979,6.1826 25.0439,6.0286 L23.1289,4.1126 C22.9749,3.9586 22.7229,3.9586 22.5699,4.1126 L21.3689,5.3136 Z M23.8439,8.9776 L20.1799,5.3136 L21.9749,3.5186 C22.4559,3.0356 23.2399,3.0366 23.7229,3.5176 L25.6389,5.4336 C26.1199,5.9156 26.1199,6.6996 25.6389,7.1826 L25.6389,7.1826 L23.8439,8.9776 Z" id="Fill-3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
