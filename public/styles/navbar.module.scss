@@ -223,7 +223,25 @@ header#header_nav {
 }
 
 @media screen and (max-width: 1024px) {
-  header#header_nav nav.nav_desktop {
-    padding-inline: 3rem;
+  header#header_nav {
+    nav.nav_desktop {
+      padding-inline: 3rem;
+    }
+    .nav_shop_dialog {
+      .nav_dialog_grid {
+        height: auto;
+        grid-template-columns: 1fr;
+
+        .shop_tools {
+          padding-bottom: 0;
+        }
+
+        .shop_offers {
+          // padding-top: 0;
+          padding-left: 0;
+          background-color: transparent;
+        }
+      }
+    }
   }
 }
