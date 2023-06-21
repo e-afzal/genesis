@@ -198,6 +198,7 @@ header#header_nav {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
       justify-items: center;
+      column-gap: 4rem;
       row-gap: 4.5rem;
       .brand_card {
         img.brand_image {
@@ -237,11 +238,17 @@ header#header_nav {
         }
 
         .shop_offers {
-          // padding-top: 0;
           padding-left: 0;
           background-color: transparent;
         }
       }
     }
+  }
+}
+
+// Desktop Navbar REMOVED at 720px and below
+@media screen and (max-width: 720px) {
+  header#header_nav {
+    display: none;
   }
 }
