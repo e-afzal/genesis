@@ -76,6 +76,8 @@ header#header_mobile {
       display: none;
 
       button.main_return_btn {
+        position: sticky;
+        top: 0;
         padding-block: 1.9rem;
         border-top: 1px solid #1e1e1e;
         padding-inline: 2.5rem;
@@ -164,6 +166,8 @@ header#header_mobile {
       // display: none;
 
       button.main_return_btn {
+        position: sticky;
+        top: 0;
         padding-block: 1.9rem;
         border-top: 1px solid #1e1e1e;
         padding-inline: 2.5rem;
@@ -254,6 +258,8 @@ header#header_mobile {
       height: 100%;
 
       button.main_return_btn {
+        position: sticky;
+        top: 0;
         padding-block: 1.9rem;
         border-top: 1px solid #1e1e1e;
         padding-inline: 2.5rem;
