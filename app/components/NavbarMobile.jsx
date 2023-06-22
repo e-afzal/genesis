@@ -14,12 +14,8 @@ import chevron from "@/public/icons/chevron-down-white.svg";
 import models from "../data/models";
 
 const NavbarMobile = () => {
-  const menuRef = useRef(null);
-  const modelOverlayRef = useRef(null);
-  const shopOverlayRef = useRef(null);
-  const brandOverlayRef = useRef(null);
-
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modelsOverlayOpen, setModelsOverlayOpen] = useState(false);
 
   const shopMenuItems = [
     { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
@@ -50,6 +46,11 @@ const NavbarMobile = () => {
     if (menuOpen) setMenuOpen(false);
   };
 
+  const handleModelsOverlay = () => {
+    if (!modelsOverlayOpen) setModelsOverlayOpen(true);
+    if (modelsOverlayOpen) setModelsOverlayOpen(false);
+  };
+
   return (
     <header id={styles.header_mobile}>
       <nav className={styles.nav_mobile}>
@@ -71,10 +72,10 @@ const NavbarMobile = () => {
       </nav>
 
       {/* MAIN OVERLAY */}
-      <div ref={menuRef} style={{ display: !menuOpen ? "none" : "block" }} className={styles.nav_mobile_main_overlay}>
+      <div style={{ display: !menuOpen ? "none" : "block" }} className={styles.nav_mobile_main_overlay}>
 
         <ul className={styles.main_link_list}>
-          <li className={styles.main_link_list_item}>
+          <li onClick={handleModelsOverlay} className={styles.main_link_list_item}>
             <button className={styles.list_item_btn}>models</button>
             <Image
               src={chevron}
@@ -107,10 +108,39 @@ const NavbarMobile = () => {
           <li className={styles.main_link_list_item}>
             <Link href="#" className={styles.list_item_link}>find a retailer</Link>
           </li>
+          {/* MODELS OVERLAY */}
+          <div style={{ display: !modelsOverlayOpen ? "none" : "block" }} className={styles.nav_models_overlay}>
+            <button onClick={handleModelsOverlay} className={styles.main_return_btn}>
+              <Image
+                src={chevron}
+                alt="Chevron Icon"
+                className={styles.chevron_icon}
+                width={11}
+              />
+              <span>models</span>
+            </button>
+            <div className={styles.models_container}>
+              {models.map((model, index) => (
+                <Link href={"#"} key={index} className={`${styles.model_card}`}>
+                  <Image src={model.image_url}
+                    className={styles.model_card_image}
+                    alt={model.modelName}
+                    width={330}
+                    height={186}
+                  />
+                  <div className={styles.model_content}>
+                    <span className={styles.car_year}>{model.year}</span>
+                    <h3 className={styles.car_model_name}>{model.modelName}</h3>
+                    <p className={styles.car_model_price}>STARTING AT <span>{`$${model.price}`}</span></p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
         </ul>
 
         {/* MODELS OVERLAY */}
-        <div className={styles.nav_models_overlay}>
+        {/* <div style={{ display: !modelsOverlayOpen ? "none" : "block" }} className={styles.nav_models_overlay}>
           <button className={styles.main_return_btn}>
             <Image
               src={chevron}
@@ -137,7 +167,7 @@ const NavbarMobile = () => {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* SHOP OVERLAY */}
         <div className={styles.nav_shop_overlay}>

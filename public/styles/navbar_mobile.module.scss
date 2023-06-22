@@ -24,14 +24,16 @@ header#header_mobile {
   .nav_mobile_main_overlay {
     width: 100vw;
     position: fixed;
-    overflow-y: scroll;
-    height: calc(100dvh - 6rem);
+    z-index: 1;
+    height: calc(100vh - 6rem);
     background-color: #111;
     border-top: 1px solid #1e1e1e;
 
     ul.main_link_list {
+      height: calc(100vh - 6rem);
       padding-top: 3.2rem;
       padding-inline: 2.5rem;
+      position: relative;
       li.main_link_list_item {
         display: flex;
         justify-content: space-between;
@@ -62,89 +64,92 @@ header#header_mobile {
           transform: rotate(-90deg);
         }
       }
-    }
-
-    // MODELS OVERLAY
-    .nav_models_overlay {
-      background-color: #fff;
-      width: 100vw;
-      position: fixed;
-      overflow-y: scroll;
-      height: 100%;
-      display: none;
-
-      button.main_return_btn {
-        position: sticky;
+      // MODELS OVERLAY
+      .nav_models_overlay {
+        background-color: #fff;
+        // width: 100vw;
+        height: 100%;
+        position: absolute;
         top: 0;
-        padding-block: 1.9rem;
-        border-top: 1px solid #1e1e1e;
-        padding-inline: 2.5rem;
-        background-color: #111;
-        width: 100%;
-        border: none;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        img.chevron_icon {
-          transform: rotate(90deg);
-          margin-right: 1rem;
-        }
-        span {
-          color: $color-white;
-          text-transform: uppercase;
-          font-family: "Jost-Regular", sans-serif;
-          font-size: 1.6rem;
-          letter-spacing: 0.55px;
-        }
-      }
+        right: 0;
+        left: 0;
+        // z-index: 10;
+        overflow-y: scroll;
+        // display: none;
 
-      .models_container {
-        padding-top: 3rem;
-        padding-bottom: 6rem;
-        padding-inline: 3rem;
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 330px;
-        place-items: center;
-        row-gap: 4.8rem;
-        a.model_card {
-          max-width: 330px;
+        button.main_return_btn {
+          position: sticky;
+          top: 0;
+          padding-block: 1.9rem;
+          border-top: 1px solid #1e1e1e;
+          padding-inline: 2.5rem;
+          background-color: #111;
+          width: 100%;
+          border: none;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          img.chevron_icon {
+            transform: rotate(90deg);
+            margin-right: 1rem;
+          }
+          span {
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.55px;
+          }
+        }
 
-          &:last-child {
-            margin-bottom: 6rem;
-          }
-          img.model_card_image {
-            width: 100%;
-          }
-          .model_content {
-            span.car_year {
-              font-size: 1.3rem;
-              color: #6f6f6f;
-              font-family: "Jost-Regular", sans-serif;
-              display: block;
+        .models_container {
+          padding-top: 3rem;
+          padding-bottom: 6rem;
+          padding-inline: 3rem;
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 330px;
+          place-items: center;
+          row-gap: 4.8rem;
+          a.model_card {
+            max-width: 330px;
+
+            &:last-child {
+              margin-bottom: 6rem;
             }
-            h3.car_model_name {
-              font-size: 3.6rem;
-              color: #141414;
-              font-family: "Jost-Light", sans-serif;
+            img.model_card_image {
+              width: 100%;
             }
-            p.car_model_price {
-              margin-top: 0.35rem;
-              font-family: "Jost-Regular", sans-serif;
-              font-size: 1.6rem;
-              color: #141414;
-              letter-spacing: 1px;
-              span {
-                position: relative;
-                &::after {
-                  content: "";
-                  position: absolute;
-                  bottom: 1px;
-                  left: 0;
-                  right: 0;
-                  background-color: #141414;
-                  width: 100%;
-                  height: 1px;
+            .model_content {
+              span.car_year {
+                font-size: 1.3rem;
+                color: #6f6f6f;
+                font-family: "Jost-Regular", sans-serif;
+                display: block;
+              }
+              h3.car_model_name {
+                font-size: 3.6rem;
+                color: #141414;
+                font-family: "Jost-Light", sans-serif;
+              }
+              p.car_model_price {
+                margin-top: 0.35rem;
+                font-family: "Jost-Regular", sans-serif;
+                font-size: 1.6rem;
+                color: #141414;
+                letter-spacing: 1px;
+                span {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 1px;
+                    left: 0;
+                    right: 0;
+                    background-color: #141414;
+                    width: 100%;
+                    height: 1px;
+                  }
                 }
               }
             }
@@ -152,6 +157,96 @@ header#header_mobile {
         }
       }
     }
+
+    // MODELS OVERLAY
+    // .nav_models_overlay {
+    //   background-color: #fff;
+    //   width: 100vw;
+    //   position: fixed;
+    //   z-index: 10;
+    //   overflow-y: scroll;
+    //   height: 100%;
+    //   display: none;
+
+    //   button.main_return_btn {
+    //     position: sticky;
+    //     top: 0;
+    //     padding-block: 1.9rem;
+    //     border-top: 1px solid #1e1e1e;
+    //     padding-inline: 2.5rem;
+    //     background-color: #111;
+    //     width: 100%;
+    //     border: none;
+    //     display: flex;
+    //     align-items: center;
+    //     cursor: pointer;
+    //     img.chevron_icon {
+    //       transform: rotate(90deg);
+    //       margin-right: 1rem;
+    //     }
+    //     span {
+    //       color: $color-white;
+    //       text-transform: uppercase;
+    //       font-family: "Jost-Regular", sans-serif;
+    //       font-size: 1.6rem;
+    //       letter-spacing: 0.55px;
+    //     }
+    //   }
+
+    //   .models_container {
+    //     padding-top: 3rem;
+    //     padding-bottom: 6rem;
+    //     padding-inline: 3rem;
+    //     display: grid;
+    //     justify-content: center;
+    //     grid-template-columns: 330px;
+    //     place-items: center;
+    //     row-gap: 4.8rem;
+    //     a.model_card {
+    //       max-width: 330px;
+
+    //       &:last-child {
+    //         margin-bottom: 6rem;
+    //       }
+    //       img.model_card_image {
+    //         width: 100%;
+    //       }
+    //       .model_content {
+    //         span.car_year {
+    //           font-size: 1.3rem;
+    //           color: #6f6f6f;
+    //           font-family: "Jost-Regular", sans-serif;
+    //           display: block;
+    //         }
+    //         h3.car_model_name {
+    //           font-size: 3.6rem;
+    //           color: #141414;
+    //           font-family: "Jost-Light", sans-serif;
+    //         }
+    //         p.car_model_price {
+    //           margin-top: 0.35rem;
+    //           font-family: "Jost-Regular", sans-serif;
+    //           font-size: 1.6rem;
+    //           color: #141414;
+    //           letter-spacing: 1px;
+    //           span {
+    //             position: relative;
+    //             &::after {
+    //               content: "";
+    //               position: absolute;
+    //               bottom: 1px;
+    //               left: 0;
+    //               right: 0;
+    //               background-color: #141414;
+    //               width: 100%;
+    //               height: 1px;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
 
     // SHOP OVERLAY
     .nav_shop_overlay {
