@@ -158,6 +158,7 @@ header#header_mobile {
       background-color: #fff;
       width: 100vw;
       position: fixed;
+      overflow-x: hidden;
       overflow-y: scroll;
       height: 100%;
       // display: none;
@@ -187,12 +188,12 @@ header#header_mobile {
 
       .nav_dialog_grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100vw;
         height: 100%;
 
         .shop_tools,
         .shop_offers {
-          padding-inline: 2.5rem;
+          padding-left: 2.5rem;
           padding-block: 6rem;
           h3.shop_title,
           h3.offers_title {
