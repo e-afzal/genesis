@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,14 +11,12 @@ import styles from "@/public/styles/navbar_mobile.module.scss";
 import logo from "@/public/images/logo-white.svg";
 import menu from "@/public/icons/menu.svg";
 import chevron from "@/public/icons/chevron-down-white.svg";
+
+// DATA
 import models from "../data/models";
 
 const NavbarMobile = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [modelsOverlayOpen, setModelsOverlayOpen] = useState(false);
-  const [shopOverlayOpen, setShopOverlayOpen] = useState(false);
-  const [brandOverlayOpen, setBrandOverlayOpen] = useState(false);
-
+  //? DOM ELEMENTS
   const shopMenuItems = [
     { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
     { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "#" },
@@ -42,6 +40,12 @@ const NavbarMobile = () => {
     { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "#" },
   ];
 
+  //? STATE
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [modelsOverlayOpen, setModelsOverlayOpen] = useState(false);
+  const [shopOverlayOpen, setShopOverlayOpen] = useState(false);
+  const [brandOverlayOpen, setBrandOverlayOpen] = useState(false);
+
   //? HANDLERS
   const handleMenu = () => {
     if (!menuOpen) setMenuOpen(true);
@@ -53,20 +57,9 @@ const NavbarMobile = () => {
     };
   };
 
-  const handleModelsOverlay = () => {
-    if (!modelsOverlayOpen) setModelsOverlayOpen(true);
-    if (modelsOverlayOpen) setModelsOverlayOpen(false);
-  };
-
-  const handleShopOverlay = () => {
-    if (!shopOverlayOpen) setShopOverlayOpen(true);
-    if (shopOverlayOpen) setShopOverlayOpen(false);
-  };
-
-  const handleBrandOverlay = () => {
-    if (!brandOverlayOpen) setBrandOverlayOpen(true);
-    if (brandOverlayOpen) setBrandOverlayOpen(false);
-  };
+  const handleModelsOverlay = () => !modelsOverlayOpen ? setModelsOverlayOpen(true) : setModelsOverlayOpen(false);
+  const handleShopOverlay = () => !shopOverlayOpen ? setShopOverlayOpen(true) : setShopOverlayOpen(false);
+  const handleBrandOverlay = () => !brandOverlayOpen ? setBrandOverlayOpen(true) : setBrandOverlayOpen(false);
 
   return (
     <header id={styles.header_mobile}>
