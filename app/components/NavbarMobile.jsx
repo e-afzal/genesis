@@ -17,6 +17,29 @@ const NavbarMobile = () => {
   const modelDialogRef = useRef(null);
   const shopDialogRef = useRef(null);
   const brandDialogRef = useRef(null);
+
+  const shopMenuItems = [
+    { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
+    { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "#" },
+    { title: "request a quote", imageUrl: "/icons/request-a-quote.svg", url: "#" },
+    { title: "schedule a test drive", imageUrl: "/icons/schedule-a-test-drive.svg", url: "#" },
+    { title: "shop parts and accessories", imageUrl: "/icons/shop-parts.svg", url: "#" },
+    { title: "genesis certified", imageUrl: "/icons/genesis-certified.svg", url: "#" },
+  ];
+
+  const offerMenuItems = [
+    { title: "special offers", imageUrl: "/icons/special-offers.svg", url: "#" },
+    { title: "estimate trade-in value", imageUrl: "/icons/estimate-trade-in-value.svg", url: "#" },
+    { title: "genesis finance", imageUrl: "/icons/genesis-finance.svg", url: "#" }
+  ];
+
+  const brandMenuItems = [
+    { title: "our story", imageUrl: "/images/brand/our_story.jpg", url: "#" },
+    { title: "accolades", imageUrl: "/images/brand/accolades.jpg", url: "#" },
+    { title: "events", imageUrl: "/images/brand/events.jpg", url: "#" },
+    { title: "genesis house", imageUrl: "/images/brand/genesis_house.jpg", url: "#" },
+    { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "#" },
+  ];
   return (
     <>
       <header id={styles.header_mobile}>
@@ -76,6 +99,7 @@ const NavbarMobile = () => {
             </li>
           </ul>
 
+          {/* MODELS OVERLAY */}
           <div className={styles.nav_models_overlay}>
             <button className={styles.main_return_btn}>
               <Image
@@ -104,10 +128,63 @@ const NavbarMobile = () => {
               ))}
             </div>
           </div>
-          {/* <div className={styles.nav_shop_overlay}>
-            <h1>Shop</h1>
+
+          {/* SHOP OVERLAY */}
+          <div className={styles.nav_shop_overlay}>
+            <button className={styles.main_return_btn}>
+              <Image
+                src={chevron}
+                alt="Chevron Icon"
+                className={styles.chevron_icon}
+                width={11}
+              />
+              <span>shop</span>
+            </button>
+            <div className={styles.nav_dialog_grid}>
+              <div className={styles.shop_tools}>
+                <h3 className={styles.shop_title}>shopping tools</h3>
+                <ul className={styles.shop_list_grid}>
+                  {shopMenuItems.map((item, index) => (
+                    <li key={index} className={styles.shop_list_item}>
+                      <Link href={item.url}>
+                        <Image
+                          className={styles.shop_icon}
+                          src={item.imageUrl}
+                          width={28}
+                          height={28}
+                          alt={`${item.title} icon`}
+                        />
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.shop_offers}>
+                <h3 className={styles.offers_title}>offers and financing</h3>
+                <ul className={styles.offers_list}>
+                  {offerMenuItems.map((item, index) => (
+                    <li key={index} className={styles.offers_list_item}>
+                      <Link href={"#"}>
+                        <Image
+                          className={styles.offer_icon}
+                          src={item.imageUrl}
+                          width={28}
+                          height={28}
+                          alt={`${item.title} icon`}
+                        />
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className={styles.nav_brand_overlay}>
+
+          {/* BRAND OVERLAY */}
+          {/* <div className={styles.nav_brand_overlay}>
             <h1>Brand</h1>
           </div> */}
         </div>
