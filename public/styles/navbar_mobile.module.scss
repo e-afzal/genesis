@@ -253,6 +253,29 @@ header#header_mobile {
       overflow-y: scroll;
       height: 100%;
 
+      button.main_return_btn {
+        padding-block: 1.9rem;
+        border-top: 1px solid #1e1e1e;
+        padding-inline: 2.5rem;
+        background-color: #111;
+        width: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img.chevron_icon {
+          transform: rotate(90deg);
+          margin-right: 1rem;
+        }
+        span {
+          color: $color-white;
+          text-transform: uppercase;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.6rem;
+          letter-spacing: 0.55px;
+        }
+      }
+
       .nav_dialog_grid {
         padding-block: 6.5rem;
         display: grid;

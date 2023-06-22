@@ -186,6 +186,15 @@ const NavbarMobile = () => {
 
           {/* BRAND OVERLAY */}
           <div className={styles.nav_brand_overlay}>
+            <button className={styles.main_return_btn}>
+              <Image
+                src={chevron}
+                alt="Chevron Icon"
+                className={styles.chevron_icon}
+                width={11}
+              />
+              <span>brand</span>
+            </button>
             <div className={styles.nav_dialog_grid}>
               {brandMenuItems.map((item, index) => (
                 <Link href={item.url} key={index} className={styles.brand_card}>
