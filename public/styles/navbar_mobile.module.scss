@@ -28,10 +28,8 @@ header#header_mobile {
     height: calc(100dvh - 6rem);
     background-color: #111;
     border-top: 1px solid #1e1e1e;
-    // display: none;
 
     ul.main_link_list {
-      display: none;
       padding-top: 3.2rem;
       padding-inline: 2.5rem;
       li.main_link_list_item {
@@ -163,7 +161,7 @@ header#header_mobile {
       overflow-x: hidden;
       overflow-y: scroll;
       height: 100%;
-      // display: none;
+      display: none;
 
       button.main_return_btn {
         position: sticky;
@@ -256,6 +254,7 @@ header#header_mobile {
       overflow-x: hidden;
       overflow-y: scroll;
       height: 100%;
+      display: none;
 
       button.main_return_btn {
         position: sticky;
