@@ -16,6 +16,8 @@ import models from "../data/models";
 const NavbarMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modelsOverlayOpen, setModelsOverlayOpen] = useState(false);
+  const [shopOverlayOpen, setShopOverlayOpen] = useState(false);
+  const [brandOverlayOpen, setBrandOverlayOpen] = useState(false);
 
   const shopMenuItems = [
     { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
@@ -43,12 +45,27 @@ const NavbarMobile = () => {
   //? HANDLERS
   const handleMenu = () => {
     if (!menuOpen) setMenuOpen(true);
-    if (menuOpen) setMenuOpen(false);
+    if (menuOpen) {
+      setMenuOpen(false);
+      setModelsOverlayOpen(false);
+      setShopOverlayOpen(false);
+      setBrandOverlayOpen(false);
+    };
   };
 
   const handleModelsOverlay = () => {
     if (!modelsOverlayOpen) setModelsOverlayOpen(true);
     if (modelsOverlayOpen) setModelsOverlayOpen(false);
+  };
+
+  const handleShopOverlay = () => {
+    if (!shopOverlayOpen) setShopOverlayOpen(true);
+    if (shopOverlayOpen) setShopOverlayOpen(false);
+  };
+
+  const handleBrandOverlay = () => {
+    if (!brandOverlayOpen) setBrandOverlayOpen(true);
+    if (brandOverlayOpen) setBrandOverlayOpen(false);
   };
 
   return (
@@ -84,7 +101,7 @@ const NavbarMobile = () => {
               width={13}
             />
           </li>
-          <li className={styles.main_link_list_item}>
+          <li onClick={handleShopOverlay} className={styles.main_link_list_item}>
             <button className={styles.list_item_btn}>shop</button>
             <Image
               src={chevron}
@@ -93,7 +110,7 @@ const NavbarMobile = () => {
               width={13}
             />
           </li>
-          <li className={styles.main_link_list_item}>
+          <li onClick={handleBrandOverlay} className={styles.main_link_list_item}>
             <button className={styles.list_item_btn}>brand</button>
             <Image
               src={chevron}
@@ -108,6 +125,7 @@ const NavbarMobile = () => {
           <li className={styles.main_link_list_item}>
             <Link href="#" className={styles.list_item_link}>find a retailer</Link>
           </li>
+
           {/* MODELS OVERLAY */}
           <div style={{ display: !modelsOverlayOpen ? "none" : "block" }} className={styles.nav_models_overlay}>
             <button onClick={handleModelsOverlay} className={styles.main_return_btn}>
@@ -137,118 +155,88 @@ const NavbarMobile = () => {
               ))}
             </div>
           </div>
+
+          {/* SHOP OVERLAY */}
+          <div style={{ display: !shopOverlayOpen ? "none" : "block" }} className={styles.nav_shop_overlay}>
+            <button onClick={handleShopOverlay} className={styles.main_return_btn}>
+              <Image
+                src={chevron}
+                alt="Chevron Icon"
+                className={styles.chevron_icon}
+                width={11}
+              />
+              <span>shop</span>
+            </button>
+            <div className={styles.nav_dialog_grid}>
+              <div className={styles.shop_tools}>
+                <h3 className={styles.shop_title}>shopping tools</h3>
+                <ul className={styles.shop_list_grid}>
+                  {shopMenuItems.map((item, index) => (
+                    <li key={index} className={styles.shop_list_item}>
+                      <Link href={item.url}>
+                        <Image
+                          className={styles.shop_icon}
+                          src={item.imageUrl}
+                          width={28}
+                          height={28}
+                          alt={`${item.title} icon`}
+                        />
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.shop_offers}>
+                <h3 className={styles.offers_title}>offers and financing</h3>
+                <ul className={styles.offers_list}>
+                  {offerMenuItems.map((item, index) => (
+                    <li key={index} className={styles.offers_list_item}>
+                      <Link href={"#"}>
+                        <Image
+                          className={styles.offer_icon}
+                          src={item.imageUrl}
+                          width={28}
+                          height={28}
+                          alt={`${item.title} icon`}
+                        />
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* BRAND OVERLAY */}
+          <div style={{ display: !brandOverlayOpen ? "none" : "block" }} className={styles.nav_brand_overlay}>
+            <button onClick={handleBrandOverlay} className={styles.main_return_btn}>
+              <Image
+                src={chevron}
+                alt="Chevron Icon"
+                className={styles.chevron_icon}
+                width={11}
+              />
+              <span>brand</span>
+            </button>
+            <div className={styles.nav_dialog_grid}>
+              {brandMenuItems.map((item, index) => (
+                <Link href={item.url} key={index} className={styles.brand_card}>
+                  <Image
+                    className={styles.brand_image}
+                    src={item.imageUrl}
+                    alt={item.title}
+                    width={325}
+                    height={185}
+                  />
+                  <h3 className={styles.brand_card_title}>{item.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
         </ul>
-
-        {/* MODELS OVERLAY */}
-        {/* <div style={{ display: !modelsOverlayOpen ? "none" : "block" }} className={styles.nav_models_overlay}>
-          <button className={styles.main_return_btn}>
-            <Image
-              src={chevron}
-              alt="Chevron Icon"
-              className={styles.chevron_icon}
-              width={11}
-            />
-            <span>models</span>
-          </button>
-          <div className={styles.models_container}>
-            {models.map((model, index) => (
-              <Link href={"#"} key={index} className={`${styles.model_card}`}>
-                <Image src={model.image_url}
-                  className={styles.model_card_image}
-                  alt={model.modelName}
-                  width={330}
-                  height={186}
-                />
-                <div className={styles.model_content}>
-                  <span className={styles.car_year}>{model.year}</span>
-                  <h3 className={styles.car_model_name}>{model.modelName}</h3>
-                  <p className={styles.car_model_price}>STARTING AT <span>{`$${model.price}`}</span></p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div> */}
-
-        {/* SHOP OVERLAY */}
-        <div className={styles.nav_shop_overlay}>
-          <button className={styles.main_return_btn}>
-            <Image
-              src={chevron}
-              alt="Chevron Icon"
-              className={styles.chevron_icon}
-              width={11}
-            />
-            <span>shop</span>
-          </button>
-          <div className={styles.nav_dialog_grid}>
-            <div className={styles.shop_tools}>
-              <h3 className={styles.shop_title}>shopping tools</h3>
-              <ul className={styles.shop_list_grid}>
-                {shopMenuItems.map((item, index) => (
-                  <li key={index} className={styles.shop_list_item}>
-                    <Link href={item.url}>
-                      <Image
-                        className={styles.shop_icon}
-                        src={item.imageUrl}
-                        width={28}
-                        height={28}
-                        alt={`${item.title} icon`}
-                      />
-                      <span>{item.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={styles.shop_offers}>
-              <h3 className={styles.offers_title}>offers and financing</h3>
-              <ul className={styles.offers_list}>
-                {offerMenuItems.map((item, index) => (
-                  <li key={index} className={styles.offers_list_item}>
-                    <Link href={"#"}>
-                      <Image
-                        className={styles.offer_icon}
-                        src={item.imageUrl}
-                        width={28}
-                        height={28}
-                        alt={`${item.title} icon`}
-                      />
-                      <span>{item.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* BRAND OVERLAY */}
-        <div className={styles.nav_brand_overlay}>
-          <button className={styles.main_return_btn}>
-            <Image
-              src={chevron}
-              alt="Chevron Icon"
-              className={styles.chevron_icon}
-              width={11}
-            />
-            <span>brand</span>
-          </button>
-          <div className={styles.nav_dialog_grid}>
-            {brandMenuItems.map((item, index) => (
-              <Link href={item.url} key={index} className={styles.brand_card}>
-                <Image
-                  className={styles.brand_image}
-                  src={item.imageUrl}
-                  alt={item.title}
-                  width={325}
-                  height={185}
-                />
-                <h3 className={styles.brand_card_title}>{item.title}</h3>
-              </Link>
-            ))}
-          </div>
-        </div>
       </div>
     </header>
   );

@@ -64,18 +64,16 @@ header#header_mobile {
           transform: rotate(-90deg);
         }
       }
+
       // MODELS OVERLAY
       .nav_models_overlay {
         background-color: #fff;
-        // width: 100vw;
         height: 100%;
         position: absolute;
         top: 0;
         right: 0;
         left: 0;
-        // z-index: 10;
         overflow-y: scroll;
-        // display: none;
 
         button.main_return_btn {
           position: sticky;
@@ -156,247 +154,159 @@ header#header_mobile {
           }
         }
       }
-    }
 
-    // MODELS OVERLAY
-    // .nav_models_overlay {
-    //   background-color: #fff;
-    //   width: 100vw;
-    //   position: fixed;
-    //   z-index: 10;
-    //   overflow-y: scroll;
-    //   height: 100%;
-    //   display: none;
-
-    //   button.main_return_btn {
-    //     position: sticky;
-    //     top: 0;
-    //     padding-block: 1.9rem;
-    //     border-top: 1px solid #1e1e1e;
-    //     padding-inline: 2.5rem;
-    //     background-color: #111;
-    //     width: 100%;
-    //     border: none;
-    //     display: flex;
-    //     align-items: center;
-    //     cursor: pointer;
-    //     img.chevron_icon {
-    //       transform: rotate(90deg);
-    //       margin-right: 1rem;
-    //     }
-    //     span {
-    //       color: $color-white;
-    //       text-transform: uppercase;
-    //       font-family: "Jost-Regular", sans-serif;
-    //       font-size: 1.6rem;
-    //       letter-spacing: 0.55px;
-    //     }
-    //   }
-
-    //   .models_container {
-    //     padding-top: 3rem;
-    //     padding-bottom: 6rem;
-    //     padding-inline: 3rem;
-    //     display: grid;
-    //     justify-content: center;
-    //     grid-template-columns: 330px;
-    //     place-items: center;
-    //     row-gap: 4.8rem;
-    //     a.model_card {
-    //       max-width: 330px;
-
-    //       &:last-child {
-    //         margin-bottom: 6rem;
-    //       }
-    //       img.model_card_image {
-    //         width: 100%;
-    //       }
-    //       .model_content {
-    //         span.car_year {
-    //           font-size: 1.3rem;
-    //           color: #6f6f6f;
-    //           font-family: "Jost-Regular", sans-serif;
-    //           display: block;
-    //         }
-    //         h3.car_model_name {
-    //           font-size: 3.6rem;
-    //           color: #141414;
-    //           font-family: "Jost-Light", sans-serif;
-    //         }
-    //         p.car_model_price {
-    //           margin-top: 0.35rem;
-    //           font-family: "Jost-Regular", sans-serif;
-    //           font-size: 1.6rem;
-    //           color: #141414;
-    //           letter-spacing: 1px;
-    //           span {
-    //             position: relative;
-    //             &::after {
-    //               content: "";
-    //               position: absolute;
-    //               bottom: 1px;
-    //               left: 0;
-    //               right: 0;
-    //               background-color: #141414;
-    //               width: 100%;
-    //               height: 1px;
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-
-    // SHOP OVERLAY
-    .nav_shop_overlay {
-      background-color: #fff;
-      width: 100vw;
-      position: fixed;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      height: 100%;
-      display: none;
-
-      button.main_return_btn {
-        position: sticky;
-        top: 0;
-        padding-block: 1.9rem;
-        border-top: 1px solid #1e1e1e;
-        padding-inline: 2.5rem;
-        background-color: #111;
-        width: 100%;
-        border: none;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        img.chevron_icon {
-          transform: rotate(90deg);
-          margin-right: 1rem;
-        }
-        span {
-          color: $color-white;
-          text-transform: uppercase;
-          font-family: "Jost-Regular", sans-serif;
-          font-size: 1.6rem;
-          letter-spacing: 0.55px;
-        }
-      }
-
-      .nav_dialog_grid {
-        display: grid;
-        grid-template-columns: 100vw;
+      // SHOP OVERLAY
+      .nav_shop_overlay {
+        background-color: #fff;
         height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
 
-        .shop_tools,
-        .shop_offers {
-          padding-left: 2.5rem;
-          padding-block: 6rem;
-          h3.shop_title,
-          h3.offers_title {
-            font-family: "Jost-Regular", sans-serif;
-            text-transform: uppercase;
-            font-size: 2.6rem;
-            color: $color-grey-body;
+        button.main_return_btn {
+          position: sticky;
+          top: 0;
+          padding-block: 1.9rem;
+          border-top: 1px solid #1e1e1e;
+          padding-inline: 2.5rem;
+          background-color: #111;
+          width: 100%;
+          border: none;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          img.chevron_icon {
+            transform: rotate(90deg);
+            margin-right: 1rem;
           }
-          ul.shop_list_grid,
-          ul.offers_list {
-            margin-top: 4.2rem;
+          span {
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.55px;
+          }
+        }
 
-            li.shop_list_item,
-            li.offers_list_item {
+        .nav_dialog_grid {
+          display: grid;
+          grid-template-columns: 100vw;
+          height: 100%;
+
+          .shop_tools,
+          .shop_offers {
+            padding-left: 2.5rem;
+            padding-block: 6rem;
+            h3.shop_title,
+            h3.offers_title {
               font-family: "Jost-Regular", sans-serif;
-              display: flex;
-              align-items: center;
-              margin-bottom: 3rem;
+              text-transform: uppercase;
+              font-size: 2.6rem;
+              color: $color-grey-body;
+            }
+            ul.shop_list_grid,
+            ul.offers_list {
+              margin-top: 4.2rem;
 
-              a {
+              li.shop_list_item,
+              li.offers_list_item {
+                font-family: "Jost-Regular", sans-serif;
                 display: flex;
                 align-items: center;
-                font-size: 1.6rem;
-                color: $color-grey-body;
-                letter-spacing: -0.05px;
-                img {
-                  margin-right: 1.5rem;
+                margin-bottom: 3rem;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  font-size: 1.6rem;
+                  color: $color-grey-body;
+                  letter-spacing: -0.05px;
+                  img {
+                    margin-right: 1.5rem;
+                  }
                 }
               }
             }
           }
-        }
-        .shop_tools {
-          width: 100%;
-          ul.shop_list_grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+          .shop_tools {
+            width: 100%;
+            ul.shop_list_grid {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+            }
           }
-        }
-        .shop_offers {
-          width: 100%;
-          background-color: #f8f8f8;
+          .shop_offers {
+            width: 100%;
+            background-color: #f8f8f8;
 
-          ul.offers_list {
-            margin-bottom: 10rem;
+            ul.offers_list {
+              margin-bottom: 10rem;
+            }
           }
         }
       }
-    }
 
-    // BRAND OVERLAY
-    .nav_brand_overlay {
-      background-color: #fff;
-      width: 100vw;
-      position: fixed;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      height: 100%;
-      display: none;
-
-      button.main_return_btn {
-        position: sticky;
+      // BRAND OVERLAY
+      .nav_brand_overlay {
+        background-color: #fff;
+        position: absolute;
         top: 0;
-        padding-block: 1.9rem;
-        border-top: 1px solid #1e1e1e;
-        padding-inline: 2.5rem;
-        background-color: #111;
-        width: 100%;
-        border: none;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        img.chevron_icon {
-          transform: rotate(90deg);
-          margin-right: 1rem;
-        }
-        span {
-          color: $color-white;
-          text-transform: uppercase;
-          font-family: "Jost-Regular", sans-serif;
-          font-size: 1.6rem;
-          letter-spacing: 0.55px;
-        }
-      }
+        right: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 100%;
 
-      .nav_dialog_grid {
-        padding-block: 6.5rem;
-        display: grid;
-        grid-template-columns: 325px;
-        justify-content: center;
-        row-gap: 4.5rem;
-        .brand_card {
-          img.brand_image {
-            border-radius: 7px;
+        button.main_return_btn {
+          position: sticky;
+          top: 0;
+          padding-block: 1.9rem;
+          border-top: 1px solid #1e1e1e;
+          padding-inline: 2.5rem;
+          background-color: #111;
+          width: 100%;
+          border: none;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          img.chevron_icon {
+            transform: rotate(90deg);
+            margin-right: 1rem;
           }
-          h3.brand_card_title {
-            margin-top: 2rem;
-            font-size: 3.2rem;
-            color: $color-grey-body;
-            font-family: "Jost-Light", sans-serif;
+          span {
+            color: $color-white;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.55px;
           }
+        }
 
-          &:last-child {
-            margin-bottom: 9rem;
+        .nav_dialog_grid {
+          padding-block: 6.5rem;
+          display: grid;
+          grid-template-columns: 325px;
+          justify-content: center;
+          row-gap: 4.5rem;
+          .brand_card {
+            img.brand_image {
+              border-radius: 7px;
+            }
+            h3.brand_card_title {
+              margin-top: 2rem;
+              font-size: 3.2rem;
+              color: $color-grey-body;
+              font-family: "Jost-Light", sans-serif;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            }
+
+            &:last-child {
+              margin-bottom: 9rem;
+            }
           }
         }
       }
@@ -414,13 +324,9 @@ header#header_mobile {
 @media screen and (max-width: 650px) {
   header#header_mobile {
     .nav_mobile_main_overlay {
-      .nav_shop_overlay {
-        .nav_dialog_grid {
-          .shop_tools {
-            ul.shop_list_grid {
-              grid-template-columns: 1fr;
-            }
-          }
+      ul.main_link_list {
+        .nav_shop_overlay .nav_dialog_grid .shop_tools ul.shop_list_grid {
+          grid-template-columns: 1fr;
         }
       }
     }
