@@ -25,7 +25,7 @@ header#header_mobile {
     width: 100vw;
     position: fixed;
     overflow-y: scroll;
-    height: calc(100vh - 6rem);
+    height: calc(100dvh - 6rem);
     background-color: #111;
     border-top: 1px solid #1e1e1e;
     // display: none;
@@ -101,15 +101,20 @@ header#header_mobile {
       .models_container {
         padding-top: 3rem;
         padding-bottom: 6rem;
+        padding-inline: 3rem;
         display: grid;
         justify-content: center;
         grid-template-columns: 330px;
         place-items: center;
         row-gap: 4.8rem;
-        padding-inline: 3rem;
         a.model_card {
           max-width: 330px;
+
+          &:last-child {
+            margin-bottom: 6rem;
+          }
           img.model_card_image {
+            width: 100%;
           }
           .model_content {
             span.car_year {
@@ -130,6 +135,7 @@ header#header_mobile {
               color: #141414;
               letter-spacing: 1px;
               span {
+                position: relative;
                 &::after {
                   content: "";
                   position: absolute;
