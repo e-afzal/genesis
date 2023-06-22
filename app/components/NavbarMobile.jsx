@@ -14,9 +14,9 @@ import chevron from "@/public/icons/chevron-down-white.svg";
 import models from "../data/models";
 
 const NavbarMobile = () => {
-  const modelDialogRef = useRef(null);
-  const shopDialogRef = useRef(null);
-  const brandDialogRef = useRef(null);
+  const modelOverlayRef = useRef(null);
+  const shopOverlayRef = useRef(null);
+  const brandOverlayRef = useRef(null);
 
   const shopMenuItems = [
     { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
@@ -40,6 +40,7 @@ const NavbarMobile = () => {
     { title: "genesis house", imageUrl: "/images/brand/genesis_house.jpg", url: "#" },
     { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "#" },
   ];
+
   return (
     <>
       <header id={styles.header_mobile}>
