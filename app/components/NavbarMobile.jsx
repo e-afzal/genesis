@@ -185,9 +185,22 @@ const NavbarMobile = () => {
           </div>
 
           {/* BRAND OVERLAY */}
-          {/* <div className={styles.nav_brand_overlay}>
-            <h1>Brand</h1>
-          </div> */}
+          <div className={styles.nav_brand_overlay}>
+            <div className={styles.nav_dialog_grid}>
+              {brandMenuItems.map((item, index) => (
+                <Link href={item.url} key={index} className={styles.brand_card}>
+                  <Image
+                    className={styles.brand_image}
+                    src={item.imageUrl}
+                    alt={item.title}
+                    width={325}
+                    height={185}
+                  />
+                  <h3 className={styles.brand_card_title}>{item.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </header>
 

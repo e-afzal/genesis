@@ -243,6 +243,41 @@ header#header_mobile {
         }
       }
     }
+
+    // BRAND OVERLAY
+    .nav_brand_overlay {
+      background-color: #fff;
+      width: 100vw;
+      position: fixed;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+
+      .nav_dialog_grid {
+        padding-block: 6.5rem;
+        display: grid;
+        grid-template-columns: 325px;
+        justify-content: center;
+        row-gap: 4.5rem;
+        .brand_card {
+          img.brand_image {
+            border-radius: 7px;
+          }
+          h3.brand_card_title {
+            margin-top: 2rem;
+            font-size: 3.2rem;
+            color: $color-grey-body;
+            font-family: "Jost-Light", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+
+          &:last-child {
+            margin-bottom: 9rem;
+          }
+        }
+      }
+    }
   }
 }
 
