@@ -20,14 +20,14 @@ footer#footer_primary {
       letter-spacing: 0.55px;
     }
     ul {
-      margin-top: 2rem;
+      margin-top: clamp(1rem, 3.5vw, 2rem);
       li {
         margin-bottom: 1.5rem;
         a {
           text-transform: capitalize;
           font-family: "Roboto-Regular", sans-serif;
           color: #bbb;
-          font-size: 1.35rem;
+          font-size: 1.4rem;
           letter-spacing: 0.4px;
         }
       }
