@@ -102,4 +102,40 @@ footer#footer_secondary {
       padding-block: 5rem;
     }
   }
+  footer#footer_secondary {
+    .secondary_links_container {
+      padding-top: 5rem;
+      grid-template-columns: 1fr;
+      row-gap: 3.5rem;
+      justify-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  footer#footer_secondary {
+    .secondary_links_container {
+      ul.miscellaneous_links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+
+        li {
+          display: block;
+          text-align: center;
+          &:nth-child(1) {
+            padding-left: 2rem;
+            text-align: right;
+          }
+          &:nth-child(2) {
+            border-right: none;
+            text-align: left;
+          }
+          &:nth-child(4) {
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+  }
 }
