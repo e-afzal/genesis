@@ -15,10 +15,12 @@ import chevron from "@/public/icons/chevron-down-white.svg";
 import models from "../data/models";
 
 const Navbar = () => {
+  //? STATES
   const modelDialogRef = useRef(null);
   const shopDialogRef = useRef(null);
   const brandDialogRef = useRef(null);
 
+  //? DOM ELEMENTS
   const shopMenuItems = [
     { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
     { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "#" },
@@ -42,6 +44,7 @@ const Navbar = () => {
     { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "#" },
   ];
 
+  //? HANDLERS
   const toggleModelDialog = () => {
     const modelActive = modelDialogRef.current.classList.contains("active");
     if (modelActive) {
