@@ -1,4 +1,118 @@
+@import "./variables.module.scss";
+
 .main {
-  height: 100vh;
-  background-color: #fff;
+  section {
+    background-color: #fff;
+  }
+
+  // SHOWCASE CAROUSEL
+  section#showcase {
+  }
+
+  // OUR MODELS
+  section#models {
+    background-color: $color-grey;
+    padding-block: 7rem;
+
+    h2.models_title {
+      color: $color-white;
+      font-size: 4.2rem;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+    }
+    p.models_description {
+      color: #ccc;
+      text-align: center;
+      font-family: "Roboto-Regular", sans-serif;
+    }
+  }
+
+  // FEATURED GRID
+  section#featured_models {
+    padding-top: 7.5rem;
+    padding-bottom: 9rem;
+    padding-inline: 2.5rem;
+    background-color: $color-white;
+    h2.discover_title {
+      font-size: 2.4rem;
+      color: $color-black;
+      text-transform: uppercase;
+      font-family: "Jost-Light", sans-serif;
+      text-align: center;
+      letter-spacing: 0.55px;
+    }
+
+    .featured_grid {
+      margin-top: 6.5rem;
+      max-width: 1200px;
+      margin-inline: auto;
+      display: grid;
+      place-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(315px, 355px));
+      column-gap: 3rem;
+      row-gap: 5.5rem;
+      .featured_card {
+        width: 100%;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8.5px;
+        }
+        h3.featured_model_title {
+          margin-top: 2rem;
+          color: $color-brass;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.15px;
+        }
+        p.featured_model_description {
+          margin-top: 0.7rem;
+          color: $color-grey-body;
+          font-size: 1.45rem;
+          line-height: 1.6;
+          font-family: "Roboto-Regular", sans-serif;
+          text-align: justify;
+        }
+        a.featured_model_link {
+          margin-top: 2rem;
+          display: inline-block;
+          font-size: 1.4rem;
+          color: $color-grey-body;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          position: relative;
+          letter-spacing: 1px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            background-color: $color-grey-body;
+            width: 100%;
+            height: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  // FEATURED MODEL - G90
+  section#featured_model {
+  }
+
+  // VIDEO - GV70
+  section#featured_video {
+  }
+
+  // ELECTRIFY EVERY DRIVE
+  section#electrification {
+  }
+
+  // FACETS OF GENESIS
+  section#facets {
+  }
 }
