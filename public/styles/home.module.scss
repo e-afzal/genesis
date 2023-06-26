@@ -7,6 +7,94 @@
 
   // SHOWCASE CAROUSEL
   section#showcase {
+    margin-top: 7rem;
+    background-color: $color-grey;
+    .swiper_container {
+      overflow: hidden;
+      height: 625px;
+    }
+
+    .swiper_slide {
+      width: 100%;
+      height: 625px;
+      position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: grab;
+
+      &:nth-child(1) {
+        background-image: url("/images/homepage/showcase_carousel/showcase_g70.jpg");
+      }
+      &:nth-child(2) {
+        background-image: url("/images/homepage/showcase_carousel/showcase_g80.jpg");
+      }
+      &:nth-child(3) {
+        background-image: url("/images/homepage/showcase_carousel/showcase_g90.jpg");
+      }
+      &:nth-child(4) {
+        background-image: url("/images/homepage/showcase_carousel/showcase_gv70.jpg");
+      }
+      &:nth-child(5) {
+        background-image: url("/images/homepage/showcase_carousel/showcase_gv80.jpg");
+      }
+
+      .swiper_content {
+        margin-left: 3rem;
+        position: absolute;
+        // bottom: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        z-index: 2;
+        padding-inline: 2.5rem;
+        padding-block: 3.5rem;
+        h5.model_year {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2rem;
+          color: $color-white;
+        }
+        h2.model_title {
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          color: $color-white;
+          font-size: 4.2rem;
+        }
+        h4.model_caption {
+          color: $color-white;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.55px;
+        }
+        a.discover_box {
+          display: flex;
+          align-items: center;
+          margin-top: 3rem;
+          span.link_text {
+            display: inline-block;
+            font-size: 1.4rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Roboto-Regular", sans-serif;
+            letter-spacing: 1px;
+          }
+          img.model_link_chevron {
+            margin-left: 7px;
+            transform: rotate(-90deg);
+            height: 8.5px;
+          }
+        }
+      }
+    }
+
+    .swiper_container_mobile {
+      overflow: hidden;
+      height: 625px;
+    }
+
+    .swiper_slide_mobile {
+      display: none;
+    }
   }
 
   // OUR MODELS
@@ -106,6 +194,11 @@
 
   // VIDEO - GV70
   section#featured_video {
+    height: 100vh;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   // ELECTRIFY EVERY DRIVE
@@ -114,5 +207,173 @@
 
   // FACETS OF GENESIS
   section#facets {
+    padding-top: 7.5rem;
+    padding-bottom: 9rem;
+    padding-inline: 2.5rem;
+    background-color: $color-white;
+    h2.facets_title {
+      font-size: 2.4rem;
+      color: $color-black;
+      text-transform: uppercase;
+      font-family: "Jost-Light", sans-serif;
+      text-align: center;
+      letter-spacing: 0.55px;
+    }
+
+    .facets_grid {
+      margin-top: 6.5rem;
+      max-width: 1200px;
+      margin-inline: auto;
+      display: grid;
+      place-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(315px, 355px));
+      column-gap: 3rem;
+      row-gap: 5.5rem;
+      .facets_card {
+        width: 100%;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8.5px;
+        }
+        h3.facets_model_title {
+          margin-top: 2rem;
+          color: $color-brass;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.15px;
+        }
+        p.facets_model_description {
+          margin-top: 0.7rem;
+          color: $color-grey-body;
+          font-size: 1.45rem;
+          line-height: 1.6;
+          font-family: "Roboto-Regular", sans-serif;
+          text-align: justify;
+        }
+        a.facets_model_link {
+          margin-top: 2rem;
+          display: inline-block;
+          font-size: 1.4rem;
+          color: $color-grey-body;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          position: relative;
+          letter-spacing: 1px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            background-color: $color-grey-body;
+            width: 100%;
+            height: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 950px) {
+  // Shifting Slide content to the top left corner
+  .main {
+    section#showcase {
+      .swiper_slide {
+        .swiper_content {
+          margin-left: 3rem;
+          bottom: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main.main {
+    section#showcase {
+      margin-top: 0;
+      .swiper_container {
+        display: none;
+      }
+      .swiper_container_mobile {
+        .swiper_slide_mobile {
+          display: block;
+          width: 100%;
+          height: 625px;
+          position: relative;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          cursor: grab;
+
+          &:nth-child(1) {
+            background-image: url("/images/homepage/showcase_carousel/showcase_g70-mobile.jpg");
+          }
+          &:nth-child(2) {
+            background-image: url("/images/homepage/showcase_carousel/showcase_g80-mobile.jpg");
+          }
+          &:nth-child(3) {
+            background-image: url("/images/homepage/showcase_carousel/showcase_g90-mobile.jpg");
+          }
+          &:nth-child(4) {
+            background-image: url("/images/homepage/showcase_carousel/showcase_gv70-mobile.jpg");
+          }
+          &:nth-child(5) {
+            background-image: url("/images/homepage/showcase_carousel/showcase_gv80-mobile.jpg");
+          }
+
+          .swiper_content {
+            padding-inline: 2rem;
+            margin-left: 0;
+            position: absolute;
+            bottom: unset;
+            top: 4rem;
+            // transform: translateY(50%);
+            z-index: 2;
+            // h5.model_year {
+            //   font-family: "Jost-Light", sans-serif;
+            //   font-size: 2rem;
+            //   color: $color-white;
+            // }
+            h2.model_title {
+              text-transform: uppercase;
+              font-family: "Jost-Light", sans-serif;
+              color: $color-white;
+              font-size: 3.6rem;
+            }
+            h4.model_caption {
+              color: $color-white;
+              font-family: "Jost-Light", sans-serif;
+              font-size: 1.6rem;
+              text-transform: uppercase;
+              letter-spacing: 0.55px;
+            }
+            a.discover_box {
+              display: flex;
+              align-items: center;
+              margin-top: 3rem;
+              span.link_text {
+                display: inline-block;
+                font-size: 1.4rem;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: "Roboto-Regular", sans-serif;
+                letter-spacing: 1px;
+              }
+              img.model_link_chevron {
+                margin-left: 7px;
+                transform: rotate(-90deg);
+                height: 8.5px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

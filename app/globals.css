@@ -140,3 +140,22 @@ a {
     color-scheme: dark;
   }
 } */
+
+/* SWIPER STYLES - HOME CAROUSEL */
+.swiper-pagination {
+  margin-bottom: 3rem;
+}
+span.swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin-inline: 3rem;
+  background-color: #8b929c;
+  opacity: 1;
+}
+span.swiper-pagination-bullet-active {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
