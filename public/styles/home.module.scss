@@ -539,6 +539,12 @@
   }
 }
 
+@media screen and (max-width: 720px) {
+  main.main {
+    margin-top: 6rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   main.main {
     section#featured_video {
