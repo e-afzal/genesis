@@ -10,13 +10,6 @@ import * as Accordion from '@radix-ui/react-accordion';
 // STYLES
 import stylesAccordion from "@/public/styles/accordionElectrify.module.scss";
 
-// ASSET IMPORT
-import present from "@/public/images/homepage/electrification/present.jpg";
-import limitless from "@/public/images/homepage/electrification/limitless.jpg";
-import complimentary from "@/public/images/homepage/electrification/complimentary.jpg";
-import G90 from "@/public/images/homepage/excellence/G90.jpg";
-import GV70 from "@/public/images/homepage/excellence/GV70.jpg";
-
 const AccordionMobile = ({ styles, title, data }) => {
 
   return (

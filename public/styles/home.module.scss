@@ -98,26 +98,7 @@
     }
   }
 
-  // OUR MODELS
-  section#models {
-    background-color: $color-grey;
-    padding-block: 7rem;
-
-    h2.models_title {
-      color: $color-white;
-      font-size: 4.2rem;
-      text-transform: uppercase;
-      text-align: center;
-      font-family: "Jost-Light", sans-serif;
-    }
-    p.models_description {
-      color: #ccc;
-      text-align: center;
-      font-family: "Roboto-Regular", sans-serif;
-    }
-  }
-
-  // FEATURED GRID
+  // GENESIS COLLECTION
   section#featured_models {
     padding-top: 7.5rem;
     padding-bottom: 9rem;
@@ -189,7 +170,33 @@
     }
   }
 
-  // FEATURED MODEL - G90
+  // OUR MODELS
+  section#models {
+    .models_grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      .models_header {
+        background-color: $color-grey;
+        padding-block: 20rem;
+        padding-right: 4.5rem;
+        padding-left: 2.5rem;
+        h2.models_title {
+          color: $color-white;
+          font-size: 4.2rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+        }
+        p.models_description {
+          color: #ccc;
+          font-family: "Roboto-Regular", sans-serif;
+        }
+      }
+      .models_cards_container {
+      }
+    }
+  }
+
+  // AWARDED MODELS
   section#awards {
     padding-top: 6rem;
     padding-bottom: 12rem;

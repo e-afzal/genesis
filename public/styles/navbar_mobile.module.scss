@@ -2,13 +2,16 @@
 
 header#header_mobile {
   background-color: #111111;
-  height: 6rem;
+  min-height: 6rem;
   border-bottom: 1px solid #1e1e1e;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
   nav.nav_mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 6rem;
     a.logo_link {
       padding-left: 2.5rem;
       img.nav_mobile_logo {

@@ -37,13 +37,7 @@ export default function Home() {
           <HomeCarouselMobile />
         </section>
 
-        {/* OUR MODELS */}
-        <section id={styles.models}>
-          <h2 className={styles.models_title}>our models</h2>
-          <p className={styles.models_description}>Explore Genesis vehicle line-up with its dynamic yet elegant design and cutting-edge technology</p>
-        </section>
-
-        {/* FEATURED GRID */}
+        {/* GENESIS COLLECTION */}
         <section id={styles.featured_models}>
           <h2 className={styles.discover_title}>discover the genesis collection</h2>
 
@@ -83,6 +77,18 @@ export default function Home() {
           </div>
         </section>
 
+        {/* OUR MODELS */}
+        <section id={styles.models}>
+          <div className={styles.models_grid}>
+            <div className={styles.models_header}>
+              <h2 className={styles.models_title}>our models</h2>
+              <p className={styles.models_description}>Explore Genesis vehicle line-up with its dynamic yet elegant design and cutting-edge technology</p>
+            </div>
+            <div className={styles.models_cards_container}></div>
+          </div>
+
+        </section>
+
         {/* AWARDED MODELS */}
         <section id={styles.awards}>
           <AccordionDesktop
@@ -92,7 +98,7 @@ export default function Home() {
             imageToUse="G90"
           />
         </section>
-        {/* ELECTRIFY EVERY DRIVE - MOBILE */}
+        {/* AWARDED MODELS - MOBILE */}
         <section id={styles.awards_mobile}>
           <AccordionMobile
             styles={styles}
@@ -127,7 +133,7 @@ export default function Home() {
           />
         </section>
 
-        {/* DONE-FACETS OF GENESIS */}
+        {/* FACETS OF GENESIS */}
         <section id={styles.facets}>
           <h2 className={styles.facets_title}>experience the many facets of genesis</h2>
 
