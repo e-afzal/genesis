@@ -114,7 +114,7 @@ h6 {
 p {
   /* font-family: "Kanit-Light", sans-serif; */
   font-weight: 100;
-  font-size: clamp(1.4rem, 4vw, 1.6rem);
+  font-size: clamp(1.4rem, 3.3vw, 1.6rem);
   letter-spacing: 0.35px;
 }
 

@@ -175,6 +175,8 @@
     .models_grid {
       display: grid;
       grid-template-columns: 1fr 2fr;
+      // column-gap: 3.5rem;
+      align-items: center;
       .models_header {
         background-color: $color-grey;
         padding-block: 20rem;
@@ -182,7 +184,7 @@
         padding-left: 2.5rem;
         h2.models_title {
           color: $color-white;
-          font-size: 4.2rem;
+          font-size: clamp(3.4rem, 5vw, 4.2rem);
           text-transform: uppercase;
           font-family: "Jost-Light", sans-serif;
         }
@@ -192,6 +194,60 @@
         }
       }
       .models_cards_container {
+        overflow-x: hidden;
+        width: auto;
+        .swiper_models_container {
+          width: 100%;
+          height: auto;
+          .model_slide {
+            width: 100%;
+            height: auto;
+            a.nav_dialog_card {
+              width: 100%;
+              height: auto;
+              .model_content {
+                img.card_model_image {
+                  width: 100%;
+                  height: auto;
+                  // display: block;
+                  // margin-inline: auto;
+                }
+                span.car_year {
+                  font-size: 1.3rem;
+                  color: $color-silver;
+                  font-family: "Jost-Regular", sans-serif;
+                  display: block;
+                }
+                h3.car_model_name {
+                  font-size: clamp(2.8rem, 7vw, 3.6rem);
+                  color: $color-grey-body;
+                  font-family: "Jost-Light", sans-serif;
+                }
+                p.car_model_price {
+                  margin-top: 0.35rem;
+                  font-family: "Jost-Regular", sans-serif;
+                  font-size: 1.6rem;
+                  color: $color-grey-body;
+                  letter-spacing: 1px;
+                  span {
+                    position: relative;
+
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: 1px;
+                      left: 0;
+                      right: 0;
+                      background-color: $color-grey-body;
+                      width: 100%;
+                      height: 1px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -549,6 +605,30 @@
   main.main {
     section#featured_video {
       height: 240px;
+    }
+    section#models {
+      padding-bottom: 6rem;
+      .models_grid {
+        grid-template-columns: 1fr;
+        row-gap: 3.5rem;
+        .models_header {
+          padding-block: 5rem;
+          h2.models_title,
+          p.models_description {
+            text-align: center;
+          }
+        }
+        .models_cards_container
+          .swiper_models_container
+          .model_slide
+          a.nav_dialog_card
+          .model_content {
+          span.car_year,
+          h3.car_model_name {
+            text-align: center;
+          }
+        }
+      }
     }
   }
 }

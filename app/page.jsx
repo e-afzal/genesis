@@ -23,6 +23,8 @@ import gt from "@/public/images/homepage/facets/genesis_gt.jpg";
 
 // DATA
 import { dataElectrify, dataG90 } from "@/app/data/dataHome";
+import models from './data/models';
+import HomeCarCarousel from "./components/HomeCarCarousel";
 
 export default function Home() {
   return (
@@ -84,7 +86,9 @@ export default function Home() {
               <h2 className={styles.models_title}>our models</h2>
               <p className={styles.models_description}>Explore Genesis vehicle line-up with its dynamic yet elegant design and cutting-edge technology</p>
             </div>
-            <div className={styles.models_cards_container}></div>
+            <div className={styles.models_cards_container}>
+              <HomeCarCarousel styles={styles} />
+            </div>
           </div>
 
         </section>
