@@ -9,8 +9,8 @@ import Navbar from "./components/Navbar";
 import NavbarMobile from "./components/NavbarMobile";
 import HomeCarousel from './components/HomeCarousel';
 import HomeCarouselMobile from "./components/HomeCarouselMobile";
-import AccordionElectrify from './components/AccordionElectrify';
-import AccordionElectrifyMobile from "./components/AccordionElectrifyMobile";
+import AccordionDesktop from './components/AccordionDesktop';
+import AccordionMobile from "./components/AccordionMobile";
 import Footer from "./components/Footer";
 
 // ASSET IMPORT
@@ -20,6 +20,9 @@ import G80e from "@/public/images/homepage/featured_models/G80e.jpg";
 import benefits from "@/public/images/homepage/facets/owner_benefits.jpg";
 import runway from "@/public/images/homepage/facets/G90_runway.jpg";
 import gt from "@/public/images/homepage/facets/genesis_gt.jpg";
+
+// DATA
+import { dataElectrify, dataG90 } from "@/app/data/dataHome";
 
 export default function Home() {
   return (
@@ -93,11 +96,21 @@ export default function Home() {
 
         {/* ELECTRIFY EVERY DRIVE - DESKTOP */}
         <section id={styles.electrification}>
-          <AccordionElectrify styles={styles} />
+          <AccordionDesktop
+            styles={styles}
+            title="electrify every drive"
+            data={dataElectrify}
+            imageToUse="electrification"
+          />
         </section>
         {/* ELECTRIFY EVERY DRIVE - MOBILE */}
         <section id={styles.electrification_mobile}>
-          <AccordionElectrifyMobile styles={styles} />
+          <AccordionMobile
+            styles={styles}
+            title="electrify every drive"
+            data={dataElectrify}
+            imageToUse="electrification"
+          />
         </section>
 
         {/* DONE-FACETS OF GENESIS */}
