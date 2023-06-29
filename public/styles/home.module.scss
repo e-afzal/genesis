@@ -235,7 +235,8 @@
 
   // VIDEO - GV70
   section#featured_video {
-    height: 100vh;
+    height: 500px;
+    width: auto;
     iframe {
       width: 100%;
       height: 100%;
@@ -527,6 +528,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main.main {
+    section#featured_video {
+      height: 240px;
     }
   }
 }
