@@ -1,0 +1,98 @@
+@import "./variables.module.scss";
+
+#accordion_container_desktop {
+  .accordion_trigger {
+    border: none;
+    letter-spacing: 0.35px;
+    font-family: "Jost-Regular", sans-serif;
+    font-size: 1.45rem;
+    text-align: left;
+    background-color: transparent;
+    color: #4d4d4d;
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+
+    &[data-state="open"] {
+      padding-bottom: 0px;
+      color: #af6249;
+    }
+  }
+
+  .accordion_content {
+    overflow: hidden;
+    font-family: "Roboto-Regular", sans-serif;
+    color: $color-black;
+    padding-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+  }
+
+  .last_item_container {
+    border-bottom: 1px solid #242424;
+  }
+}
+
+#accordion_container_mobile {
+  padding-inline: 2rem;
+  .accordion_trigger {
+    padding-block: 2.5rem;
+    border: none;
+    border-top: 1px solid rgba(77, 77, 77, 0.25);
+    letter-spacing: 0.35px;
+    font-family: "Jost-Regular", sans-serif;
+    font-size: 1.4rem;
+    text-align: left;
+    background-color: transparent;
+    color: #4d4d4d;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    // padding-bottom: 1rem;
+
+    &[data-state="open"] {
+      padding-bottom: 0px;
+      color: #af6249;
+    }
+  }
+
+  .accordion_content {
+    overflow: hidden;
+    font-family: "Roboto-Regular", sans-serif;
+    color: $color-black;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+
+  // .last_item_container {
+  //   border-bottom: 1px solid rgba(77, 77, 77, 0.25);
+  // }
+}
+
+@media screen and (max-width: 500px) {
+  #accordion_container {
+    .accordion_trigger {
+      line-height: 1.5;
+      padding-block: 2.5rem;
+    }
+  }
+}

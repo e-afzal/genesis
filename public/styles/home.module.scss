@@ -88,6 +88,7 @@
     }
 
     .swiper_container_mobile {
+      display: none;
       overflow: hidden;
       height: 625px;
     }
@@ -203,6 +204,44 @@
 
   // ELECTRIFY EVERY DRIVE
   section#electrification {
+    padding-block: 8rem;
+
+    .tab_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+      .tab_content {
+        h2.electrification_title {
+          margin-bottom: 4rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-black;
+        }
+      }
+      .tab_image_box {
+        // width: 100%;
+        // height: 450px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img.accordion_image {
+          // max-width: 800px;
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+          &[value="item1"] {
+            object-position: left center;
+          }
+        }
+      }
+    }
+  }
+  // ELECTRIFY EVERY DRIVE - MOBILE
+  section#electrification_mobile {
+    display: none;
   }
 
   // FACETS OF GENESIS
@@ -279,6 +318,30 @@
 }
 
 // MEDIA QUERIES
+@media screen and (max-width: 1024px) {
+  .main {
+    section#electrification {
+      padding-block: 8rem;
+
+      .tab_container {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        padding-left: 2.5rem;
+        .tab_content {
+        }
+        .tab_image_box {
+          width: 100%;
+          img.accordion_image {
+            // max-width: 800px;
+            max-width: 85%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 950px) {
   // Shifting Slide content to the top left corner
   .main {
@@ -293,6 +356,33 @@
   }
 }
 
+@media screen and (max-width: 810px) {
+  .main {
+    section#electrification {
+      display: none;
+    }
+    section#electrification_mobile {
+      display: block;
+      padding-block: clamp(3rem, 5.5vw, 7rem);
+      .tab_container_mobile {
+        h2.electrification_title {
+          margin-bottom: 4rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-black;
+          text-align: center;
+        }
+
+        #accordion_container_mobile {
+          border-bottom: 1px solid rgba(77, 77, 77, 0.25);
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 750px) {
   main.main {
     section#showcase {
@@ -301,6 +391,7 @@
         display: none;
       }
       .swiper_container_mobile {
+        display: block;
         .swiper_slide_mobile {
           display: block;
           width: 100%;

@@ -9,6 +9,8 @@ import Navbar from "./components/Navbar";
 import NavbarMobile from "./components/NavbarMobile";
 import HomeCarousel from './components/HomeCarousel';
 import HomeCarouselMobile from "./components/HomeCarouselMobile";
+import AccordionElectrify from './components/AccordionElectrify';
+import AccordionElectrifyMobile from "./components/AccordionElectrifyMobile";
 import Footer from "./components/Footer";
 
 // ASSET IMPORT
@@ -89,8 +91,14 @@ export default function Home() {
             frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowFullScreen></iframe>
         </section>
 
-        {/* ELECTRIFY EVERY DRIVE */}
-        <section id={styles.electrification}></section>
+        {/* ELECTRIFY EVERY DRIVE - DESKTOP */}
+        <section id={styles.electrification}>
+          <AccordionElectrify styles={styles} />
+        </section>
+        {/* ELECTRIFY EVERY DRIVE - MOBILE */}
+        <section id={styles.electrification_mobile}>
+          <AccordionElectrifyMobile styles={styles} />
+        </section>
 
         {/* DONE-FACETS OF GENESIS */}
         <section id={styles.facets}>
