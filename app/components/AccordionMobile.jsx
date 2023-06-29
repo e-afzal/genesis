@@ -17,18 +17,7 @@ import complimentary from "@/public/images/homepage/electrification/complimentar
 import G90 from "@/public/images/homepage/excellence/G90.jpg";
 import GV70 from "@/public/images/homepage/excellence/GV70.jpg";
 
-const AccordionMobile = ({ styles, title, data, imageToUse }) => {
-  //? Since this component is being shared, we need to pass 'imageToUse' to set the default image 
-  const imageToUseasDefault = imageToUse === "electrification" ? present : G90;
-  const [currentImage, setCurrentImage] = useState(imageToUseasDefault);
-
-  const handleImageChange = (val) => {
-    if (val === "limitless") setCurrentImage(limitless);
-    if (val === "complimentary") setCurrentImage(complimentary);
-    if (val === "present") setCurrentImage(present);
-    if (val === "G90") setCurrentImage(G90);
-    if (val === "GV70") setCurrentImage(GV70);
-  };
+const AccordionMobile = ({ styles, title, data }) => {
 
   return (
     <div className={styles.tab_container_mobile}>
@@ -36,7 +25,6 @@ const AccordionMobile = ({ styles, title, data, imageToUse }) => {
       <Accordion.Root
         id={stylesAccordion.accordion_container_mobile}
         defaultValue={data[0].value}
-        onValueChange={(val) => handleImageChange(val)}
       >
         {data.map((each, index) => (
           <Accordion.Item key={index} value={each.value}>
@@ -45,8 +33,10 @@ const AccordionMobile = ({ styles, title, data, imageToUse }) => {
             </Accordion.Header>
             <Accordion.Content className={stylesAccordion.accordion_content}>
               <Image
-                src={currentImage}
-                alt="Electrification"
+                width={2880}
+                height={1280}
+                src={each.image}
+                alt={each.title}
                 className={styles.accordion_image_mobile}
               />
               <p>{each.description}</p>

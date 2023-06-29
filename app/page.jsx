@@ -43,7 +43,7 @@ export default function Home() {
           <p className={styles.models_description}>Explore Genesis vehicle line-up with its dynamic yet elegant design and cutting-edge technology</p>
         </section>
 
-        {/* DONE-FEATURED GRID */}
+        {/* FEATURED GRID */}
         <section id={styles.featured_models}>
           <h2 className={styles.discover_title}>discover the genesis collection</h2>
 
@@ -83,8 +83,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FEATURED MODEL - G90 */}
-        <section id={styles.featured_model}></section>
+        {/* AWARDED MODELS */}
+        <section id={styles.awards}>
+          <AccordionDesktop
+            styles={styles}
+            title="designed for excellence"
+            data={dataG90}
+            imageToUse="G90"
+          />
+        </section>
+        {/* ELECTRIFY EVERY DRIVE - MOBILE */}
+        <section id={styles.awards_mobile}>
+          <AccordionMobile
+            styles={styles}
+            title="designed for excellence"
+            data={dataG90}
+          />
+        </section>
 
         {/* VIDEO - GV70 */}
         <section id={styles.featured_video}>
@@ -109,7 +124,6 @@ export default function Home() {
             styles={styles}
             title="electrify every drive"
             data={dataElectrify}
-            imageToUse="electrification"
           />
         </section>
 
