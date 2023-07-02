@@ -1,4 +1,5 @@
 const models = [
+  // G70
   {
     year: 2023,
     modelName: "G70",
@@ -8,7 +9,9 @@ const models = [
     financing: {
       apr: "3.49%",
       mos: 60,
-      bonus: 500,
+      leaseStart: "",
+      bonus: "500",
+      leaseSigningDue: "",
     },
     consumption: {
       city: 21,
@@ -87,6 +90,18 @@ const models = [
       url: "#",
       image: "#",
     },
+    home: {
+      title: "",
+      description: "",
+      url: "#",
+      image: "#",
+    },
+    charging: {
+      title: "",
+      description: "",
+      image: "#",
+      url: "#",
+    },
     accessories: [
       {
         title: "rear bumper applique",
@@ -119,6 +134,7 @@ const models = [
     ],
   },
 
+  // G80
   {
     year: 2023,
     modelName: "G80",
@@ -128,7 +144,9 @@ const models = [
     financing: {
       apr: "3.49%",
       mos: 60,
-      bonus: 500,
+      bonus: "500",
+      leaseStart: "",
+      leaseSigningDue: "",
     },
     consumption: {
       city: 22,
@@ -201,9 +219,21 @@ const models = [
       title: "drive the future",
       caption: "discover the all-new electrified G80",
       description:
-        "Experience the next step in the evolution of the all-electric luxury midsize sedan. Infused with the same groundbreaking features and expressive design as the signature G80, the Electrified G80 is where premium electric performance meets pure modern elegance. ",
+        "Experience the next step in the evolution of the all-electric luxury midsize sedan. Infused with the same groundbreaking features and expressive design as the signature G80, the Electrified G80 is where premium electric performance meets pure modern elegance.",
       url: "#",
       image: "#",
+    },
+    home: {
+      title: "",
+      description: "",
+      url: "#",
+      image: "#",
+    },
+    charging: {
+      title: "",
+      description: "",
+      image: "#",
+      url: "#",
     },
     accessories: [
       {
@@ -251,6 +281,7 @@ const models = [
     ],
   },
 
+  // G80e
   {
     year: 2023,
     modelName: "ELECTRIFIED G80",
@@ -258,9 +289,11 @@ const models = [
     image_url: "/images/car_models/G80e/2023-G80e-Side.png",
     url: "#",
     financing: {
-      apr: "3.49%",
+      leaseStart: "899",
+      apr: "",
       mos: 36,
-      bonus: 7500,
+      bonus: "7,500",
+      leaseSigningDue: "5,999",
     },
     range: 282,
     horsepower: 365,
@@ -366,6 +399,7 @@ const models = [
     ],
   },
 
+  // G90
   {
     year: 2023,
     modelName: "G90",
@@ -436,9 +470,22 @@ const models = [
       url: "#",
       image: "#",
     },
+    home: {
+      title: "",
+      description: "",
+      url: "#",
+      image: "#",
+    },
+    charging: {
+      title: "",
+      description: "",
+      image: "#",
+      url: "#",
+    },
     accessories: [],
   },
 
+  // GV60
   {
     year: 2023,
     modelName: "GV60",
@@ -479,13 +526,6 @@ const models = [
       },
     ],
     gallery: ["", "", "", "", ""],
-    home: {
-      title: "introducing genesis home",
-      description:
-        "Continue the Electrified driving experience and elevate your lifestyle in a whole new way with Genesis Home. Enjoy a 240-volt (Level 2) charger for your Electrified Genesis vehicle, solar panels and efficient energy storage systems, equipping your home with your own power source while simultaneously helping to reduce your carbon footprint. Discover the next iteration of the Genesis Experience.",
-      url: "#",
-      image: "#",
-    },
     design: {
       title: "the shape of the future",
       description:
@@ -514,6 +554,13 @@ const models = [
       url: "#",
       image: "#",
     },
+    home: {
+      title: "introducing genesis home",
+      description:
+        "Continue the Electrified driving experience and elevate your lifestyle in a whole new way with Genesis Home. Enjoy a 240-volt (Level 2) charger for your Electrified Genesis vehicle, solar panels and efficient energy storage systems, equipping your home with your own power source while simultaneously helping to reduce your carbon footprint. Discover the next iteration of the Genesis Experience.",
+      url: "#",
+      image: "#",
+    },
     charging: {
       title: "road trip approved",
       description:
@@ -524,6 +571,7 @@ const models = [
     accessories: [],
   },
 
+  // GV70
   {
     year: 2023,
     modelName: "GV70",
@@ -531,7 +579,7 @@ const models = [
     image_url: "/images/car_models/GV70/2023-GV70-Side.png",
     url: "#",
     financing: {
-      apr: "",
+      apr: "3.49%",
       mos: 60,
       bonus: "",
       leaseStart: "",
@@ -566,12 +614,6 @@ const models = [
       },
     ],
     gallery: ["", "", "", "", ""],
-    home: {
-      title: "",
-      description: "",
-      url: "#",
-      image: "#",
-    },
     design: {
       title: "confidence is always in style",
       description:
@@ -597,6 +639,12 @@ const models = [
       title: "a sense of the future",
       description:
         "Featuring the world’s first in-vehicle fingerprint reader, a 14.5” HD screen, and available 3D digital instrument cluster, the GV70’s innovative cabin creates a world of connectivity perfectly in tune to your needs.",
+      url: "#",
+      image: "#",
+    },
+    home: {
+      title: "",
+      description: "",
       url: "#",
       image: "#",
     },
@@ -638,6 +686,7 @@ const models = [
     ],
   },
 
+  // G70e
   {
     year: 2023,
     modelName: "ELECTRIFIED GV70",
@@ -724,6 +773,7 @@ const models = [
     ],
   },
 
+  // GV80
   {
     year: 2023,
     modelName: "GV80",
