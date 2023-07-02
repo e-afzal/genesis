@@ -203,6 +203,7 @@
             width: 100%;
             height: auto;
             a.nav_dialog_card {
+              cursor: grab;
               width: 100%;
               height: auto;
               .model_content {
@@ -431,8 +432,6 @@
         display: grid;
         grid-template-columns: 1fr 2.5fr;
         padding-left: 2.5rem;
-        .tab_content {
-        }
         .tab_image_box {
           width: 100%;
           img.accordion_image {
