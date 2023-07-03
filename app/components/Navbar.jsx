@@ -22,26 +22,26 @@ const Navbar = () => {
 
   //? DOM ELEMENTS
   const shopMenuItems = [
-    { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "#" },
-    { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "#" },
-    { title: "request a quote", imageUrl: "/icons/request-a-quote.svg", url: "#" },
-    { title: "schedule a test drive", imageUrl: "/icons/schedule-a-test-drive.svg", url: "#" },
-    { title: "shop parts and accessories", imageUrl: "/icons/shop-parts.svg", url: "#" },
-    { title: "genesis certified", imageUrl: "/icons/genesis-certified.svg", url: "#" },
+    { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "/" },
+    { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "/" },
+    { title: "request a quote", imageUrl: "/icons/request-a-quote.svg", url: "/" },
+    { title: "schedule a test drive", imageUrl: "/icons/schedule-a-test-drive.svg", url: "/" },
+    { title: "shop parts and accessories", imageUrl: "/icons/shop-parts.svg", url: "/" },
+    { title: "genesis certified", imageUrl: "/icons/genesis-certified.svg", url: "/" },
   ];
 
   const offerMenuItems = [
-    { title: "special offers", imageUrl: "/icons/special-offers.svg", url: "#" },
-    { title: "estimate trade-in value", imageUrl: "/icons/estimate-trade-in-value.svg", url: "#" },
-    { title: "genesis finance", imageUrl: "/icons/genesis-finance.svg", url: "#" }
+    { title: "special offers", imageUrl: "/icons/special-offers.svg", url: "/" },
+    { title: "estimate trade-in value", imageUrl: "/icons/estimate-trade-in-value.svg", url: "/" },
+    { title: "genesis finance", imageUrl: "/icons/genesis-finance.svg", url: "/" }
   ];
 
   const brandMenuItems = [
-    { title: "our story", imageUrl: "/images/brand/our_story.jpg", url: "#" },
-    { title: "accolades", imageUrl: "/images/brand/accolades.jpg", url: "#" },
-    { title: "events", imageUrl: "/images/brand/events.jpg", url: "#" },
-    { title: "genesis house", imageUrl: "/images/brand/genesis_house.jpg", url: "#" },
-    { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "#" },
+    { title: "our story", imageUrl: "/images/brand/our_story.jpg", url: "/" },
+    { title: "accolades", imageUrl: "/images/brand/accolades.jpg", url: "/" },
+    { title: "events", imageUrl: "/images/brand/events.jpg", url: "/" },
+    { title: "genesis house", imageUrl: "/images/brand/genesis_house.jpg", url: "/" },
+    { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "/" },
   ];
 
   //? HANDLERS
@@ -149,7 +149,7 @@ const Navbar = () => {
       <div ref={modelDialogRef} className={`${styles.nav_model_dialog}`}>
         <div className={`${styles.nav_dialog_grid} max-w`}>
           {models.map((model, index) => (
-            <Link href={"#"} key={index} className={`${styles.nav_dialog_card}`}>
+            <Link href={`/models/${model.slug}`} key={index} className={`${styles.nav_dialog_card}`}>
               <Image src={model.image_url}
                 className={styles.card_model_image}
                 alt={model.modelName}

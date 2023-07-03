@@ -1,6 +1,335 @@
+@import "./variables.module.scss";
+
 main#main {
   margin-top: 7rem;
 
+  // SECTION: SHOWCASE
   section#showcase {
+    display: none;
+    margin-top: 7rem;
+    background-color: $color-grey;
+    .swiper_container {
+      overflow: hidden;
+      height: 625px;
+    }
+
+    .swiper_slide {
+      width: 100%;
+      height: 625px;
+      position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: grab;
+    }
+
+    .swiper_container_mobile {
+      display: none;
+      overflow: hidden;
+      height: 625px;
+    }
+
+    .swiper_slide_mobile {
+      display: none;
+    }
+  }
+
+  // SECTION: FINANCING
+  section#financing {
+    display: none;
+    margin-block: 8rem;
+    .financing_grid {
+      padding-inline: 10rem;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 0.45fr 0.55fr;
+      .financing_numbers {
+        display: flex;
+        column-gap: 4.5rem;
+        h6 {
+          text-transform: uppercase;
+          font-family: "Roboto-Regular", sans-serif;
+          color: #cd9a81;
+          font-size: 1.1rem;
+          letter-spacing: 0.7px;
+        }
+        p {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 3.7rem;
+          color: $color-white;
+          padding-left: 5px;
+        }
+      }
+      .financing_links {
+        // border: 1px solid yellow;
+        display: flex;
+        column-gap: 3rem;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+          text-align: center;
+          padding: 2rem 4rem;
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+        }
+        a.finance_price {
+          color: #141414;
+          background-color: $color-white;
+        }
+        a.finance_offer {
+          color: $color-white;
+          background-color: #292929;
+        }
+      }
+    }
+    p.financing_condition {
+      padding-left: 10rem;
+      font-size: 1.15rem;
+      letter-spacing: 0.55px;
+      font-family: "Roboto-Regular", sans-serif;
+      color: #6f6f6f;
+      margin-top: 3rem;
+    }
+  }
+
+  // SECTION: BY THE NUMBERS
+  section#numbers {
+    padding-block: 12rem;
+    background-color: $color-white;
+    h2.numbers_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: 3.6rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: $color-black;
+    }
+
+    .numbers_grid {
+      max-width: 1350px;
+      margin-inline: auto;
+      margin-top: 10.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-inline: clamp(2.5rem, 4.5vw, 10rem);
+      h3,
+      p {
+        color: $color-black;
+      }
+      h3 {
+        font-family: "Jost-Regular", sans-serif;
+        font-size: clamp(3.8rem, 5vw, 4.5rem);
+        text-align: center;
+
+        sup {
+          font-size: 2rem;
+        }
+
+        span {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          letter-spacing: 0.55px;
+          text-transform: uppercase;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6f6f6f;
+        font-family: "Roboto-Regular", sans-serif;
+        letter-spacing: 0.55px;
+      }
+      .consumption_box,
+      .horsepower_box {
+        border-right: 1px solid rgba(112, 112, 112, 0.4);
+      }
+      .consumption_box,
+      .horsepower_box,
+      .price_box {
+        padding-inline: 1.5rem;
+      }
+    }
+  }
+
+  // SECTION: POWERTRAINS
+  section#powertrains {
+  }
+
+  // SECTION: GALLERY
+  section#gallery {
+  }
+
+  // SECTION: DESIGN
+  section#design {
+  }
+
+  // SECTION: PERFORMANCE
+  section#performance {
+  }
+
+  // SECTION:SAFETY
+  section#safety {
+  }
+
+  // SECTION: TECHNOLOGY
+  section#technology {
+  }
+
+  // SECTION: ACCESSORIES
+  section#accessories {
+  }
+
+  // SECTION: OWNER
+  section#owner {
+  }
+
+  // SECTION: UPDATES
+  section#updates {
+  }
+
+  // SECTION: CONCIERGE
+  section#concierge {
+  }
+
+  // SECTION: SHOP
+  section#shop {
+  }
+}
+
+// MEDIA QUERIES - SHOWCASE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+    section#showcase {
+      margin-top: 0;
+      .swiper_container {
+        display: none;
+      }
+      .swiper_container_mobile {
+        display: block;
+        .swiper_slide_mobile {
+          display: block;
+          width: 100%;
+          height: 625px;
+          position: relative;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          cursor: grab;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES: FINANCING
+@media screen and (max-width: 1075px) {
+  main#main {
+    section#financing {
+      .financing_grid {
+        grid-template-columns: 1fr;
+        place-items: center;
+        row-gap: 2.5rem;
+
+        .financing_numbers {
+          h6 {
+            text-align: center;
+          }
+          p {
+            text-align: center;
+            padding-left: 0;
+          }
+        }
+        .financing_links {
+        }
+      }
+      p.financing_condition {
+        margin-top: 4rem;
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main#main {
+    section#financing {
+      .financing_grid {
+        padding-inline: 3rem;
+        place-items: unset;
+        .financing_numbers {
+          display: grid;
+          grid-template-columns: 1fr;
+          width: 100%;
+          .item_apr,
+          .item_mos,
+          .item_bonus {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 1.5rem;
+          }
+          .item_apr,
+          .item_mos {
+            border-bottom: 1px solid #232323;
+          }
+          h6 {
+            text-align: center;
+          }
+          p {
+            text-align: center;
+            padding-left: 0;
+            font-size: 2.8rem;
+          }
+        }
+        .financing_links {
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-content: stretch;
+          a {
+            padding-inline: 0;
+            display: block;
+            width: 100%;
+            margin-top: 1.5rem;
+          }
+        }
+      }
+      p.financing_condition {
+        margin-top: 4rem;
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  main#main {
+    section#financing {
+      p.financing_condition {
+        padding-inline: 3rem;
+        text-align: left;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - BY THE NUMBER
+@media screen and (max-width: 655px) {
+  main#main {
+    section#numbers {
+      .numbers_grid {
+        grid-template-columns: 1fr;
+        row-gap: 3.5rem;
+        margin-top: 5rem;
+        .consumption_box,
+        .horsepower_box {
+          border-right: none;
+        }
+      }
+    }
   }
 }

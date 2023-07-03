@@ -15,31 +15,31 @@ import logo from "@/public/images/logo-white.svg";
 const Footer = () => {
   //? DOM ELEMENTS
   const shopLinks = [
-    { title: "search inventory", url: "#" },
-    { title: "build your own", url: "#" },
-    { title: "request a quote", url: "#" },
-    { title: "schedule a test drive", url: "#" },
-    { title: "shop parts and accessories", url: "#" },
-    { title: "genesis certified", url: "#" },
-    { title: "special offers", url: "#" },
-    { title: "estimate trade-in value", url: "#" },
-    { title: "genesis finance", url: "#" }
+    { title: "search inventory", url: "/" },
+    { title: "build your own", url: "/" },
+    { title: "request a quote", url: "/" },
+    { title: "schedule a test drive", url: "/" },
+    { title: "shop parts and accessories", url: "/" },
+    { title: "genesis certified", url: "/" },
+    { title: "special offers", url: "/" },
+    { title: "estimate trade-in value", url: "/" },
+    { title: "genesis finance", url: "/" }
   ];
   const brandLinks = [
-    { title: "our story", url: "#" },
-    { title: "accolades", url: "#" },
-    { title: "events", url: "#" },
-    { title: "genesis house", url: "#" },
-    { title: "genesis cares", url: "#" },
+    { title: "our story", url: "/" },
+    { title: "accolades", url: "/" },
+    { title: "events", url: "/" },
+    { title: "genesis house", url: "/" },
+    { title: "genesis cares", url: "/" },
   ];
   const ownerLinks = [
-    { title: "my genesis", url: "#" }
+    { title: "my genesis", url: "/" }
   ];
   const miscellaneous_links = [
-    { title: "sitemap", url: "#" },
-    { title: "warranty", url: "#" },
-    { title: "terms of use", url: "#" },
-    { title: "privacy policy", url: "#" },
+    { title: "sitemap", url: "/" },
+    { title: "warranty", url: "/" },
+    { title: "terms of use", url: "/" },
+    { title: "privacy policy", url: "/" },
   ];
 
   return (
@@ -50,9 +50,9 @@ const Footer = () => {
           <div className={styles.model_container}>
             <h4 className={styles.model_links_title}>models</h4>
             <ul className={styles.model_links}>
-              {models.map((each, index) => (
+              {models.map((model, index) => (
                 <li key={index}>
-                  <Link href={each.url}>{each.modelName}</Link>
+                  <Link href={`/models/${model.slug}`}>{model.modelName}</Link>
                 </li>
               ))}
             </ul>
@@ -95,7 +95,7 @@ const Footer = () => {
             <h4 className={styles.support_links_title}>support</h4>
             <ul className={styles.support_links}>
               <li>
-                <Link href={"#"}>contact us</Link>
+                <Link href={"/"}>contact us</Link>
               </li>
             </ul>
           </div>

@@ -13,6 +13,7 @@ const models = [
       "/G70/showcase-desktop_4.jpg",
       "/G70/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/G70/showcase-mobile.jpg",
     financing: {
       apr: "3.49%",
       mos: 60,
@@ -161,6 +162,7 @@ const models = [
       "/G80/showcase-desktop_4.jpg",
       "/G80/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/G80/showcase-mobile.jpg",
     financing: {
       apr: "3.49%",
       mos: 60,
@@ -321,6 +323,7 @@ const models = [
       "/G80e/showcase-desktop_4.jpg",
       "/G80e/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/G80e/showcase-mobile.jpg",
     financing: {
       leaseStart: "899",
       apr: "",
@@ -409,6 +412,7 @@ const models = [
       "/G90/showcase-desktop_4.jpg",
       "/G90/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/G90/showcase-mobile.jpg",
     financing: {
       apr: "3.49%",
       mos: 36,
@@ -508,6 +512,7 @@ const models = [
       "/GV60/showcase-desktop_4.jpg",
       "/GV60/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/GV60/showcase-mobile.jpg",
     financing: {
       apr: "",
       mos: 36,
@@ -607,6 +612,7 @@ const models = [
       "/GV70/showcase-desktop_4.jpg",
       "/GV70/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/GV70/showcase-mobile.jpg",
     financing: {
       apr: "3.49%",
       mos: 60,
@@ -721,11 +727,11 @@ const models = [
     ],
   },
 
-  // G70e
+  // GV70e
   {
     year: 2023,
     modelName: "ELECTRIFIED GV70",
-    slug: "G70e",
+    slug: "GV70e",
     price: "65,850",
     image_url: "/images/car_models/GV70e/2023-GV70e-Side.png",
     showcase_carousel: [
@@ -735,6 +741,7 @@ const models = [
       "/GV70e/showcase-desktop_4.jpg",
       "/GV70e/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/GV70e/showcase-mobile.jpg",
     financing: {
       apr: "",
       leaseStart: "799",
@@ -828,6 +835,7 @@ const models = [
       "/GV80/showcase-desktop_4.jpg",
       "/GV80/showcase-desktop_5.jpg",
     ],
+    showcase_carousel_mobile: "/GV80/showcase-mobile.jpg",
     financing: {
       apr: "",
       leaseStart: "",

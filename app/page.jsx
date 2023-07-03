@@ -23,7 +23,7 @@ import gt from "@/public/images/homepage/facets/genesis_gt.jpg";
 
 // DATA
 import { dataElectrify, dataG90 } from "@/app/data/dataHome";
-import HomeCarCarousel from "./components/HomeCarCarousel";
+import HomeCarCarousel from "@/app/components/homepage/HomeCarCarousel";
 
 export default function Home() {
   return (
@@ -52,7 +52,7 @@ export default function Home() {
               <h3 className={styles.featured_model_title}>G90</h3>
               <p className={styles.featured_model_description}>
                 Proudly named the 2023 MotorTrend Car of the Year, our all-new flagship G90 is the perfect balance of sophisticated design and athletic elegance.</p>
-              <Link href={"#"} className={styles.featured_model_link}>go inside the all-new g90</Link>
+              <Link href={"/models/G90"} className={styles.featured_model_link}>go inside the all-new g90</Link>
             </div>
 
             <div className={styles.featured_card}>
@@ -63,7 +63,7 @@ export default function Home() {
               <h3 className={styles.featured_model_title}>GV80</h3>
               <p className={styles.featured_model_description}>Blending the refinement of our luxury sedans with enhanced versatility and cargo capacity, the GV80 adapts to all of life’s adventures.
               </p>
-              <Link href={"#"} className={styles.featured_model_link}>experience the gv80</Link>
+              <Link href={"/models/GV80"} className={styles.featured_model_link}>experience the gv80</Link>
             </div>
 
             <div className={styles.featured_card}>
@@ -73,7 +73,7 @@ export default function Home() {
               />
               <h3 className={styles.featured_model_title}>electrified g80</h3>
               <p className={styles.featured_model_description}>Defining the next generation of electrification, Genesis leads with forward facing technologies and intriguing design, embodied in the Electrified G80.</p>
-              <Link href={"#"} className={styles.featured_model_link}>discover the electrified g80</Link>
+              <Link href={"/models/G80e"} className={styles.featured_model_link}>discover the electrified g80</Link>
             </div>
           </div>
         </section>
@@ -150,7 +150,7 @@ export default function Home() {
               <h3 className={styles.facets_model_title}>luxury that puts you first</h3>
               <p className={styles.facets_model_description}>
                 Genesis vehicles are covered by industry-disrupting warranties and exceptional ownership benefits designed to enhance not only the way you drive, but the way you live.</p>
-              <Link href={"#"} className={styles.facets_model_link}>explore owner benefits</Link>
+              <Link href={"/"} className={styles.facets_model_link}>explore owner benefits</Link>
             </div>
 
             <div className={styles.facets_card}>
@@ -161,7 +161,7 @@ export default function Home() {
               <h3 className={styles.facets_model_title}>from the highway to the runway</h3>
               <p className={styles.facets_model_description}>A benchmark of refinement, the G90’s style-defining features are catching the eye of fashion’s elite, launching collaborations between Genesis and Vogue, NYFW, Monse, and more.
               </p>
-              <Link href={"#"} className={styles.facets_model_link}>view the g90 design</Link>
+              <Link href={"/models/G90"} className={styles.facets_model_link}>view the g90 design</Link>
             </div>
 
             <div className={styles.facets_card}>
@@ -171,7 +171,7 @@ export default function Home() {
               />
               <h3 className={styles.facets_model_title}>genesis races into gran turismo</h3>
               <p className={styles.facets_model_description}>Push the G70 GR4 concept to top speeds or practice drifting with unprecedented realism as Genesis takes to the track as an Official Manufacturer Partner of the GT World Series.</p>
-              <Link href={"#"} className={styles.facets_model_link}>go inside the real genesis g70</Link>
+              <Link href={"/models/G70"} className={styles.facets_model_link}>go inside the real genesis g70</Link>
             </div>
           </div>
         </section>
