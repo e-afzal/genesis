@@ -3,6 +3,7 @@ const models = [
   {
     year: 2023,
     modelName: "G70",
+    slug: "G70",
     price: "39,400",
     image_url: "/images/car_models/G70/2023-G70-Side.png",
     showcase_carousel: [
@@ -12,7 +13,6 @@ const models = [
       "/G70/showcase-desktop_4.jpg",
       "/G70/showcase-desktop_5.jpg",
     ],
-    url: "#",
     financing: {
       apr: "3.49%",
       mos: 60,
@@ -151,6 +151,7 @@ const models = [
   {
     year: 2023,
     modelName: "G80",
+    slug: "G80",
     price: "50,000",
     image_url: "/images/car_models/G80/2023-G80-Side.png",
     showcase_carousel: [
@@ -160,7 +161,6 @@ const models = [
       "/G80/showcase-desktop_4.jpg",
       "/G80/showcase-desktop_5.jpg",
     ],
-    url: "#",
     financing: {
       apr: "3.49%",
       mos: 60,
@@ -311,9 +311,9 @@ const models = [
   {
     year: 2023,
     modelName: "ELECTRIFIED G80",
+    slug: "G80e",
     price: "79,825",
     image_url: "/images/car_models/G80e/2023-G80e-Side.png",
-    url: "#",
     showcase_carousel: [
       "/G80e/showcase-desktop_1.jpg",
       "/G80e/showcase-desktop_2.jpg",
@@ -399,9 +399,9 @@ const models = [
   {
     year: 2023,
     modelName: "G90",
+    slug: "G90",
     price: "88,400",
     image_url: "/images/car_models/G90/2023-G90-Side.png",
-    url: "#",
     showcase_carousel: [
       "/G90/showcase-desktop_1.jpg",
       "/G90/showcase-desktop_2.jpg",
@@ -498,6 +498,7 @@ const models = [
   {
     year: 2023,
     modelName: "GV60",
+    slug: "GV60",
     price: "59,290",
     image_url: "/images/car_models/GV60/2023-GV60-Side.png",
     showcase_carousel: [
@@ -507,7 +508,6 @@ const models = [
       "/GV60/showcase-desktop_4.jpg",
       "/GV60/showcase-desktop_5.jpg",
     ],
-    url: "#",
     financing: {
       apr: "",
       mos: 36,
@@ -597,6 +597,7 @@ const models = [
   {
     year: 2023,
     modelName: "GV70",
+    slug: "GV70",
     price: "43,150",
     image_url: "/images/car_models/GV70/2023-GV70-Side.png",
     showcase_carousel: [
@@ -606,7 +607,6 @@ const models = [
       "/GV70/showcase-desktop_4.jpg",
       "/GV70/showcase-desktop_5.jpg",
     ],
-    url: "#",
     financing: {
       apr: "3.49%",
       mos: 60,
@@ -725,6 +725,7 @@ const models = [
   {
     year: 2023,
     modelName: "ELECTRIFIED GV70",
+    slug: "G70e",
     price: "65,850",
     image_url: "/images/car_models/GV70e/2023-GV70e-Side.png",
     showcase_carousel: [
@@ -734,7 +735,6 @@ const models = [
       "/GV70e/showcase-desktop_4.jpg",
       "/GV70e/showcase-desktop_5.jpg",
     ],
-    url: "#",
     financing: {
       apr: "",
       leaseStart: "799",
@@ -818,6 +818,7 @@ const models = [
   {
     year: 2023,
     modelName: "GV80",
+    slug: "GV80",
     price: "57,450",
     image_url: "/images/car_models/GV80/2023-GV80-Side.png",
     showcase_carousel: [
@@ -827,7 +828,6 @@ const models = [
       "/GV80/showcase-desktop_4.jpg",
       "/GV80/showcase-desktop_5.jpg",
     ],
-    url: "#",
     financing: {
       apr: "",
       leaseStart: "",

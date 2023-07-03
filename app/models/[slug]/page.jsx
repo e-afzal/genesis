@@ -9,23 +9,56 @@ import NavbarMobile from "@/app/components/NavbarMobile";
 import Footer from "@/app/components/Footer";
 
 // DATA
+import models from "@/app/data/models";
 
 const SingleProject = ({ params: { slug } }) => {
   // FILTER model based on slug
-  // const filteredProject = projects.filter(project => project.slug === slug);
+  const filteredModel = models.filter(model => model.slug === slug);
 
   return (
     <body>
       <Navbar />
       <NavbarMobile />
-
       <main id={styles.main}>
-        {/* SECTION: SHOWCASE */}
-        <section id={styles.showcase}>
-          <h1>Testing</h1>
-        </section>
 
-        {/* SECTION:  */}
+        {/* SHOWCASE CAROUSEL */}
+        <section id={styles.showcase}></section>
+
+        {/* FINANCING */}
+        <section id={styles.financing}></section>
+
+        {/* BY THE NUMBERS */}
+        <section id={styles.numbers}></section>
+
+        {/* ABOUT */}
+        <section id={styles.about}></section>
+
+        {/* POWERTRAINS */}
+        <section id={styles.powertrains}></section>
+
+        {/* GALLERY */}
+        <section id={styles.gallery}></section>
+
+        {/* DESIGN */}
+        <section id={styles.design}></section>
+
+        {/* PERFORMANCE */}
+        <section id={styles.performance}></section>
+
+        {/* ACCESSORIES */}
+        <section id={styles.accessories}></section>
+
+        {/* OWNER */}
+        <section id={styles.owner}></section>
+
+        {/* UPDATES */}
+        <section id={styles.updates}></section>
+
+        {/* CONCIERGE */}
+        <section id={styles.concierge}></section>
+
+        {/* SHOP */}
+        <section id={styles.shop}></section>
       </main>
 
       <Footer />

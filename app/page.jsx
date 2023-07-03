@@ -5,13 +5,13 @@ import Link from "next/link";
 import styles from "@/public/styles/home.module.scss";
 
 // COMPONENTS
-import Navbar from "./components/Navbar";
-import NavbarMobile from "./components/NavbarMobile";
-import HomeCarousel from './components/HomeCarousel';
-import HomeCarouselMobile from "./components/HomeCarouselMobile";
-import AccordionDesktop from './components/AccordionDesktop';
-import AccordionMobile from "./components/AccordionMobile";
-import Footer from "./components/Footer";
+import Navbar from "@/app/components/Navbar";
+import NavbarMobile from "@/app/components/NavbarMobile";
+import HomeCarousel from '@/app/components/homepage/HomeCarousel';
+import HomeCarouselMobile from "@/app/components/homepage/HomeCarouselMobile";
+import AccordionDesktop from '@/app/components/homepage/AccordionDesktop';
+import AccordionMobile from "@/app/components/homepage/AccordionMobile";
+import Footer from "@/app/components/Footer";
 
 // ASSET IMPORT
 import g90 from "@/public/images/homepage/featured_models/G90.jpg";
@@ -23,7 +23,6 @@ import gt from "@/public/images/homepage/facets/genesis_gt.jpg";
 
 // DATA
 import { dataElectrify, dataG90 } from "@/app/data/dataHome";
-import models from './data/models';
 import HomeCarCarousel from "./components/HomeCarCarousel";
 
 export default function Home() {
