@@ -5,7 +5,7 @@ main#main {
 
   // SECTION: SHOWCASE
   section#showcase {
-    display: none;
+    // display: none;
     margin-top: 7rem;
     background-color: $color-grey;
     .swiper_container {
@@ -36,7 +36,7 @@ main#main {
 
   // SECTION: FINANCING
   section#financing {
-    display: none;
+    // display: none;
     margin-block: 8rem;
     .financing_grid {
       padding-inline: 10rem;
@@ -95,7 +95,7 @@ main#main {
 
   // SECTION: BY THE NUMBERS
   section#numbers {
-    display: none;
+    // display: none;
     padding-block: 12rem;
     background-color: $color-white;
     h2.numbers_title {
