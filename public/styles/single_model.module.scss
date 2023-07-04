@@ -5,7 +5,7 @@ main#main {
 
   // SECTION: SHOWCASE
   section#showcase {
-    // display: none;
+    display: none;
     margin-top: 7rem;
     background-color: $color-grey;
     .swiper_container {
@@ -36,7 +36,7 @@ main#main {
 
   // SECTION: FINANCING
   section#financing {
-    // display: none;
+    display: none;
     margin-block: 8rem;
     .financing_grid {
       padding-inline: 10rem;
@@ -95,6 +95,7 @@ main#main {
 
   // SECTION: BY THE NUMBERS
   section#numbers {
+    display: none;
     padding-block: 12rem;
     background-color: $color-white;
     h2.numbers_title {
@@ -154,6 +155,77 @@ main#main {
 
   // SECTION: POWERTRAINS
   section#powertrains {
+    background-color: $color-white;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+
+    h2.powertrain_title {
+      color: $color-black;
+      font-size: clamp(2.4rem, 5vw, 3rem);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+    }
+
+    .powertrains_container {
+      max-width: 1680px;
+      margin-inline: auto;
+      padding-inline: clamp(2.5rem, 5vw, 12rem);
+      overflow-x: hidden;
+      .swiper_models_container {
+        margin-top: 4.5rem;
+        width: 100%;
+        height: auto;
+        .model_slide {
+          width: 100%;
+          min-height: 365px;
+          background-color: #f7f7f7;
+          padding-top: 3rem;
+          cursor: grab;
+          .powertrain_image_container {
+            width: 100%;
+            height: auto;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .powertrain_content {
+            padding-inline: 2rem;
+            padding-bottom: 3rem;
+            h4 {
+              font-size: 2rem;
+              font-family: "Jost-Regular", sans-serif;
+              color: $color-black;
+            }
+            p {
+              letter-spacing: 0.65px;
+              margin-top: 1.5rem;
+              color: #a36b4f;
+              font-size: 1.25rem;
+              font-family: "Jost-Regular", sans-serif;
+              text-transform: uppercase;
+            }
+            ul {
+              margin-left: 1rem;
+              margin-top: 1.5rem;
+              padding-left: 1rem;
+              li {
+                list-style-type: disc;
+                padding-block: 5px;
+                color: #6f6f6f;
+                font-size: 1.25rem;
+                font-family: "Roboto", sans-serif;
+              }
+            }
+          }
+        }
+      }
+      .swiper-wrapper {
+        justify-content: space-between;
+      }
+    }
   }
 
   // SECTION: GALLERY
@@ -330,6 +402,18 @@ main#main {
           border-right: none;
         }
       }
+    }
+  }
+}
+
+// MEDIA QUERY - POWERTRAINS
+@media screen and (max-width: 500px) {
+  main#main {
+    section#powertrains
+      .powertrains_container
+      .swiper_models_container
+      .model_slide {
+      max-width: 100%;
     }
   }
 }

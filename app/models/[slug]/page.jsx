@@ -12,6 +12,7 @@ import Footer from "@/app/components/Footer";
 // DATA
 import models from "@/app/data/models";
 import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
+import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
 
 const SingleProject = ({ params: { slug } }) => {
   // FILTER model based on slug
@@ -88,7 +89,16 @@ const SingleProject = ({ params: { slug } }) => {
           </section>
 
           {/* SECTION: POWERTRAINS */}
-          <section id={styles.powertrains}></section>
+          <section id={styles.powertrains}>
+            <h2 className={styles.powertrain_title}>available powertrains</h2>
+
+            <div className={styles.powertrains_container}>
+              <PowertrainCarousel
+                styles={styles}
+                powertrains={model.powertrains}
+              />
+            </div>
+          </section>
 
           {/* SECTION: GALLERY */}
           <section id={styles.gallery}></section>
