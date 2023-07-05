@@ -30,9 +30,13 @@ const SingleProject = ({ params: { slug } }) => {
           <section id={styles.showcase}>
             <ModelShowcaseCarousel
               images={model.showcase_carousel}
+              modelName={model.modelName}
+              caption={model.caption}
             />
             <ModelShowcaseCarouselMobile
               image={model.showcase_carousel_mobile}
+              modelName={model.modelName}
+              caption={model.caption}
             />
           </section>
 

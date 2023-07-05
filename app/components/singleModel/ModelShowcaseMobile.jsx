@@ -8,7 +8,7 @@ import "swiper/css";
 // STYLES
 import styles from "@/public/styles/single_model.module.scss";
 
-const ModelShowcaseCarouselMobile = ({ image }) => {
+const ModelShowcaseCarouselMobile = ({ image, modelName, caption }) => {
 
   return (
     <Swiper
@@ -20,6 +20,10 @@ const ModelShowcaseCarouselMobile = ({ image }) => {
         className={styles.swiper_slide_mobile}
         style={{ backgroundImage: `url(/images/car_models${image})` }}
       >
+        <div className={styles.swiper_content}>
+          <h2 className={styles.model_title}>{`genesis ${modelName}`}</h2>
+          <h4 className={styles.model_caption}>{caption}</h4>
+        </div>
       </SwiperSlide>
     </Swiper>
   );

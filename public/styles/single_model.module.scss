@@ -21,6 +21,30 @@ main#main {
       background-repeat: no-repeat;
       background-size: cover;
       cursor: grab;
+
+      .swiper_content {
+        margin-left: 3rem;
+        position: absolute;
+        // bottom: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        z-index: 2;
+        padding-inline: 2.5rem;
+        padding-block: 3.5rem;
+        h2.model_title {
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          color: $color-white;
+          font-size: 4.2rem;
+        }
+        h4.model_caption {
+          color: $color-white;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.55px;
+        }
+      }
     }
 
     .swiper_container_mobile {
@@ -595,7 +619,28 @@ main#main {
           background-position: center center;
           background-repeat: no-repeat;
           background-size: cover;
-          cursor: grab;
+
+          .swiper_content {
+            padding-inline: 2rem;
+            margin-left: 0;
+            position: absolute;
+            bottom: unset;
+            top: 4rem;
+            z-index: 2;
+            h2.model_title {
+              text-transform: uppercase;
+              font-family: "Jost-Light", sans-serif;
+              color: $color-white;
+              font-size: 3.6rem;
+            }
+            h4.model_caption {
+              color: $color-white;
+              font-family: "Jost-Light", sans-serif;
+              font-size: 1.6rem;
+              text-transform: uppercase;
+              letter-spacing: 0.55px;
+            }
+          }
         }
       }
     }
