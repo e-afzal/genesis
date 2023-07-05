@@ -11,6 +11,8 @@ const PowertrainCarousel = ({ styles, powertrains }) => {
   return (
     <Swiper
       className={styles.swiper_models_container}
+      // centeredSlides={powertrains.length > 1 ? false : true}
+      centerInsufficientSlides
       breakpoints={{
         320: {
           slidesPerView: 1,

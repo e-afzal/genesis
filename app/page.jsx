@@ -101,6 +101,7 @@ export default function Home() {
             imageToUse="G90"
           />
         </section>
+
         {/* AWARDED MODELS - MOBILE */}
         <section id={styles.awards_mobile}>
           <AccordionMobile

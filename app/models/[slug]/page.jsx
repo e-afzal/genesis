@@ -13,6 +13,7 @@ import Footer from "@/app/components/Footer";
 import models from "@/app/data/models";
 import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
 import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
+import Image from "next/image";
 
 const SingleProject = ({ params: { slug } }) => {
   // FILTER model based on slug
@@ -104,16 +105,151 @@ const SingleProject = ({ params: { slug } }) => {
           <section id={styles.gallery}></section>
 
           {/* SECTION: DESIGN */}
-          <section id={styles.design}></section>
+          <section id={styles.design}>
+            <div className={styles.feature_container_desktop}>
+              {/* CONTENT */}
+              <div className={styles.feature_content}>
+                <h2 className={styles.main_title}>design</h2>
+                <h3 className={styles.subtitle}>{model.design.title}</h3>
+                <p className={styles.content_body}>
+                  {model.design.description}
+                </p>
+              </div>
+
+              {/* IMAGE BOX */}
+              <div className={styles.feature_image_box}>
+                <Image
+                  width={2880}
+                  height={1280}
+                  src={`/images/car_models${model.design.image}`}
+                  alt={model.design.title}
+                />
+              </div>
+            </div>
+          </section>
 
           {/* SECTION: PERFORMANCE */}
-          <section id={styles.performance}></section>
+          <section id={styles.performance}>
+            <div className={styles.feature_container_desktop}>
+              {/* CONTENT */}
+              <div className={styles.feature_content}>
+                <h2 className={styles.main_title}>performance</h2>
+                <h3 className={styles.subtitle}>{model.performance.title}</h3>
+                <p className={styles.content_body}>
+                  {model.performance.description}
+                </p>
+              </div>
+
+              {/* IMAGE BOX */}
+              <div className={styles.feature_image_box}>
+                <Image
+                  width={2880}
+                  height={1280}
+                  src={`/images/car_models${model.performance.image}`}
+                  alt={model.performance.title}
+                />
+              </div>
+            </div>
+          </section>
 
           {/* SECTION: SAFETY */}
-          <section id={styles.safety}></section>
+          <section id={styles.safety}>
+            <div className={styles.feature_container_desktop}>
+              {/* CONTENT */}
+              <div className={styles.feature_content}>
+                <h2 className={styles.main_title}>safety</h2>
+                <h3 className={styles.subtitle}>{model.safety.title}</h3>
+                <p className={styles.content_body}>
+                  {model.safety.description}
+                </p>
+              </div>
+
+              {/* IMAGE BOX */}
+              <div className={styles.feature_image_box}>
+                <Image
+                  width={2880}
+                  height={1280}
+                  src={`/images/car_models${model.safety.image}`}
+                  alt={model.safety.title}
+                />
+              </div>
+            </div>
+          </section>
 
           {/* SECTION: TECHNOLOGY */}
-          <section id={styles.technology}></section>
+          <section id={styles.technology}>
+            <div className={styles.feature_container_desktop}>
+              {/* CONTENT */}
+              <div className={styles.feature_content}>
+                <h2 className={styles.main_title}>technology</h2>
+                <h3 className={styles.subtitle}>{model.technology.title}</h3>
+                <p className={styles.content_body}>
+                  {model.technology.description}
+                </p>
+              </div>
+
+              {/* IMAGE BOX */}
+              <div className={styles.feature_image_box}>
+                <Image
+                  width={2880}
+                  height={1280}
+                  src={`/images/car_models${model.technology.image}`}
+                  alt={model.technology.title}
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION: GENESIS HOME (Electric) */}
+          {model.home?.title && (
+            <section id={styles.genesis_home}>
+              <div className={styles.feature_container_desktop}>
+                {/* CONTENT */}
+                <div className={styles.feature_content}>
+                  <h3 className={styles.subtitle}>{model.home.title}</h3>
+                  <p className={styles.content_body}>
+                    {model.home.description}
+                  </p>
+                </div>
+
+                {/* IMAGE BOX */}
+                <div className={styles.feature_image_box}>
+                  <Image
+                    width={2880}
+                    height={1280}
+                    src={`/images/car_models${model.home.image}`}
+                    alt={model.safety.title}
+                  />
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* SECTION: CHARGING (Electric) */}
+          {model.charging?.title && (
+            <section id={styles.charging}>
+              <div className={styles.feature_container_desktop}>
+                {/* CONTENT */}
+                <div className={styles.feature_content}>
+                  <h2 className={styles.main_title}>charging</h2>
+                  <h3 className={styles.subtitle}>{model.charging.title}</h3>
+                  <p className={styles.content_body}>
+                    {model.charging.description}
+                  </p>
+                </div>
+
+                {/* IMAGE BOX */}
+                <div className={styles.feature_image_box}>
+                  <Image
+                    width={2880}
+                    height={1280}
+                    src={`/images/car_models${model.charging.image}`}
+                    alt={model.charging.title}
+                  />
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* SECTION: ACCESSORIES */}
           <section id={styles.accessories}></section>

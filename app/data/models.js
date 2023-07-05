@@ -365,7 +365,7 @@ const models = [
       description:
         "Equipped with AWD capability and four dynamic drive modes, the Electrified G80 tailors every ride precisely to your needs. Dual 136kW electric motors provide power directly to the Electrified G80’s 19” wheels for near-instantaneous acceleration and a quietly confident performance every time.",
       url: "#",
-      image: "/G80e/design.jpg",
+      image: "/G80e/performance.jpg",
     },
     safety: {
       title: "protecting every journey",
@@ -392,8 +392,8 @@ const models = [
       title: "complimentary on-the-go charging",
       description:
         "Enjoy three years of complimentary 30-minute DC fast charging sessions* from Electrify America. Jumping from 10% to 80% in just 22 minutes,* the Electrified G80’s high-capacity battery also supports Vehicle-to-Load Charging* (V2L), allowing you to use a 110V outlet to power items like a laptop or small home appliance. ",
-      image: "#",
-      url: "/G80e/charging.jpg",
+      image: "/G80e/charging.jpg",
+      url: "#",
     },
     accessories: [],
   },
