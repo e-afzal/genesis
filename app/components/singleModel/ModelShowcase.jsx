@@ -12,7 +12,6 @@ import styles from "@/public/styles/single_model.module.scss";
 
 
 const ModelShowcaseCarousel = ({ images, modelName, caption }) => {
-
   return (
     <Swiper
       slidesPerView={"1"}
@@ -22,19 +21,27 @@ const ModelShowcaseCarousel = ({ images, modelName, caption }) => {
       pagination={{ clickable: true }}
     // autoplay={{ delay: 5000 }}
     >
-      {images.map((each, index) => (
+      <SwiperSlide
+        className={styles.swiper_slide}
+        style={{ backgroundImage: `url(/images/car_models/${modelName}/showcase-desktop_1.jpg)` }}
+      >
+        <div className={styles.swiper_content}>
+          <h2 className={styles.model_title}>{`genesis ${modelName}`}</h2>
+          <h4 className={styles.model_caption}>{caption}</h4>
+        </div>
+      </SwiperSlide>
+      {images.slice(1,).map((each, index) => (
         <SwiperSlide
           key={index}
           className={styles.swiper_slide}
           style={{ backgroundImage: `url(/images/car_models${each})` }}
         >
-          <div className={styles.swiper_content}>
+          {/* <div className={styles.swiper_content}>
             <h2 className={styles.model_title}>{`genesis ${modelName}`}</h2>
             <h4 className={styles.model_caption}>{caption}</h4>
-          </div>
+          </div> */}
         </SwiperSlide>
       ))}
-
     </Swiper>
   );
 };
