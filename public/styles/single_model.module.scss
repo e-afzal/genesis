@@ -747,8 +747,11 @@ main#main {
           }
         }
         .feature_image_box {
+          min-height: 205px;
           img {
+            border-radius: 8.5px;
             min-width: 100%;
+            object-fit: cover;
           }
         }
       }
