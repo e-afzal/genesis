@@ -587,6 +587,92 @@ main#main {
 
   // SECTION: ACCESSORIES
   section#accessories {
+    padding-top: clamp(4rem, 5vw, 6rem);
+    padding-bottom: 4rem;
+    background-color: #111;
+
+    h2.accessories_main_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      text-align: center;
+    }
+    .tab_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+      padding-block: 6rem;
+      .tab_content {
+        order: 1;
+        h2.accessories_title {
+          margin-bottom: 4rem;
+          text-transform: uppercase;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+        }
+
+        #accordion_container_desktop {
+          .accordion_trigger {
+            border: none;
+            letter-spacing: 0.35px;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.45rem;
+            text-align: left;
+            background-color: transparent;
+            color: #bbb;
+            width: 100%;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+
+            &[data-state="open"] {
+              padding-bottom: 0px;
+              color: #c36f51;
+            }
+          }
+
+          .accordion_content {
+            overflow: hidden;
+            font-family: "Roboto-Regular", sans-serif;
+            color: $color-white;
+            padding-top: 1rem;
+            margin-bottom: 1.5rem;
+
+            p {
+              font-size: 1.4rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+      .tab_image_box {
+        order: 2;
+        // width: 100%;
+        // height: 450px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img.accordion_image {
+          // max-width: 800px;
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+          &[value="item1"] {
+            object-position: left center;
+          }
+        }
+      }
+    }
+  }
+
+  section#accessories_mobile {
+    display: none;
   }
 
   // SECTION: OWNER
@@ -963,6 +1049,80 @@ main#main {
     }
     section#design {
       padding-top: 10rem;
+    }
+  }
+}
+
+// ACCESSORIES
+@media screen and (max-width: 810px) {
+  main#main {
+    section#accessories {
+      display: none;
+    }
+    section#accessories_mobile {
+      display: block;
+      padding-block: clamp(3rem, 5.5vw, 7rem);
+
+      .tab_container_mobile {
+        h2.accessories_title {
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+          text-align: center;
+        }
+
+        #accordion_container_mobile {
+          border-bottom: 1px solid rgba(77, 77, 77, 0.25);
+          padding-inline: 2.5rem;
+          .accordion_trigger {
+            padding-block: 2.5rem;
+            border: none;
+            border-top: 1px solid rgba(77, 77, 77, 0.25);
+            letter-spacing: 0.35px;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.4rem;
+            text-align: left;
+            background-color: transparent;
+            color: #bbb;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+
+            &[data-state="open"] {
+              padding-bottom: 0px;
+              color: #c36f51;
+            }
+          }
+
+          .accordion_content {
+            overflow: hidden;
+            color: $color-white;
+            padding-top: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            p {
+              font-family: "Roboto-Regular", sans-serif;
+              margin-top: 1rem;
+              font-size: 1.45rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.6;
+            }
+            img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 5px;
+            }
+          }
+
+          // .last_item_container {
+          //   border-bottom: 1px solid rgba(77, 77, 77, 0.25);
+          // }
+        }
+      }
     }
   }
 }

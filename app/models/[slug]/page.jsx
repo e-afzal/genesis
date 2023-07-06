@@ -10,6 +10,8 @@ import NavbarMobile from "@/app/components/NavbarMobile";
 import ModelShowcaseCarousel from '@/app/components/singleModel/ModelShowcase';
 import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
 import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
+import AccordionDesktop from "@/app/components/singleModel/AccordionDesktop";
+import AccordionMobile from "@/app/components/singleModel/AccordionMobile";
 import Footer from "@/app/components/Footer";
 
 // DATA
@@ -259,7 +261,27 @@ const SingleProject = ({ params: { slug } }) => {
           )}
 
           {/* SECTION: ACCESSORIES */}
-          <section id={styles.accessories}></section>
+          {model.accessories.length >= 1 && (
+            <section id={styles.accessories}>
+              <h2 className={styles.accessories_main_title}>accessories</h2>
+              <AccordionDesktop
+                modelName={model.modelName}
+                styles={styles}
+                data={model.accessories}
+              />
+            </section>
+          )}
+
+          {/* SECTION: ACCESSORIES-MOBILE */}
+          {model.accessories.length >= 1 && (
+            <section id={styles.accessories_mobile}>
+              <AccordionMobile
+                modelName={model.modelName}
+                styles={styles}
+                data={model.accessories}
+              />
+            </section>
+          )}
 
           {/* SECTION: OWNER */}
           <section id={styles.owner}></section>

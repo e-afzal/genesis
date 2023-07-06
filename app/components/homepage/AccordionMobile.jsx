@@ -1,7 +1,6 @@
 //? For use on Homepage - Electrification section
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 
 // RADIX-UI
