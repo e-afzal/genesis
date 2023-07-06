@@ -5,7 +5,7 @@ main#main {
 
   // SECTION: SHOWCASE
   section#showcase {
-    // display: none;
+    display: none;
     margin-top: 7rem;
     background-color: $color-grey;
     .swiper_container {
@@ -60,7 +60,7 @@ main#main {
 
   // SECTION: FINANCING
   section#financing {
-    // display: none;
+    display: none;
     margin-block: 8rem;
     .financing_grid {
       margin-inline: auto;
@@ -121,7 +121,7 @@ main#main {
 
   // SECTION: BY THE NUMBERS
   section#numbers {
-    // display: none;
+    display: none;
     padding-block: 12rem;
     background-color: $color-white;
     h2.numbers_title {
@@ -181,7 +181,7 @@ main#main {
 
   // SECTION: POWERTRAINS
   section#powertrains {
-    // display: none;
+    display: none;
     background-color: $color-white;
     padding-top: 7rem;
     padding-bottom: 5rem;
@@ -258,6 +258,7 @@ main#main {
 
   // SECTION: DESIGN
   section#design {
+    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -315,6 +316,7 @@ main#main {
 
   // SECTION: PERFORMANCE
   section#performance {
+    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -369,6 +371,7 @@ main#main {
 
   // SECTION:SAFETY
   section#safety {
+    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -398,7 +401,7 @@ main#main {
           line-height: 3rem;
         }
         p.content_body {
-          font-size: 1.33rem;
+          font-size: 1.4rem;
           color: $color-grey-body;
           font-family: "Roboto-Regular", sans-serif;
           line-height: 23px;
@@ -425,6 +428,7 @@ main#main {
 
   // SECTION: TECHNOLOGY
   section#technology {
+    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -479,6 +483,7 @@ main#main {
 
   // SECTION: GENESIS HOME
   section#genesis_home {
+    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -527,6 +532,7 @@ main#main {
 
   // SECTION: CHARGING
   section#charging {
+    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -589,10 +595,152 @@ main#main {
 
   // SECTION: UPDATES
   section#updates {
+    padding-block: clamp(5rem, 5vw, 10rem);
+    background-color: $color-grey-body;
+    padding-inline: 3rem;
+
+    h2.update_title {
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
+      color: #a36b4f;
+      text-transform: uppercase;
+    }
+
+    form.update_form {
+      margin-top: 9rem;
+      max-width: 800px;
+      margin-inline: auto;
+
+      input {
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+
+        &[type="email"],
+        &[type="number"] {
+          display: block;
+          width: 100%;
+          margin-top: 5.5rem;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+
+        &::placeholder {
+          letter-spacing: 0.55px;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .name_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+      }
+    }
+
+    p.form_condition {
+      max-width: 800px;
+      margin-inline: auto;
+      color: #999;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 2rem;
+    }
+
+    button.form_button {
+      border: none;
+      background-color: $color-white;
+      padding: 1.5rem 5rem;
+      font-family: "Jost-Regular", sans-serif;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      display: block;
+      margin-inline: auto;
+      margin-top: 5rem;
+      cursor: pointer;
+      letter-spacing: 0.55px;
+      border-radius: 3px;
+    }
   }
 
   // SECTION: CONCIERGE
   section#concierge {
+    margin-inline: auto;
+    max-width: 1920px;
+    background-color: $color-white;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+
+    .concierge_container {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      padding-right: 5.5rem;
+
+      .concierge_content {
+        order: 2;
+        h3.concierge_title {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+        }
+        p.concierge_body {
+          font-size: 1.4rem;
+          color: $color-grey-body;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+        }
+        a {
+          font-family: "Jost-Light", sans-serif;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          color: $color-black;
+          display: inline-block;
+          margin-top: 2.5rem;
+          position: relative;
+          letter-spacing: 1.15px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $color-black;
+            bottom: -5px;
+            left: 0;
+          }
+        }
+      }
+      .concierge_image_box {
+        order: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
   }
 
   // SECTION: SHOP
@@ -815,6 +963,44 @@ main#main {
     }
     section#design {
       padding-top: 10rem;
+    }
+  }
+}
+
+// UPDATES
+@media screen and (max-width: 450px) {
+  main#main {
+    section#updates {
+      form.update_form {
+        .name_grid {
+          grid-template-columns: 1fr;
+          row-gap: 5.5rem;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - CONCIERGE
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#concierge {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      padding-block: 5rem;
+      .concierge_container {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(3rem, 5vw, 5rem);
+        .concierge_image_box {
+          min-height: 205px;
+          img {
+            border-radius: 8.5px;
+            min-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }

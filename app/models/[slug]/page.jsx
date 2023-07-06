@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 // STYLES
 import styles from "@/public/styles/single_model.module.scss";
@@ -7,13 +8,15 @@ import styles from "@/public/styles/single_model.module.scss";
 import Navbar from "@/app/components/Navbar";
 import NavbarMobile from "@/app/components/NavbarMobile";
 import ModelShowcaseCarousel from '@/app/components/singleModel/ModelShowcase';
+import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
+import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
 import Footer from "@/app/components/Footer";
 
 // DATA
 import models from "@/app/data/models";
-import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
-import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
-import Image from "next/image";
+
+// ASSET IMPORT
+import concierge from "@/public/images/car_models/concierge.jpg";
 
 const SingleProject = ({ params: { slug } }) => {
   // FILTER model based on slug
@@ -262,10 +265,68 @@ const SingleProject = ({ params: { slug } }) => {
           <section id={styles.owner}></section>
 
           {/* SECTION: UPDATES */}
-          <section id={styles.updates}></section>
+          <section id={styles.updates}>
+            <h2 className={styles.update_title}>get updates</h2>
+
+            <form className={styles.update_form}>
+              <div className={styles.name_grid}>
+                <input
+                  type="text"
+                  className={styles.fName}
+                  placeholder="first name*"
+                  required
+                />
+                <input
+                  type="text"
+                  className={styles.lName}
+                  placeholder="last name*"
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                className={styles.email}
+                placeholder="email*"
+                required
+              />
+              <input
+                type="number"
+                className={styles.zipCode}
+                placeholder="zip code*"
+                required
+              />
+            </form>
+
+            <p className={styles.form_condition}>
+              Receive localized news and offers for your area. By clicking or tapping the "SEND ME UPDATES" button, I acknowledge that I have read and agree to Genesis's Privacy Policy and Terms of Use.
+            </p>
+
+            <button className={styles.form_button}>send me updates</button>
+          </section>
 
           {/* SECTION: CONCIERGE */}
-          <section id={styles.concierge}></section>
+          <section id={styles.concierge}>
+            <div className={styles.concierge_container}>
+              {/* CONTENT */}
+              <div className={styles.concierge_content}>
+                <h3 className={styles.concierge_title}>genesis concierge</h3>
+                <p className={styles.concierge_body}>
+                  Perhaps the most elevated way to shop for a vehicle, Genesis Concierge offers a full catalogue of complimentary personal shopping services right from the comfort of home. Schedule on-location test drives, request inventory searches and more. Connect with a Genesis Concierge today to make finding your perfect Genesis straightforward and enjoyable.
+                </p>
+                <Link href={"#"}>discover concierge services</Link>
+              </div>
+
+              {/* IMAGE BOX */}
+              <div className={styles.concierge_image_box}>
+                <Image
+                  width={1440}
+                  height={640}
+                  src={concierge}
+                  alt="concierge services"
+                />
+              </div>
+            </div>
+          </section>
 
           {/* SECTION: SHOP */}
           <section id={styles.shop}></section>
