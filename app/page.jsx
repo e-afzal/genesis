@@ -46,7 +46,7 @@ export default function Home() {
           <div className={styles.featured_grid}>
             <div className={styles.featured_card}>
               <Image src={g90} alt="The all-new 2023 Genesis G90 sedan" />
-              <h3 className={styles.featured_model_title}>G900</h3>
+              <h3 className={styles.featured_model_title}>G90</h3>
               <p className={styles.featured_model_description}>
                 Proudly named the 2023 MotorTrend Car of the Year, our all-new
                 flagship G90 is the perfect balance of sophisticated design and
