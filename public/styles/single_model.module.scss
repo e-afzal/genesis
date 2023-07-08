@@ -5,7 +5,6 @@ main#main {
 
   // SECTION: SHOWCASE
   section#showcase {
-    display: none;
     margin-top: 7rem;
     background-color: $color-grey;
     .swiper_container {
@@ -60,7 +59,6 @@ main#main {
 
   // SECTION: FINANCING
   section#financing {
-    display: none;
     margin-block: 8rem;
     .financing_grid {
       margin-inline: auto;
@@ -121,7 +119,6 @@ main#main {
 
   // SECTION: BY THE NUMBERS
   section#numbers {
-    display: none;
     padding-block: 12rem;
     background-color: $color-white;
     h2.numbers_title {
@@ -181,7 +178,6 @@ main#main {
 
   // SECTION: POWERTRAINS
   section#powertrains {
-    display: none;
     background-color: $color-white;
     padding-top: 7rem;
     padding-bottom: 5rem;
@@ -257,6 +253,9 @@ main#main {
     padding-top: 8rem;
     padding-bottom: 10rem;
     background-color: $color-grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     h2.gallery_title {
       font-family: "Jost-Light", sans-serif;
@@ -264,7 +263,6 @@ main#main {
       color: #cd9a81;
       text-transform: uppercase;
       letter-spacing: 0.25px;
-      text-align: center;
       margin-bottom: 5rem;
     }
 
@@ -308,11 +306,32 @@ main#main {
         }
       }
     }
+
+    a {
+      margin-top: 4.5rem;
+      display: inline-block;
+      font-size: 1.4rem;
+      color: $color-white;
+      text-transform: uppercase;
+      font-family: "Jost-Light", sans-serif;
+      position: relative;
+      letter-spacing: 1px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        background-color: $color-white;
+        width: 100%;
+        height: 1px;
+      }
+    }
   }
 
   // SECTION: DESIGN
   section#design {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -370,7 +389,6 @@ main#main {
 
   // SECTION: PERFORMANCE
   section#performance {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -425,7 +443,6 @@ main#main {
 
   // SECTION:SAFETY
   section#safety {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -482,7 +499,6 @@ main#main {
 
   // SECTION: TECHNOLOGY
   section#technology {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -537,7 +553,6 @@ main#main {
 
   // SECTION: GENESIS HOME
   section#genesis_home {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -586,7 +601,6 @@ main#main {
 
   // SECTION: CHARGING
   section#charging {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
@@ -735,7 +749,6 @@ main#main {
 
   // SECTION: UPDATES
   section#updates {
-    display: none;
     padding-block: clamp(5rem, 5vw, 10rem);
     background-color: $color-grey-body;
     padding-inline: 3rem;
@@ -820,7 +833,6 @@ main#main {
 
   // SECTION: CONCIERGE
   section#concierge {
-    display: none;
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;

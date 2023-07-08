@@ -132,6 +132,7 @@ const SingleProject = ({ params: { slug } }) => {
                 </div>
               ))}
             </div>
+            <Link href={"#"}>explore the full gallery</Link>
           </section>
 
           {/* SECTION: DESIGN */}
