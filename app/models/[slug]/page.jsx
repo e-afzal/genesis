@@ -7,7 +7,7 @@ import styles from "@/public/styles/single_model.module.scss";
 // COMPONENTS
 import Navbar from "@/app/components/Navbar";
 import NavbarMobile from "@/app/components/NavbarMobile";
-import ModelShowcaseCarousel from '@/app/components/singleModel/ModelShowcase';
+import ModelShowcaseCarousel from "@/app/components/singleModel/ModelShowcase";
 import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
 import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
 import AccordionDesktop from "@/app/components/singleModel/AccordionDesktop";
@@ -22,7 +22,7 @@ import concierge from "@/public/images/car_models/concierge.jpg";
 
 const SingleProject = ({ params: { slug } }) => {
   // FILTER model based on slug
-  const filteredModel = models.filter(model => slug === model.slug);
+  const filteredModel = models.filter((model) => slug === model.slug);
 
   return (
     <body>
@@ -30,7 +30,6 @@ const SingleProject = ({ params: { slug } }) => {
       <NavbarMobile />
       {filteredModel.map((model, index) => (
         <main key={index} id={styles.main}>
-
           {/* SHOWCASE CAROUSEL */}
           <section id={styles.showcase}>
             <ModelShowcaseCarousel
@@ -49,7 +48,6 @@ const SingleProject = ({ params: { slug } }) => {
           <section id={styles.financing}>
             <div className={styles.financing_grid}>
               <div className={styles.financing_numbers}>
-
                 <div className={styles.item_apr}>
                   <h6 className={styles.apr_title}>finance</h6>
                   <p className={styles.apr_amount}>3.49%</p>
@@ -61,18 +59,21 @@ const SingleProject = ({ params: { slug } }) => {
                 </div>
                 <div className={styles.item_bonus}>
                   <h6 className={styles.bonus_title}>signature event bonus</h6>
-                  <p className={styles.bonus_amount}>
-                    $500
-                  </p>
+                  <p className={styles.bonus_amount}>$500</p>
                 </div>
               </div>
               <div className={styles.financing_links}>
-                <Link href="#" className={styles.finance_price}>get your price</Link>
-                <Link href="#" className={styles.finance_offer}>offer details</Link>
+                <Link href="#" className={styles.finance_price}>
+                  get your price
+                </Link>
+                <Link href="#" className={styles.finance_offer}>
+                  offer details
+                </Link>
               </div>
             </div>
             <p className={styles.financing_condition}>
-              Finance Offer ends 07/05/2023. Signature Event Bonus offer ends 07/05/2023.
+              Finance Offer ends 07/05/2023. Signature Event Bonus offer ends
+              07/05/2023.
             </p>
           </section>
 
@@ -80,9 +81,10 @@ const SingleProject = ({ params: { slug } }) => {
           <section id={styles.numbers}>
             <h2 className={styles.numbers_title}>G70 by the numbers</h2>
             <div className={styles.numbers_grid}>
-
               <div className={styles.consumption_box}>
-                <h3 className={styles.consumption_facts}>21<span>city</span> 31<span>hwy</span></h3>
+                <h3 className={styles.consumption_facts}>
+                  21<span>city</span> 31<span>hwy</span>
+                </h3>
                 <p className={styles.fuel}>fuel consumption</p>
                 <p className={styles.estimate}>EPA-estimated city/hwy MPG</p>
               </div>
@@ -91,11 +93,12 @@ const SingleProject = ({ params: { slug } }) => {
                 <p className={styles.power}>horsepower</p>
               </div>
               <div className={styles.price_box}>
-                <h3 className={styles.price_number}><sup>$</sup>39,400</h3>
+                <h3 className={styles.price_number}>
+                  <sup>$</sup>39,400
+                </h3>
                 <p className={styles.start}>starting msrp</p>
               </div>
             </div>
-
           </section>
 
           {/* SECTION: POWERTRAINS */}
@@ -111,7 +114,25 @@ const SingleProject = ({ params: { slug } }) => {
           </section>
 
           {/* SECTION: GALLERY */}
-          <section id={styles.gallery}></section>
+          <section id={styles.gallery}>
+            <h2 className={styles.gallery_title}>
+              discover the genesis {model.modelName}
+            </h2>
+
+            <div className={styles.gallery_grid}>
+              {model.gallery.map((each, index) => (
+                <div className={`${styles.gallery_item_container}`}>
+                  <div
+                    key={index}
+                    className={styles.gallery_item}
+                    style={{
+                      backgroundImage: `url(/images/car_models${each})`,
+                    }}
+                  ></div>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* SECTION: DESIGN */}
           <section id={styles.design}>
@@ -320,7 +341,9 @@ const SingleProject = ({ params: { slug } }) => {
             </form>
 
             <p className={styles.form_condition}>
-              Receive localized news and offers for your area. By clicking or tapping the "SEND ME UPDATES" button, I acknowledge that I have read and agree to Genesis's Privacy Policy and Terms of Use.
+              Receive localized news and offers for your area. By clicking or
+              tapping the "SEND ME UPDATES" button, I acknowledge that I have
+              read and agree to Genesis's Privacy Policy and Terms of Use.
             </p>
 
             <button className={styles.form_button}>send me updates</button>
@@ -333,7 +356,12 @@ const SingleProject = ({ params: { slug } }) => {
               <div className={styles.concierge_content}>
                 <h3 className={styles.concierge_title}>genesis concierge</h3>
                 <p className={styles.concierge_body}>
-                  Perhaps the most elevated way to shop for a vehicle, Genesis Concierge offers a full catalogue of complimentary personal shopping services right from the comfort of home. Schedule on-location test drives, request inventory searches and more. Connect with a Genesis Concierge today to make finding your perfect Genesis straightforward and enjoyable.
+                  Perhaps the most elevated way to shop for a vehicle, Genesis
+                  Concierge offers a full catalogue of complimentary personal
+                  shopping services right from the comfort of home. Schedule
+                  on-location test drives, request inventory searches and more.
+                  Connect with a Genesis Concierge today to make finding your
+                  perfect Genesis straightforward and enjoyable.
                 </p>
                 <Link href={"#"}>discover concierge services</Link>
               </div>
