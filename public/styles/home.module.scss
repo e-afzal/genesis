@@ -114,7 +114,7 @@
     }
 
     .featured_grid {
-      margin-top: 6.5rem;
+      margin-top: clamp(4rem, 7vw, 6.5rem);
       max-width: 1200px;
       margin-inline: auto;
       display: grid;
