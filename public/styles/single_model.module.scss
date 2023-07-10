@@ -119,11 +119,11 @@ main#main {
 
   // SECTION: BY THE NUMBERS
   section#numbers {
-    padding-block: 12rem;
+    padding-block: clamp(6rem, 12vw, 12rem);
     background-color: $color-white;
     h2.numbers_title {
       font-family: "Jost-Light", sans-serif;
-      font-size: 3.6rem;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
       text-transform: uppercase;
       text-align: center;
       color: $color-black;
@@ -179,8 +179,8 @@ main#main {
   // SECTION: POWERTRAINS
   section#powertrains {
     background-color: $color-white;
-    padding-top: 7rem;
-    padding-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: clamp(5rem, 9vw, 9rem);
 
     h2.powertrain_title {
       color: $color-black;
@@ -250,8 +250,8 @@ main#main {
 
   // SECTION: GALLERY
   section#gallery {
-    padding-top: 8rem;
-    padding-bottom: 10rem;
+    padding-top: clamp(6rem, 7vw, 7rem);
+    padding-bottom: clamp(7rem, 10vw, 10rem);
     background-color: $color-grey;
     display: flex;
     align-items: center;
@@ -655,8 +655,7 @@ main#main {
 
   // SECTION: ACCESSORIES
   section#accessories {
-    padding-top: clamp(4rem, 5vw, 6rem);
-    padding-bottom: 4rem;
+    padding-block: 7rem;
     background-color: #111;
 
     h2.accessories_main_title {
@@ -749,7 +748,8 @@ main#main {
 
   // SECTION: UPDATES
   section#updates {
-    padding-block: clamp(5rem, 5vw, 10rem);
+    padding-top: clamp(3rem, 8.5vw, 10rem);
+    padding-bottom: clamp(5rem, 6vw, 7rem);
     background-color: $color-grey-body;
     padding-inline: 3rem;
 
@@ -762,7 +762,7 @@ main#main {
     }
 
     form.update_form {
-      margin-top: 9rem;
+      margin-top: clamp(5.5rem, 9.5vw, 9rem);
       max-width: 800px;
       margin-inline: auto;
 
@@ -836,9 +836,8 @@ main#main {
     margin-inline: auto;
     max-width: 1920px;
     background-color: $color-white;
-    padding-top: 10rem;
-    padding-bottom: 12rem;
-
+    padding-top: clamp(5.5rem, 10.5vw, 10rem);
+    padding-bottom: clamp(7rem, 10vw, 12rem);
     .concierge_container {
       display: grid;
       grid-template-columns: 4fr 1fr;
@@ -1155,7 +1154,7 @@ main#main {
     }
     section#accessories_mobile {
       display: block;
-      padding-block: clamp(3rem, 5.5vw, 7rem);
+      padding-block: clamp(5rem, 9vw, 7rem);
 
       .tab_container_mobile {
         h2.accessories_title {
@@ -1240,7 +1239,6 @@ main#main {
   main#main {
     section#concierge {
       padding-inline: clamp(2rem, 5vw, 3.5rem);
-      padding-block: 5rem;
       .concierge_container {
         padding-right: 0;
         padding-left: 0;
