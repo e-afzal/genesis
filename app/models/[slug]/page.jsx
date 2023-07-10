@@ -48,19 +48,44 @@ const SingleProject = ({ params: { slug } }) => {
           <section id={styles.financing}>
             <div className={styles.financing_grid}>
               <div className={styles.financing_numbers}>
-                <div className={styles.item_apr}>
-                  <h6 className={styles.apr_title}>finance</h6>
-                  <p className={styles.apr_amount}>3.49%</p>
-                </div>
-
-                <div className={styles.item_mos}>
-                  <h6 className={styles.mos_title}>mos.</h6>
-                  <p className={styles.mos_amount}>60</p>
-                </div>
-                <div className={styles.item_bonus}>
-                  <h6 className={styles.bonus_title}>signature event bonus</h6>
-                  <p className={styles.bonus_amount}>$500</p>
-                </div>
+                {model.financing.apr && (
+                  <div className={styles.item_apr}>
+                    <h6 className={styles.apr_title}>finance</h6>
+                    <p className={styles.apr_amount}>{model.financing.apr}</p>
+                  </div>
+                )}
+                {model.financing.leaseStart && (
+                  <div className={styles.item_lease_start}>
+                    <h6 className={styles.lease_start_title}>
+                      lease starting at
+                    </h6>
+                    <p className={styles.lease_start_amount}>
+                      {model.financing.leaseStart}
+                    </p>
+                  </div>
+                )}
+                {model.financing.mos && (
+                  <div className={styles.item_mos}>
+                    <h6 className={styles.mos_title}>mos.</h6>
+                    <p className={styles.mos_amount}>{model.financing.mos}</p>
+                  </div>
+                )}
+                {model.financing.leaseSigningDue && (
+                  <div className={styles.item_lease_due}>
+                    <h6 className={styles.due_title}>due at lease signing</h6>
+                    <p className={styles.due_amount}>
+                      {model.financing.leaseSigningDue}
+                    </p>
+                  </div>
+                )}
+                {model.financing.bonus && (
+                  <div className={styles.item_bonus}>
+                    <h6 className={styles.bonus_title}>lease bonus</h6>
+                    <p className={styles.bonus_amount}>
+                      {model.financing.bonus}
+                    </p>
+                  </div>
+                )}
               </div>
               <div className={styles.financing_links}>
                 <Link href="#" className={styles.finance_price}>
@@ -72,8 +97,7 @@ const SingleProject = ({ params: { slug } }) => {
               </div>
             </div>
             <p className={styles.financing_condition}>
-              Finance Offer ends 07/05/2023. Signature Event Bonus offer ends
-              07/05/2023.
+              Finance Offer ends 07/05/2023.
             </p>
           </section>
 
