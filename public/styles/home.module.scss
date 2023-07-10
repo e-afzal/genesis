@@ -100,8 +100,8 @@
 
   // GENESIS COLLECTION
   section#featured_models {
-    padding-top: 7.5rem;
-    padding-bottom: 9rem;
+    padding-top: clamp(6.5rem, 9.5vw, 7.5rem);
+    padding-bottom: clamp(9rem, 12vw, 10rem);
     padding-inline: 2.5rem;
     background-color: $color-white;
     h2.discover_title {
@@ -179,12 +179,12 @@
       align-items: center;
       .models_header {
         background-color: $color-grey;
-        padding-block: 20rem;
+        padding-block: clamp(12rem, 8.5vw, 20rem);
         padding-right: 4.5rem;
         padding-left: 2.5rem;
         h2.models_title {
           color: $color-white;
-          font-size: clamp(3.4rem, 5vw, 4.2rem);
+          font-size: clamp(3.2rem, 5vw, 4.2rem);
           text-transform: uppercase;
           font-family: "Jost-Light", sans-serif;
         }
@@ -255,8 +255,7 @@
 
   // AWARDED MODELS
   section#awards {
-    padding-top: 6rem;
-    padding-bottom: 12rem;
+    padding-block: clamp(9rem, 12vw, 12rem);
 
     .tab_container_desktop {
       display: grid;
@@ -309,7 +308,8 @@
 
   // ELECTRIFY EVERY DRIVE
   section#electrification {
-    padding-block: 8rem;
+    padding-top: clamp(9rem, 12vw, 12rem);
+    padding-bottom: 3.5rem;
 
     .tab_container_desktop {
       display: grid;
@@ -351,7 +351,7 @@
 
   // FACETS OF GENESIS
   section#facets {
-    padding-top: 7.5rem;
+    padding-top: clamp(5.5rem, 7vw, 7.5rem);
     padding-bottom: 9rem;
     padding-inline: 2.5rem;
     background-color: $color-white;
@@ -365,7 +365,7 @@
     }
 
     .facets_grid {
-      margin-top: 6.5rem;
+      margin-top: clamp(5rem, 6vw, 6.5rem);
       max-width: 1200px;
       margin-inline: auto;
       display: grid;
@@ -426,8 +426,6 @@
 @media screen and (max-width: 1024px) {
   .main {
     section#electrification {
-      padding-block: 8rem;
-
       .tab_container {
         display: grid;
         grid-template-columns: 1fr 2.5fr;
@@ -438,6 +436,20 @@
             // max-width: 800px;
             max-width: 85%;
             height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .main {
+    section#models {
+      .models_grid {
+        .models_header {
+          p.models_description {
+            display: none;
           }
         }
       }
@@ -466,7 +478,8 @@
     }
     section#awards_mobile {
       display: block;
-      padding-block: clamp(3rem, 5.5vw, 7rem);
+      padding-top: clamp(3rem, 9vw, 7rem);
+      padding-bottom: 4rem;
       .tab_container_mobile {
         h2.electrification_title {
           margin-bottom: 1.5rem;
@@ -488,7 +501,9 @@
     }
     section#electrification_mobile {
       display: block;
-      padding-block: clamp(3rem, 5.5vw, 7rem);
+      padding-top: clamp(4.5rem, 7.5vw, 7rem);
+      padding-bottom: 2rem;
+
       .tab_container_mobile {
         h2.electrification_title {
           margin-bottom: 4rem;

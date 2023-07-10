@@ -314,7 +314,7 @@ const models = [
   // G80e
   {
     year: 2023,
-    modelName: "ELECTRIFIED G80",
+    modelName: "G80e",
     caption: "intuitive technology in motion",
     slug: "G80e",
     price: "79,825",
@@ -736,7 +736,7 @@ const models = [
   // GV70e
   {
     year: 2023,
-    modelName: "ELECTRIFIED GV70",
+    modelName: "GV70e",
     caption: "explore new beginnings",
     slug: "GV70e",
     price: "65,850",
