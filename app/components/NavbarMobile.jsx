@@ -18,26 +18,74 @@ import models from "../data/models";
 const NavbarMobile = () => {
   //? DOM ELEMENTS
   const shopMenuItems = [
-    { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "/" },
-    { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "/" },
-    { title: "request a quote", imageUrl: "/icons/request-a-quote.svg", url: "/" },
-    { title: "schedule a test drive", imageUrl: "/icons/schedule-a-test-drive.svg", url: "/" },
-    { title: "shop parts and accessories", imageUrl: "/icons/shop-parts.svg", url: "/" },
-    { title: "genesis certified", imageUrl: "/icons/genesis-certified.svg", url: "/" },
+    {
+      title: "search inventory",
+      imageUrl: "/icons/search-inventory.svg",
+      url: "/",
+    },
+    {
+      title: "build your own",
+      imageUrl: "/icons/build-your-own.svg",
+      url: "/",
+    },
+    {
+      title: "request a quote",
+      imageUrl: "/icons/request-a-quote.svg",
+      url: "/",
+    },
+    {
+      title: "schedule a test drive",
+      imageUrl: "/icons/schedule-a-test-drive.svg",
+      url: "/",
+    },
+    {
+      title: "shop parts and accessories",
+      imageUrl: "/icons/shop-parts.svg",
+      url: "/",
+    },
+    {
+      title: "genesis certified",
+      imageUrl: "/icons/genesis-certified.svg",
+      url: "/",
+    },
   ];
 
   const offerMenuItems = [
-    { title: "special offers", imageUrl: "/icons/special-offers.svg", url: "/" },
-    { title: "estimate trade-in value", imageUrl: "/icons/estimate-trade-in-value.svg", url: "/" },
-    { title: "genesis finance", imageUrl: "/icons/genesis-finance.svg", url: "/" }
+    {
+      title: "special offers",
+      imageUrl: "/icons/special-offers.svg",
+      url: "/",
+    },
+    {
+      title: "estimate trade-in value",
+      imageUrl: "/icons/estimate-trade-in-value.svg",
+      url: "/",
+    },
+    {
+      title: "genesis finance",
+      imageUrl: "/icons/genesis-finance.svg",
+      url: "/",
+    },
   ];
 
   const brandMenuItems = [
-    { title: "our story", imageUrl: "/images/brand/our_story.jpg", url: "/" },
+    {
+      title: "our story",
+      imageUrl: "/images/brand/our_story.jpg",
+      url: "/brand",
+    },
     { title: "accolades", imageUrl: "/images/brand/accolades.jpg", url: "/" },
     { title: "events", imageUrl: "/images/brand/events.jpg", url: "/" },
-    { title: "genesis house", imageUrl: "/images/brand/genesis_house.jpg", url: "/" },
-    { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "/" },
+    {
+      title: "genesis house",
+      imageUrl: "/images/brand/genesis_house.jpg",
+      url: "/",
+    },
+    {
+      title: "genesis cares",
+      imageUrl: "/images/brand/genesis_cares.jpg",
+      url: "/",
+    },
   ];
 
   //? STATE
@@ -54,12 +102,17 @@ const NavbarMobile = () => {
       setModelsOverlayOpen(false);
       setShopOverlayOpen(false);
       setBrandOverlayOpen(false);
-    };
+    }
   };
 
-  const handleModelsOverlay = () => !modelsOverlayOpen ? setModelsOverlayOpen(true) : setModelsOverlayOpen(false);
-  const handleShopOverlay = () => !shopOverlayOpen ? setShopOverlayOpen(true) : setShopOverlayOpen(false);
-  const handleBrandOverlay = () => !brandOverlayOpen ? setBrandOverlayOpen(true) : setBrandOverlayOpen(false);
+  const handleModelsOverlay = () =>
+    !modelsOverlayOpen
+      ? setModelsOverlayOpen(true)
+      : setModelsOverlayOpen(false);
+  const handleShopOverlay = () =>
+    !shopOverlayOpen ? setShopOverlayOpen(true) : setShopOverlayOpen(false);
+  const handleBrandOverlay = () =>
+    !brandOverlayOpen ? setBrandOverlayOpen(true) : setBrandOverlayOpen(false);
 
   return (
     <header id={styles.header_mobile}>
@@ -82,10 +135,15 @@ const NavbarMobile = () => {
       </nav>
 
       {/* MAIN OVERLAY */}
-      <div style={{ display: !menuOpen ? "none" : "block" }} className={styles.nav_mobile_main_overlay}>
-
+      <div
+        style={{ display: !menuOpen ? "none" : "block" }}
+        className={styles.nav_mobile_main_overlay}
+      >
         <ul className={styles.main_link_list}>
-          <li onClick={handleModelsOverlay} className={styles.main_link_list_item}>
+          <li
+            onClick={handleModelsOverlay}
+            className={styles.main_link_list_item}
+          >
             <button className={styles.list_item_btn}>models</button>
             <Image
               src={chevron}
@@ -94,7 +152,10 @@ const NavbarMobile = () => {
               width={13}
             />
           </li>
-          <li onClick={handleShopOverlay} className={styles.main_link_list_item}>
+          <li
+            onClick={handleShopOverlay}
+            className={styles.main_link_list_item}
+          >
             <button className={styles.list_item_btn}>shop</button>
             <Image
               src={chevron}
@@ -103,7 +164,10 @@ const NavbarMobile = () => {
               width={13}
             />
           </li>
-          <li onClick={handleBrandOverlay} className={styles.main_link_list_item}>
+          <li
+            onClick={handleBrandOverlay}
+            className={styles.main_link_list_item}
+          >
             <button className={styles.list_item_btn}>brand</button>
             <Image
               src={chevron}
@@ -113,15 +177,25 @@ const NavbarMobile = () => {
             />
           </li>
           <li className={styles.main_link_list_item}>
-            <Link href="#" className={styles.list_item_link}>owners</Link>
+            <Link href="#" className={styles.list_item_link}>
+              owners
+            </Link>
           </li>
           <li className={styles.main_link_list_item}>
-            <Link href="#" className={styles.list_item_link}>find a retailer</Link>
+            <Link href="#" className={styles.list_item_link}>
+              find a retailer
+            </Link>
           </li>
 
           {/* MODELS OVERLAY */}
-          <div style={{ display: !modelsOverlayOpen ? "none" : "block" }} className={styles.nav_models_overlay}>
-            <button onClick={handleModelsOverlay} className={styles.main_return_btn}>
+          <div
+            style={{ display: !modelsOverlayOpen ? "none" : "block" }}
+            className={styles.nav_models_overlay}
+          >
+            <button
+              onClick={handleModelsOverlay}
+              className={styles.main_return_btn}
+            >
               <Image
                 src={chevron}
                 alt="Chevron Icon"
@@ -132,8 +206,13 @@ const NavbarMobile = () => {
             </button>
             <div className={styles.models_container}>
               {models.map((model, index) => (
-                <Link href={`/models/${model.slug}`} key={index} className={`${styles.model_card}`}>
-                  <Image src={model.image_url}
+                <Link
+                  href={`/models/${model.slug}`}
+                  key={index}
+                  className={`${styles.model_card}`}
+                >
+                  <Image
+                    src={model.image_url}
                     className={styles.model_card_image}
                     alt={model.modelName}
                     width={330}
@@ -142,7 +221,9 @@ const NavbarMobile = () => {
                   <div className={styles.model_content}>
                     <span className={styles.car_year}>{model.year}</span>
                     <h3 className={styles.car_model_name}>{model.modelName}</h3>
-                    <p className={styles.car_model_price}>STARTING AT <span>{`$${model.price}`}</span></p>
+                    <p className={styles.car_model_price}>
+                      STARTING AT <span>{`$${model.price}`}</span>
+                    </p>
                   </div>
                 </Link>
               ))}
@@ -150,8 +231,14 @@ const NavbarMobile = () => {
           </div>
 
           {/* SHOP OVERLAY */}
-          <div style={{ display: !shopOverlayOpen ? "none" : "block" }} className={styles.nav_shop_overlay}>
-            <button onClick={handleShopOverlay} className={styles.main_return_btn}>
+          <div
+            style={{ display: !shopOverlayOpen ? "none" : "block" }}
+            className={styles.nav_shop_overlay}
+          >
+            <button
+              onClick={handleShopOverlay}
+              className={styles.main_return_btn}
+            >
               <Image
                 src={chevron}
                 alt="Chevron Icon"
@@ -204,8 +291,14 @@ const NavbarMobile = () => {
           </div>
 
           {/* BRAND OVERLAY */}
-          <div style={{ display: !brandOverlayOpen ? "none" : "block" }} className={styles.nav_brand_overlay}>
-            <button onClick={handleBrandOverlay} className={styles.main_return_btn}>
+          <div
+            style={{ display: !brandOverlayOpen ? "none" : "block" }}
+            className={styles.nav_brand_overlay}
+          >
+            <button
+              onClick={handleBrandOverlay}
+              className={styles.main_return_btn}
+            >
               <Image
                 src={chevron}
                 alt="Chevron Icon"

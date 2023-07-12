@@ -22,26 +22,74 @@ const Navbar = () => {
 
   //? DOM ELEMENTS
   const shopMenuItems = [
-    { title: "search inventory", imageUrl: "/icons/search-inventory.svg", url: "/" },
-    { title: "build your own", imageUrl: "/icons/build-your-own.svg", url: "/" },
-    { title: "request a quote", imageUrl: "/icons/request-a-quote.svg", url: "/" },
-    { title: "schedule a test drive", imageUrl: "/icons/schedule-a-test-drive.svg", url: "/" },
-    { title: "shop parts and accessories", imageUrl: "/icons/shop-parts.svg", url: "/" },
-    { title: "genesis certified", imageUrl: "/icons/genesis-certified.svg", url: "/" },
+    {
+      title: "search inventory",
+      imageUrl: "/icons/search-inventory.svg",
+      url: "/",
+    },
+    {
+      title: "build your own",
+      imageUrl: "/icons/build-your-own.svg",
+      url: "/",
+    },
+    {
+      title: "request a quote",
+      imageUrl: "/icons/request-a-quote.svg",
+      url: "/",
+    },
+    {
+      title: "schedule a test drive",
+      imageUrl: "/icons/schedule-a-test-drive.svg",
+      url: "/",
+    },
+    {
+      title: "shop parts and accessories",
+      imageUrl: "/icons/shop-parts.svg",
+      url: "/",
+    },
+    {
+      title: "genesis certified",
+      imageUrl: "/icons/genesis-certified.svg",
+      url: "/",
+    },
   ];
 
   const offerMenuItems = [
-    { title: "special offers", imageUrl: "/icons/special-offers.svg", url: "/" },
-    { title: "estimate trade-in value", imageUrl: "/icons/estimate-trade-in-value.svg", url: "/" },
-    { title: "genesis finance", imageUrl: "/icons/genesis-finance.svg", url: "/" }
+    {
+      title: "special offers",
+      imageUrl: "/icons/special-offers.svg",
+      url: "/",
+    },
+    {
+      title: "estimate trade-in value",
+      imageUrl: "/icons/estimate-trade-in-value.svg",
+      url: "/",
+    },
+    {
+      title: "genesis finance",
+      imageUrl: "/icons/genesis-finance.svg",
+      url: "/",
+    },
   ];
 
   const brandMenuItems = [
-    { title: "our story", imageUrl: "/images/brand/our_story.jpg", url: "/" },
+    {
+      title: "our story",
+      imageUrl: "/images/brand/our_story.jpg",
+      url: "/brand",
+    },
     { title: "accolades", imageUrl: "/images/brand/accolades.jpg", url: "/" },
     { title: "events", imageUrl: "/images/brand/events.jpg", url: "/" },
-    { title: "genesis house", imageUrl: "/images/brand/genesis_house.jpg", url: "/" },
-    { title: "genesis cares", imageUrl: "/images/brand/genesis_cares.jpg", url: "/" },
+    {
+      title: "genesis house",
+      imageUrl: "/images/brand/genesis_house.jpg",
+      url: "/",
+    },
+    {
+      title: "genesis cares",
+      imageUrl: "/images/brand/genesis_cares.jpg",
+      url: "/",
+    },
   ];
 
   //? HANDLERS
@@ -120,17 +168,44 @@ const Navbar = () => {
 
         <div className={styles.nav__flex_box}>
           <div className={styles.nav_left}>
-            <button onClick={toggleModelDialog} id="nav_model_btn" className={`${styles.models_btn} ${styles.nav_btn}`}>
+            <button
+              onClick={toggleModelDialog}
+              id="nav_model_btn"
+              className={`${styles.models_btn} ${styles.nav_btn}`}
+            >
               <span>models</span>
-              <Image className={styles.nav_btn_chevron} src={chevron} alt="Chevron icon" width={12} />
+              <Image
+                className={styles.nav_btn_chevron}
+                src={chevron}
+                alt="Chevron icon"
+                width={12}
+              />
             </button>
-            <button onClick={toggleShopDialog} id="nav_shop_btn" className={`${styles.shop_btn} ${styles.nav_btn}`}>
+            <button
+              onClick={toggleShopDialog}
+              id="nav_shop_btn"
+              className={`${styles.shop_btn} ${styles.nav_btn}`}
+            >
               <span>shop</span>
-              <Image className={styles.nav_btn_chevron} src={chevron} alt="Chevron icon" width={12} />
+              <Image
+                className={styles.nav_btn_chevron}
+                src={chevron}
+                alt="Chevron icon"
+                width={12}
+              />
             </button>
-            <button onClick={toggleBrandDialog} id="nav_brand_btn" className={`${styles.genesis_btn} ${styles.nav_btn}`}>
+            <button
+              onClick={toggleBrandDialog}
+              id="nav_brand_btn"
+              className={`${styles.genesis_btn} ${styles.nav_btn}`}
+            >
               <span>brand</span>
-              <Image className={styles.nav_btn_chevron} src={chevron} alt="Chevron icon" width={12} />
+              <Image
+                className={styles.nav_btn_chevron}
+                src={chevron}
+                alt="Chevron icon"
+                width={12}
+              />
             </button>
           </div>
 
@@ -149,8 +224,13 @@ const Navbar = () => {
       <div ref={modelDialogRef} className={`${styles.nav_model_dialog}`}>
         <div className={`${styles.nav_dialog_grid} max-w`}>
           {models.map((model, index) => (
-            <Link href={`/models/${model.slug}`} key={index} className={`${styles.nav_dialog_card}`}>
-              <Image src={model.image_url}
+            <Link
+              href={`/models/${model.slug}`}
+              key={index}
+              className={`${styles.nav_dialog_card}`}
+            >
+              <Image
+                src={model.image_url}
                 className={styles.card_model_image}
                 alt={model.modelName}
                 width={330}
@@ -159,13 +239,14 @@ const Navbar = () => {
               <div className={styles.model_content}>
                 <span className={styles.car_year}>{model.year}</span>
                 <h3 className={styles.car_model_name}>{model.modelName}</h3>
-                <p className={styles.car_model_price}>STARTING AT <span>{`$${model.price}`}</span></p>
+                <p className={styles.car_model_price}>
+                  STARTING AT <span>{`$${model.price}`}</span>
+                </p>
               </div>
             </Link>
           ))}
         </div>
       </div>
-
 
       {/* SHOP DIALOG */}
       <div ref={shopDialogRef} className={styles.nav_shop_dialog}>
@@ -207,8 +288,6 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-
-
             </ul>
           </div>
         </div>

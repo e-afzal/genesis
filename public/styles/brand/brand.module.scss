@@ -1,0 +1,539 @@
+@import "../variables.module.scss";
+
+main#main {
+  background-color: $color-grey-body;
+  margin-top: 6.9rem;
+  max-width: 1920px;
+  margin-inline: auto;
+
+  // SECTION: SHOWCASE
+  section#showcase {
+    height: min(645px, 85vh);
+    position: relative;
+    .video_container {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .showcase_content {
+      position: absolute;
+      padding-inline: clamp(2rem, 4.5vw, 6rem);
+      padding-top: clamp(3.5rem, 7vw, 4rem);
+      padding-bottom: 4rem;
+      h1 {
+        font-size: clamp(3.3rem, 7.5vw, 4.5rem);
+        text-transform: uppercase;
+        font-family: "Jost-Light", sans-serif;
+        color: $color-white;
+      }
+      p {
+        font-size: clamp(1.6rem, 3.5vw, 1.8rem);
+        letter-spacing: 0.25px;
+        color: $color-white;
+        text-transform: capitalize;
+        font-family: "Jost-Light", sans-serif;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // SECTION: VISION
+  section#vision {
+    margin-top: clamp(3.5rem, 7.5vw, 5rem);
+    width: 100%;
+    height: min(645px, 85vh);
+    position: relative;
+
+    .vision_background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("/images/brand/overview/vision.jpg") no-repeat center
+        top/cover;
+      z-index: 0;
+    }
+    .vision_content {
+      max-width: 1350px;
+      margin-inline: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 3.5rem;
+      h3.vision_title {
+        letter-spacing: 0.55px;
+        padding-left: clamp(3rem, 8.5vw, 5rem);
+        font-size: 1.8rem;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: "Jost-Light", sans-serif;
+      }
+      p.vision_description {
+        max-width: clamp(325px, 7.5vw, 500px);
+        justify-self: flex-end;
+        padding-right: clamp(3rem, 3.5vw, 5rem);
+        color: $color-white;
+        font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+        font-family: "Jost-Light", sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // SECTION: DESIGN
+  section#design {
+    padding-top: clamp(5rem, 7vw, 10rem);
+    padding-bottom: 4rem;
+    background-color: #111111;
+    h2.design_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: #cd9a81;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      margin-bottom: clamp(2.5rem, 6vw, 4rem);
+      text-align: center;
+    }
+
+    .video_container {
+      width: auto;
+      height: 500px;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // SECTION: DESIGN AT A GLANCE
+  section#glance {
+    padding-top: 7rem;
+    background-color: #111;
+
+    h2.glance_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      text-align: center;
+    }
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+      padding-block: clamp(2.5rem, 6.5vw, 6rem);
+
+      .feature_content {
+        order: 1;
+        h2.accessories_title {
+          margin-bottom: 4rem;
+          text-transform: uppercase;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+        }
+
+        #feature_container_desktop {
+          .feature_trigger {
+            border: none;
+            letter-spacing: 0.35px;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.45rem;
+            text-align: left;
+            background-color: transparent;
+            color: #bbb;
+            width: 100%;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+
+            &[data-state="open"] {
+              padding-bottom: 0px;
+              color: #c36f51;
+            }
+          }
+
+          .feature_content {
+            overflow: hidden;
+            font-family: "Roboto-Regular", sans-serif;
+            color: $color-white;
+            padding-top: 1rem;
+            margin-bottom: 1.5rem;
+
+            p {
+              font-size: 1.4rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+      .feature_image_box {
+        order: 2;
+        // width: 100%;
+        // height: 450px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img.feature_image {
+          // max-width: 800px;
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+          &[value="item1"] {
+            object-position: left center;
+          }
+        }
+      }
+    }
+  }
+
+  // SECTION: TALKING
+  section#talking {
+    padding-top: clamp(3rem, 7vw, 10rem);
+    background-color: #111;
+    h2.talking_title {
+      padding-inline: 2rem;
+      margin-bottom: clamp(2.5rem, 6.5vw, 6rem);
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      text-align: center;
+    }
+    .video_container {
+      height: 500px;
+      width: auto;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // SECTION: LIFESTYLE
+  section#lifestyle {
+    padding-top: 10rem;
+    background-color: #111;
+    h2.lifestyle_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: #cd9a81;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      margin-bottom: clamp(2.5rem, 6vw, 4rem);
+      text-align: center;
+    }
+
+    .lifestyle_image {
+      background: url("/images/brand/overview/lifestyle.jpg") no-repeat center
+        center/cover;
+      height: 25vh;
+      width: auto;
+    }
+    p.lifestyle_description {
+      margin-top: clamp(3.5rem, 5vw, 4.5rem);
+      padding-inline: clamp(2rem, 5vw, 6rem);
+      font-size: clamp(2rem, 4.5vw, 2.4rem);
+      font-family: "Jost-Light", sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+  // SECTION: SPACE
+  section#space {
+    background-color: #111;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      padding-right: 5.5rem;
+
+      .feature_content {
+        order: 2;
+        h2.main_title {
+          margin-bottom: 2rem;
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 0.25px;
+        }
+        p.content_body {
+          font-size: 1.4rem;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+          color: #ccc;
+        }
+      }
+      .feature_image_box {
+        order: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: MEMBERSHIP
+  section#membership {
+    background-color: #111;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+
+      .feature_content {
+        h2.main_title {
+          margin-bottom: 2rem;
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 0.25px;
+        }
+        p.content_body {
+          font-size: 1.4rem;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+          color: #ccc;
+        }
+      }
+      .feature_image_box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: PARTNERSHIP
+  section#partnership {
+    background-color: #111;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      padding-right: 5.5rem;
+
+      .feature_content {
+        order: 2;
+        h2.main_title {
+          margin-bottom: 2rem;
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 0.25px;
+        }
+        p.content_body {
+          font-size: 1.4rem;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+          color: #ccc;
+        }
+      }
+      .feature_image_box {
+        order: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - SHOWCASE
+@media screen and (max-width: 720px) {
+  main#main {
+    margin-top: 6rem;
+
+    section#showcase .showcase_content {
+      bottom: 0;
+    }
+  }
+}
+
+// MEDIA QUERY - VISION
+@media screen and (max-width: 720px) {
+  main#main {
+    section#vision .vision_content {
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h3.vision_title,
+      p.vision_description {
+        padding-left: 3rem;
+      }
+      p.vision_description {
+        margin-top: 1rem;
+        justify-self: flex-start;
+        max-width: 720px;
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - DESIGN
+@media screen and (max-width: 500px) {
+  main#main {
+    section#design .video_container {
+      height: 350px;
+    }
+  }
+}
+
+// MEDIA QUERY - DESIGN AT A GLANCE
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#glance {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      padding-block: 5rem;
+      .feature_container_desktop {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(0px, 2.8vw, 2.5rem);
+        .feature_content {
+          h2.main_title {
+            margin-bottom: 1rem;
+          }
+        }
+        .feature_image_box {
+          min-height: 205px;
+          img {
+            border-radius: 8.5px;
+            min-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    section#glance {
+      .feature_container_desktop {
+        .feature_image_box {
+          order: 1;
+        }
+        .feature_content {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - TALKING
+@media screen and (max-width: 500px) {
+  main#main {
+    section#talking {
+      .video_container {
+        height: 240px;
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - LIFESTYLE
+@media screen and (min-width: 1400px) {
+  main#main {
+    section#lifestyle {
+      .lifestyle_image {
+        height: 655px;
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - SPACE & PARTNERSHIP
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#space,
+    section#membership,
+    section#partnership {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      padding-block: 5rem;
+      .feature_container_desktop {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(3rem, 5vw, 5rem);
+        .feature_content {
+          h2.main_title {
+            margin-bottom: 1rem;
+          }
+        }
+        .feature_image_box {
+          min-height: 205px;
+          img {
+            border-radius: 8.5px;
+            min-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    section#membership {
+      .feature_container_desktop {
+        .feature_image_box {
+          order: 1;
+        }
+        .feature_content {
+          order: 2;
+        }
+      }
+    }
+    section#space {
+      padding-top: 10rem;
+    }
+  }
+}
