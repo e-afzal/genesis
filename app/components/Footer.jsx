@@ -23,18 +23,16 @@ const Footer = () => {
     { title: "genesis certified", url: "/" },
     { title: "special offers", url: "/" },
     { title: "estimate trade-in value", url: "/" },
-    { title: "genesis finance", url: "/" }
+    { title: "genesis finance", url: "/" },
   ];
   const brandLinks = [
-    { title: "our story", url: "/" },
+    { title: "our story", url: "/brand" },
     { title: "accolades", url: "/" },
     { title: "events", url: "/" },
     { title: "genesis house", url: "/" },
     { title: "genesis cares", url: "/" },
   ];
-  const ownerLinks = [
-    { title: "my genesis", url: "/" }
-  ];
+  const ownerLinks = [{ title: "my genesis", url: "/" }];
   const miscellaneous_links = [
     { title: "sitemap", url: "/" },
     { title: "warranty", url: "/" },
@@ -115,28 +113,19 @@ const Footer = () => {
               href="https://www.facebook.com/GenesisMotorAmerica"
               target="_blank"
             >
-              <Image
-                src={facebookIcon}
-                alt="Facebook Social Icon"
-              />
+              <Image src={facebookIcon} alt="Facebook Social Icon" />
             </Link>
-            <Link href={"https://www.instagram.com/genesis_usa"} target="_blank">
-              <Image
-                src={instagramIcon}
-                alt="Instagram Social Icon"
-              />
+            <Link
+              href={"https://www.instagram.com/genesis_usa"}
+              target="_blank"
+            >
+              <Image src={instagramIcon} alt="Instagram Social Icon" />
             </Link>
             <Link href={"https://www.youtube.com/genesisusa"} target="_blank">
-              <Image
-                src={youtubeIcon}
-                alt="YouTube Social Icon"
-              />
+              <Image src={youtubeIcon} alt="YouTube Social Icon" />
             </Link>
             <Link href={"https://twitter.com/GenesisUSA"} target="_blank">
-              <Image
-                src={twitterIcon}
-                alt="Twitter Social Icon"
-              />
+              <Image src={twitterIcon} alt="Twitter Social Icon" />
             </Link>
           </div>
         </div>

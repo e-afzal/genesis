@@ -86,7 +86,9 @@ const Overview = () => {
             <video
               src="/images/brand/overview/design.mp4"
               type="video/mp4"
-              // autoPlay
+              controls
+              autoPlay
+              loop
             />
           </div>
         </section>
