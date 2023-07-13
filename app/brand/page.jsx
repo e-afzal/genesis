@@ -83,7 +83,7 @@ const Overview = () => {
           <h2 className={styles.design_title}>genesis design</h2>
 
           <div className={styles.video_container}>
-            <video src="/images/brand/overview/design.mp4" autoPlay />
+            <video src="/images/brand/overview/design.mp4" controls />
           </div>
         </section>
 
