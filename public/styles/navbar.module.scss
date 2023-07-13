@@ -48,14 +48,23 @@ header#header_nav {
         }
       }
       .nav_right {
-        button.owners_btn {
-          border-right: 1px solid #4d4d4d;
+        a {
+          margin-right: 0;
+          text-transform: uppercase;
+          background-color: transparent;
+          font-family: "Jost-Regular", sans-serif;
+          color: $color-white;
+          font-size: 1.5rem;
+          letter-spacing: 0.55px;
+        }
+        a.owners_btn {
+          border-right: 2px solid #4d4d4d;
+          padding-right: 8px;
+        }
+        a.retailer_btn {
+          margin-left: 0.8rem;
           margin-right: 0;
           padding-right: 1px;
-        }
-        button.retailer_btn {
-          margin-right: 0;
-          margin-left: 0.8rem;
         }
       }
     }

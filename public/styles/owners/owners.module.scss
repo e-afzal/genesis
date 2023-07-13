@@ -1,0 +1,474 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+  background-color: #111;
+
+  // SECTION: SHOWCASE
+  section#showcase {
+    margin-bottom: 10rem;
+    height: min(625px, calc(100vh - 6rem));
+    position: relative;
+    background: url("/images/owners/showcase/showcase.jpg") no-repeat center
+      center/cover;
+    display: flex;
+    align-items: center;
+    .showcase_content {
+      padding-left: 5rem;
+
+      h2 {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.8rem, 7vw, 3.6rem);
+        text-transform: uppercase;
+        width: 25ch;
+        letter-spacing: 0.55px;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: clamp(1.4rem, 3.5vw, 1.5rem);
+      }
+      a {
+        margin-top: 4rem;
+        display: inline-block;
+        font-size: 1.5rem;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: "Jost-Light", sans-serif;
+        position: relative;
+        letter-spacing: 1px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          right: 0;
+          background-color: $color-white;
+          width: 100%;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  // SECTION: INTELLIGENT ASSISTANT
+  section#assistant {
+    margin-inline: auto;
+    max-width: 1920px;
+    padding-block: 8rem;
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+
+      .feature_content {
+        h2.main_title {
+          margin-bottom: 3.5rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+        }
+        h3.subtitle {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+        }
+        p.content_body {
+          font-size: 1.4rem;
+          color: #ccc;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+        }
+      }
+      .feature_image_box {
+        // width: 100%;
+        // height: 450px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img {
+          // max-width: 800px;
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: OWNERSHIP EXPERIENCE
+  section#experience {
+    padding-block: 7rem;
+    background-color: #111;
+
+    h2.experience_main_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      text-align: center;
+    }
+    .tab_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+      padding-block: 6rem;
+      .tab_content {
+        order: 1;
+        h2.accessories_title {
+          margin-bottom: 4rem;
+          text-transform: uppercase;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+        }
+
+        #accordion_container_desktop {
+          .accordion_trigger {
+            border: none;
+            letter-spacing: 0.35px;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.45rem;
+            text-align: left;
+            background-color: transparent;
+            color: #bbb;
+            width: 100%;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+
+            &[data-state="open"] {
+              padding-bottom: 0px;
+              color: #c36f51;
+            }
+          }
+
+          .accordion_content {
+            overflow: hidden;
+            font-family: "Roboto-Regular", sans-serif;
+            color: $color-white;
+            padding-top: 1rem;
+            margin-bottom: 1.5rem;
+
+            p {
+              font-size: 1.4rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+      .tab_image_box {
+        order: 2;
+        // width: 100%;
+        // height: 450px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img.accordion_image {
+          // max-width: 800px;
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+          &[value="item1"] {
+            object-position: left center;
+          }
+        }
+      }
+    }
+  }
+
+  section#experience_mobile {
+    display: none;
+  }
+
+  // SECTION: OWNER RESOURCE
+  section#resource {
+    padding-inline: 2.5rem;
+    h2.resource_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: #cd9a81;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+      text-align: center;
+    }
+    p.resource_description {
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+      text-transform: capitalize;
+      font-size: clamp(1.6rem, 5vw, 1.7rem);
+      padding-inline: 2.5rem;
+    }
+
+    .resource_grid {
+      margin-inline: auto;
+      max-width: 770px;
+      margin-top: 4.5rem;
+      display: flex;
+      column-gap: 5rem;
+      flex-wrap: wrap;
+      row-gap: 7rem;
+      justify-content: center;
+      .resource_card {
+        max-width: 360px;
+        img.resource_image {
+          border-radius: 8.5px;
+          max-width: 360px;
+          height: auto;
+        }
+
+        .resource_content {
+          margin-top: 2.5rem;
+          h4.resource_card_title {
+            font-family: "Jost-Light", sans-serif;
+            text-transform: capitalize;
+            font-size: clamp(2.7rem, 4.5vw, 2.8rem);
+          }
+          p.resource_card_description {
+            font-family: "Jost-Light", sans-serif;
+            font-size: 1.6rem;
+            color: #ccc;
+            margin-top: 1rem;
+          }
+          a.resource_card_link {
+            margin-top: 1.5rem;
+            display: inline-block;
+            font-size: 1.35rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Jost-Light", sans-serif;
+            position: relative;
+            letter-spacing: 1px;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              right: 0;
+              background-color: #fff;
+              width: 100%;
+              height: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // SECTION: LUXURY
+  section#luxury {
+    margin-top: 10rem;
+    height: min(625px, 100vh);
+    max-height: 940px;
+    background: url("/images/owners/luxury/luxury_desktop.jpg") no-repeat center
+      center/cover;
+    display: flex;
+    align-items: center;
+
+    .luxury_content {
+      padding-left: 5rem;
+      h2.luxury_title {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.4rem, 5vw, 2.8rem);
+        color: #cd9a81;
+        text-transform: uppercase;
+        letter-spacing: 0.55px;
+      }
+      p.luxury_description {
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 1.45rem;
+        color: #ccc;
+        margin-top: 1rem;
+        width: 35vw;
+        max-width: 75ch;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  section#luxury_mobile {
+    display: none;
+  }
+}
+
+// MEDIA QUERY - DEFAULT MARGIN TOP
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// MEDIA QUERY - SHOWCASE
+@media screen and (max-width: 690px) {
+  main#main {
+    section#showcase {
+      .showcase_content {
+        padding-left: 2.5rem;
+        h2 {
+          width: 23ch;
+          line-height: 1.3;
+        }
+        p {
+          width: 42ch;
+          line-height: 1.5;
+        }
+        a {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - INTELLIGENT ASSISTANT
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#assistant {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      padding-block: 5rem;
+      .feature_container_desktop {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(3rem, 5vw, 5rem);
+        .feature_content {
+          order: 2;
+          h2.main_title {
+            display: none;
+          }
+        }
+        .feature_image_box {
+          order: 1;
+          min-height: 205px;
+          img {
+            border-radius: 8.5px;
+            min-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - OWNERSHIP EXPERIENCE
+@media screen and (max-width: 810px) {
+  main#main {
+    section#experience {
+      display: none;
+    }
+    section#experience_mobile {
+      display: block;
+      padding-block: clamp(5rem, 9vw, 7rem);
+
+      .tab_container_mobile {
+        h2.experience_title {
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+          text-align: center;
+        }
+
+        #accordion_container_mobile {
+          border-bottom: 1px solid rgba(77, 77, 77, 0.25);
+          padding-inline: 2.5rem;
+          .accordion_trigger {
+            padding-block: 2.5rem;
+            border: none;
+            border-top: 1px solid rgba(77, 77, 77, 0.25);
+            letter-spacing: 0.35px;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.4rem;
+            text-align: left;
+            background-color: transparent;
+            color: #bbb;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+
+            &[data-state="open"] {
+              padding-bottom: 0px;
+              color: #c36f51;
+            }
+          }
+
+          .accordion_content {
+            overflow: hidden;
+            color: $color-white;
+            padding-top: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            p {
+              font-family: "Roboto-Regular", sans-serif;
+              margin-top: 1rem;
+              font-size: 1.45rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.6;
+            }
+            img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - LUXURY
+@media screen and (max-width: 750px) {
+  main#main {
+    section#luxury {
+      display: none;
+    }
+    section#luxury_mobile {
+      display: block;
+      margin-top: 10rem;
+      padding-bottom: 5rem;
+      img.luxury_mobile_image {
+        width: 100%;
+        height: auto;
+      }
+
+      .luxury_content {
+        margin-top: 2.5rem;
+        padding-inline: 2.5rem;
+        h2.luxury_title {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #cd9a81;
+          text-transform: uppercase;
+          letter-spacing: 0.55px;
+        }
+        p.luxury_description {
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: 1.45rem;
+          color: #ccc;
+          width: 100%;
+          margin-top: 1rem;
+          max-width: 75ch;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

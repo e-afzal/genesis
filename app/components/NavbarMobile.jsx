@@ -181,7 +181,7 @@ const NavbarMobile = () => {
             />
           </li>
           <li className={styles.main_link_list_item}>
-            <Link href="#" className={styles.list_item_link}>
+            <Link href="/owners" className={styles.list_item_link}>
               owners
             </Link>
           </li>

@@ -214,12 +214,12 @@ const Navbar = () => {
           </div>
 
           <div className={styles.nav_right}>
-            <button className={`${styles.owners_btn} ${styles.nav_btn}`}>
-              <span>owners</span>
-            </button>
-            <button className={`${styles.retailer_btn} ${styles.nav_btn}`}>
-              <span>find a retailer</span>
-            </button>
+            <Link href={"/owners"} className={`${styles.owners_btn}`}>
+              owners
+            </Link>
+            <Link href={"/retailer"} className={`${styles.retailer_btn}`}>
+              find a retailer
+            </Link>
           </div>
         </div>
       </nav>
