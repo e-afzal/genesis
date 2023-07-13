@@ -75,7 +75,11 @@ const NavbarMobile = () => {
       url: "/brand",
     },
     { title: "accolades", imageUrl: "/images/brand/accolades.jpg", url: "/" },
-    { title: "events", imageUrl: "/images/brand/events.jpg", url: "/" },
+    {
+      title: "events",
+      imageUrl: "/images/brand/events.jpg",
+      url: "/brand/events",
+    },
     {
       title: "genesis house",
       imageUrl: "/images/brand/genesis_house.jpg",

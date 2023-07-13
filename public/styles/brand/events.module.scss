@@ -1,0 +1,356 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+  background-color: #111;
+
+  // SECTION: SHOWCASE
+  section#showcase {
+    margin-bottom: 10rem;
+    height: min(625px, calc(100vh - 6rem));
+    position: relative;
+    .showcase_image {
+      background: url("/images/brand/motorshow/showcase.jpg") no-repeat center
+        center/cover;
+      width: 100%;
+      height: inherit;
+    }
+    h2.showcase_title {
+      padding-inline: 2.5rem;
+      position: absolute;
+      bottom: 0;
+      padding-left: 5rem;
+      letter-spacing: 0.55px;
+      padding-bottom: 3.5rem;
+      text-transform: uppercase;
+      font-family: "Jost-Light", sans-serif;
+      color: #fff;
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+    }
+  }
+
+  // SECTION: RED DOT AWARD
+  section#award {
+    padding-block: 10rem;
+    .award_container {
+      padding-inline: 2.5rem;
+      max-width: 960px;
+      margin-inline: auto;
+      display: flex;
+      .content_image_container {
+        padding-right: clamp(3.3rem, 7.5vw, 8.5rem);
+        align-self: center;
+        img {
+          height: 75px;
+          width: auto;
+        }
+      }
+      .award_content {
+        border-left: 2px solid #333;
+        padding-left: clamp(3.3rem, 7.5vw, 8.5rem);
+        align-items: center;
+        h2 {
+          letter-spacing: 0.55px;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          color: #fff;
+          font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+        }
+        p {
+          margin-top: 1.5rem;
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: 1.8rem;
+          color: #ccc;
+        }
+      }
+    }
+  }
+
+  // SECTION: SHOW ONE & THREE
+  section#showOne,
+  section#showThree {
+    margin-inline: auto;
+    max-width: 1920px;
+    padding-block: 8rem;
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+
+      .feature_content {
+        h2.main_title {
+          margin-bottom: 3.5rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+        }
+        h3.subtitle {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+        }
+        p.content_body {
+          font-size: 1.4rem;
+          color: #ccc;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+        }
+      }
+      .feature_image_box {
+        // width: 100%;
+        // height: 450px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img {
+          // max-width: 800px;
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: SHOW TWO & FOUR
+  section#showTwo,
+  section#showFour {
+    margin-inline: auto;
+    max-width: 1920px;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+
+    .feature_container_desktop {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      padding-right: 5.5rem;
+
+      .feature_content {
+        order: 2;
+        h2.main_title {
+          margin-bottom: 3.5rem;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 1.8rem;
+          letter-spacing: 0.5px;
+          color: $color-white;
+        }
+        h3.subtitle {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+        }
+        p.content_body {
+          font-size: 1.4rem;
+          color: #ccc;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0px;
+        }
+      }
+      .feature_image_box {
+        order: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: MASONRY
+  section#masonry {
+    padding-top: clamp(6rem, 7vw, 7rem);
+    padding-bottom: clamp(7rem, 10vw, 10rem);
+    background-color: $color-grey;
+    .gallery_grid {
+      height: min(100vh, 800px);
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .gallery_item_container {
+        overflow: hidden;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5) {
+          grid-column: span 1;
+          grid-row: span 1;
+
+          &:hover ~ .gallery_item_container {
+            opacity: 0.3;
+          }
+        }
+        &:nth-child(4) {
+          grid-column: 2/5;
+          grid-row: 1/3;
+        }
+
+        .gallery_item {
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.5s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+
+    section#showcase {
+      margin-bottom: 5rem;
+    }
+    section#award {
+      padding-top: 5rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// MEDIA QUERY - SHOWCASE
+@media screen and (max-width: 500px) {
+  main#main {
+    section#showcase {
+      h2.showcase_title {
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// MEDIA QUERY  - AWARD
+@media screen and (max-width: 810px) {
+  main#main {
+    section#award {
+      .award_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        .content_image_container {
+          padding-right: 0;
+          max-width: 220px;
+          justify-self: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .award_content {
+          margin-top: clamp(2.5rem, 7.5vw, 4.5rem);
+          border-left: none;
+          padding-left: 0;
+          h2 {
+            text-align: center;
+            letter-spacing: 0px;
+          }
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - SHOW ONE, TWO, THREE, FOUR
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#showOne,
+    section#showTwo,
+    section#showThree,
+    section#showFour {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      padding-block: 5rem;
+      .feature_container_desktop {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(3rem, 5vw, 5rem);
+        .feature_content {
+          h2.main_title {
+            display: none;
+          }
+        }
+        .feature_image_box {
+          min-height: 205px;
+          img {
+            border-radius: 8.5px;
+            min-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    section#showOne,
+    section#showThree {
+      .feature_container_desktop {
+        .feature_image_box {
+          order: 1;
+        }
+        .feature_content {
+          order: 2;
+        }
+      }
+    }
+    section#showOne {
+      padding-top: 10rem;
+    }
+  }
+}
+
+// MEDIA QUERY - MASONRY
+@media screen and (max-width: 1100px) {
+  main#main {
+    section#masonry {
+      .gallery_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        .gallery_item_container {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(5) {
+            grid-column: span 1;
+            grid-row: span 1;
+          }
+          &:nth-child(4) {
+            grid-column: 1/3;
+            grid-row: 1/3;
+          }
+        }
+      }
+    }
+  }
+}
