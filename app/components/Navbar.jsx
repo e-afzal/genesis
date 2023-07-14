@@ -91,7 +91,7 @@ const Navbar = () => {
     {
       title: "genesis house",
       imageUrl: "/images/brand/genesis_house.jpg",
-      url: "/",
+      url: "/brand/genesis-house",
     },
     {
       title: "genesis cares",

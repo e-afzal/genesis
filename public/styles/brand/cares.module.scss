@@ -179,7 +179,6 @@ main#main {
     padding-bottom: clamp(5rem, 6vw, 7rem);
     background-color: $color-grey-body;
     padding-inline: 3rem;
-    border-bottom: 1px solid #1e1e1e;
 
     h2.update_title {
       text-align: center;
@@ -187,6 +186,7 @@ main#main {
       font-size: clamp(2.8rem, 5vw, 3.6rem);
       color: #a36b4f;
       text-transform: uppercase;
+      letter-spacing: 0.55px;
     }
 
     form.update_form {

@@ -29,7 +29,7 @@ const Footer = () => {
     { title: "our story", url: "/brand" },
     { title: "accolades", url: "/brand/accolades" },
     { title: "events", url: "/brand/events" },
-    { title: "genesis house", url: "/" },
+    { title: "genesis house", url: "/brand/genesis-house" },
     { title: "genesis cares", url: "/brand/cares" },
   ];
   const ownerLinks = [{ title: "my genesis", url: "/owners" }];

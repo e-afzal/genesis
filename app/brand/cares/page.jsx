@@ -11,8 +11,6 @@ import NavbarMobile from "@/app/components/NavbarMobile";
 
 // ASSET IMPORTS
 import concierge from "@/public/images/brand/cares/concierge.jpg";
-import showcase from "@/public/images/brand/cares/showcase.jpg";
-import valetDesktop from "@/public/images/brand/cares/valet_desktop.jpg";
 import valetMobile from "@/public/images/brand/cares/valet_mobile.jpg";
 
 const Cares = () => {
