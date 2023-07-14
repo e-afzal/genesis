@@ -92,7 +92,7 @@ const NavbarMobile = () => {
     {
       title: "genesis cares",
       imageUrl: "/images/brand/genesis_cares.jpg",
-      url: "/",
+      url: "/brand/cares",
     },
   ];
 

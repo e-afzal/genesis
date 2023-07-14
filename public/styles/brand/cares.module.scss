@@ -1,0 +1,390 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+
+  // SECTION: SHOWCASE
+  section#showcase {
+    height: min(625px, calc(100vh - 6rem));
+    display: flex;
+    align-items: center;
+    background: url("/images/owners/showcase/showcase.jpg") no-repeat center
+      center/cover;
+
+    .showcase_content {
+      padding-left: 5rem;
+      h2 {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.8rem, 7vw, 4rem);
+        text-transform: uppercase;
+        width: 25ch;
+        letter-spacing: 0.55px;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: clamp(1.35rem, 3vw, 1.5rem);
+        line-height: 1.5;
+        width: 41vw;
+        max-width: 45ch;
+      }
+      a {
+        margin-top: 4rem;
+        display: inline-block;
+        font-size: 1.5rem;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: "Jost-Light", sans-serif;
+        position: relative;
+        letter-spacing: 1px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          right: 0;
+          background-color: $color-white;
+          width: 100%;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  // SECTION: CONCIERGE
+  section#concierge {
+    margin-inline: auto;
+    max-width: 1920px;
+    background-color: #141414;
+    padding-top: clamp(5.5rem, 10.5vw, 10rem);
+    padding-bottom: clamp(7rem, 10vw, 12rem);
+    .concierge_container {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+      align-items: center;
+
+      .concierge_content {
+        order: 1;
+        h3.concierge_title {
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+          letter-spacing: 0.35px;
+        }
+        p.concierge_body {
+          font-size: 1.4rem;
+          color: $color-white;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 1.7;
+          letter-spacing: 0px;
+        }
+        a {
+          font-family: "Jost-Light", sans-serif;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          color: $color-white;
+          display: inline-block;
+          margin-top: 2.5rem;
+          position: relative;
+          letter-spacing: 1.15px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $color-white;
+            bottom: -5px;
+            left: 0;
+          }
+        }
+      }
+      .concierge_image_box {
+        order: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: VALET
+  section#valet {
+    margin-top: 10rem;
+    height: min(625px, 100vh);
+    max-height: 940px;
+    background: url("/images/brand/cares/valet_desktop.jpg") no-repeat center
+      center/cover;
+    display: flex;
+    align-items: center;
+
+    .valet_content {
+      padding-left: 5rem;
+      h2.valet_title {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.4rem, 5vw, 2.8rem);
+        color: #cd9a81;
+        text-transform: uppercase;
+        letter-spacing: 0.55px;
+      }
+      p.valet_description {
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 1.45rem;
+        color: $color-white;
+        margin-top: 1rem;
+        width: 41vw;
+        max-width: 45ch;
+        line-height: 1.7;
+      }
+      a {
+        font-family: "Jost-Light", sans-serif;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: #fff;
+        display: inline-block;
+        margin-top: 2.5rem;
+        position: relative;
+        letter-spacing: 1.15px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #fff;
+          bottom: -5px;
+          left: 0;
+        }
+      }
+    }
+  }
+  section#valet_mobile {
+    display: none;
+  }
+
+  // SECTION: UPDATES
+  section#updates {
+    padding-top: clamp(3rem, 8.5vw, 10rem);
+    padding-bottom: clamp(5rem, 6vw, 7rem);
+    background-color: $color-grey-body;
+    padding-inline: 3rem;
+    border-bottom: 1px solid #1e1e1e;
+
+    h2.update_title {
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
+      color: #a36b4f;
+      text-transform: uppercase;
+    }
+
+    form.update_form {
+      margin-top: clamp(5.5rem, 9.5vw, 9rem);
+      max-width: 800px;
+      margin-inline: auto;
+
+      input {
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+
+        &[type="email"],
+        &[type="number"] {
+          display: block;
+          width: 100%;
+          margin-top: 5.5rem;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+
+        &::placeholder {
+          letter-spacing: 0.55px;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .name_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+      }
+    }
+
+    p.form_condition {
+      max-width: 800px;
+      margin-inline: auto;
+      color: #999;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 2rem;
+    }
+
+    button.form_button {
+      border: none;
+      background-color: $color-white;
+      padding: 1.5rem 5rem;
+      font-family: "Jost-Regular", sans-serif;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      display: block;
+      margin-inline: auto;
+      margin-top: 5rem;
+      cursor: pointer;
+      letter-spacing: 0.55px;
+      border-radius: 3px;
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// MEDIA QUERY: SHOWCASE
+@media screen and (max-width: 690px) {
+  main#main {
+    section#showcase {
+      .showcase_content {
+        padding-left: 2.5rem;
+        h2 {
+          width: 23ch;
+          line-height: 1.3;
+        }
+        p {
+          width: 32ch;
+          line-height: 1.5;
+        }
+        a {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - CONCIERGE
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#concierge {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      .concierge_container {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(3rem, 5vw, 4rem);
+
+        .concierge_image_box {
+          order: 1;
+          img {
+            border-radius: 8.5px;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .concierge_content {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - VALET
+@media screen and (max-width: 750px) {
+  main#main {
+    section#valet {
+      display: none;
+    }
+    section#valet_mobile {
+      display: block;
+      padding-bottom: 5rem;
+      img.valet_mobile_image {
+        width: 100%;
+        height: auto;
+      }
+
+      .valet_content {
+        margin-top: 2.5rem;
+        padding-inline: 2.5rem;
+        h2.valet_title {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #cd9a81;
+          text-transform: uppercase;
+          letter-spacing: 0.55px;
+        }
+        p.valet_description {
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: 1.35rem;
+          color: #ccc;
+          width: 100%;
+          margin-top: 1rem;
+          line-height: 1.55;
+        }
+        a {
+          font-family: "Jost-Light", sans-serif;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          color: #fff;
+          display: inline-block;
+          margin-top: 2.5rem;
+          position: relative;
+          letter-spacing: 1.15px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            bottom: -5px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// UPDATES
+@media screen and (max-width: 450px) {
+  main#main {
+    section#updates {
+      form.update_form {
+        .name_grid {
+          grid-template-columns: 1fr;
+          row-gap: 5.5rem;
+        }
+      }
+    }
+  }
+}

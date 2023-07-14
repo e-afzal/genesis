@@ -8,6 +8,7 @@ import styles from "@/public/styles/brand/accolades.module.scss";
 import Navbar from "@/app/components/Navbar";
 import NavbarMobile from "@/app/components/NavbarMobile";
 import AccordionDesktop from "@/app/components/brand/accolades/AccordionDesktop";
+import AccordionMobile from "@/app/components/brand/accolades/AccordionMobile";
 import Footer from "@/app/components/Footer";
 
 // ASSET IMPORTS
@@ -15,7 +16,6 @@ import g80Mobile from "@/public/images/brand/accolades/g80_hero_mobile.jpg";
 import g90Mobile from "@/public/images/brand/accolades/g90_hero_mobile.jpg";
 import gv70Mobile from "@/public/images/brand/accolades/gv70_hero_mobile.jpg";
 import gv80Mobile from "@/public/images/brand/accolades/gv80_hero_mobile.jpg";
-import AccordionMobile from "@/app/components/brand/accolades/AccordionMobile";
 
 const Accolades = () => {
   const g80AccordionData = [
