@@ -27,12 +27,12 @@ const Footer = () => {
   ];
   const brandLinks = [
     { title: "our story", url: "/brand" },
-    { title: "accolades", url: "/" },
+    { title: "accolades", url: "/brand/accolades" },
     { title: "events", url: "/" },
     { title: "genesis house", url: "/" },
     { title: "genesis cares", url: "/" },
   ];
-  const ownerLinks = [{ title: "my genesis", url: "/" }];
+  const ownerLinks = [{ title: "my genesis", url: "/owners" }];
   const miscellaneous_links = [
     { title: "sitemap", url: "/" },
     { title: "warranty", url: "/" },

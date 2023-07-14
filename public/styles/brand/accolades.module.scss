@@ -1,0 +1,361 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+
+  section#showcase {
+    height: min(625px, calc(100vh - 6rem));
+    display: flex;
+    align-items: center;
+    background: url("/images/brand/accolades/showcase.jpg") no-repeat center
+      center/cover;
+
+    .showcase_content {
+      padding-left: 5rem;
+      h2 {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.8rem, 7vw, 3.6rem);
+        text-transform: uppercase;
+        width: 25ch;
+        letter-spacing: 0.55px;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: clamp(1.4rem, 3.5vw, 1.5rem);
+        width: 35vw;
+        max-width: 75ch;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  section#g80,
+  section#g90,
+  section#gv70,
+  section#gv80 {
+    // margin-bottom: 10rem;
+
+    h2.award_title {
+      background-color: $color-black;
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 2.8rem);
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+      padding-block: 5rem;
+      text-align: center;
+    }
+
+    .g80_hero {
+      background: url("/images/brand/accolades/g80_hero.jpg") no-repeat center
+        center/cover;
+    }
+    .g90_hero {
+      background: url("/images/brand/accolades/g90_hero.jpg") no-repeat center
+        center/cover;
+    }
+    .gv70_hero {
+      background: url("/images/brand/accolades/gv70_hero.jpg") no-repeat center
+        center/cover;
+    }
+    .gv80_hero {
+      background: url("/images/brand/accolades/gv80_hero.jpg") no-repeat center
+        center/cover;
+    }
+
+    .g80_hero,
+    .g90_hero,
+    .gv70_hero,
+    .gv80_hero {
+      height: min(625px, calc(100vh - 6rem));
+      position: relative;
+      display: flex;
+      align-items: center;
+      .hero_content {
+        padding-left: 5rem;
+        h3 {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.8rem, 7vw, 3.6rem);
+          text-transform: uppercase;
+          width: 25ch;
+          letter-spacing: 0.55px;
+        }
+        p {
+          margin-top: 1.5rem;
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: clamp(1.4rem, 3.5vw, 1.5rem);
+          width: 35vw;
+          max-width: 75ch;
+          line-height: 1.5;
+        }
+        a {
+          margin-top: 4rem;
+          display: inline-block;
+          font-size: 1.5rem;
+          color: $color-white;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          position: relative;
+          letter-spacing: 1px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            background-color: $color-white;
+            width: 100%;
+            height: 1px;
+          }
+        }
+      }
+    }
+
+    .g80_hero_mobile,
+    .g90_hero_mobile,
+    .gv70_hero_mobile,
+    .gv80_hero_mobile {
+      display: none;
+    }
+  }
+
+  // SECTION: G80 COMMON ACCORDION STYLES
+  section#g80,
+  section#g90,
+  section#gv70,
+  section#gv80 {
+    .award_accordion_container {
+      padding-block: clamp(9rem, 12vw, 12rem);
+      background-color: #fff;
+      .tab_container_desktop {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding-left: 5.5rem;
+        .tab_content {
+          order: 1;
+        }
+        .tab_image_box {
+          order: 2;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          width: 100%;
+          img.accordion_image {
+            max-width: 80%;
+            height: 100%;
+            object-fit: contain;
+            // &[value="item1"] {
+            //   object-position: left center;
+            // }
+          }
+        }
+      }
+      #accordion_container_desktop {
+        .accordion_trigger {
+          border: none;
+          letter-spacing: 0.35px;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.45rem;
+          text-align: left;
+          background-color: transparent;
+          color: #4d4d4d;
+          width: 100%;
+          cursor: pointer;
+          padding-bottom: 1rem;
+          text-transform: uppercase;
+
+          &[data-state="open"] {
+            padding-bottom: 0px;
+            color: #af6249;
+          }
+        }
+
+        .accordion_content {
+          overflow: hidden;
+          font-family: "Roboto-Regular", sans-serif;
+          color: $color-black;
+          padding-top: 1rem;
+          margin-bottom: 1.5rem;
+
+          p {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+          }
+        }
+
+        .last_item_container {
+          border-bottom: 1px solid #242424;
+        }
+      }
+    }
+    .award_accordion_container_mobile {
+      display: none;
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// SECTION: SHOWCASE
+@media screen and (max-width: 651px) {
+  main#main {
+    section#showcase {
+      align-items: flex-end;
+      justify-content: flex-start;
+      justify-content: center;
+      .showcase_content {
+        padding-bottom: 4rem;
+        padding-left: 0;
+        h2 {
+          text-align: center;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// SECTION: ALL MODEL HERO SECTIONS
+@media screen and (max-width: 750px) {
+  main#main {
+    section#g80,
+    section#g90,
+    section#gv70,
+    section#gv80 {
+      .g80_hero,
+      .g90_hero,
+      .gv70_hero,
+      .gv80_hero {
+        display: none;
+      }
+      .g80_hero_mobile,
+      .g90_hero_mobile,
+      .gv70_hero_mobile,
+      .gv80_hero_mobile {
+        display: block;
+        padding-bottom: clamp(4.2rem, 10.5vw, 7rem);
+        .hero_image img {
+          width: 100%;
+          height: auto;
+        }
+
+        .hero_content {
+          padding-inline: 2.5rem;
+          h3 {
+            font-family: "Jost-Light", sans-serif;
+            font-size: clamp(2.8rem, 7vw, 3.6rem);
+            text-transform: uppercase;
+            width: 25ch;
+            letter-spacing: 0.55px;
+          }
+          p {
+            margin-top: 1.5rem;
+            font-family: "Roboto-Regular", sans-serif;
+            font-size: 1.45rem;
+            width: 100%;
+            line-height: 1.5;
+          }
+          a {
+            margin-top: 2.5rem;
+            display: inline-block;
+            font-size: 1.5rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Jost-Light", sans-serif;
+            position: relative;
+            letter-spacing: 1px;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              right: 0;
+              background-color: #fff;
+              width: 100%;
+              height: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SECTION: AWARDS ACCORDIONS
+@media screen and (max-width: 810px) {
+  main#main {
+    section#g80,
+    section#g90,
+    section#gv70,
+    section#gv80 {
+      .award_accordion_container {
+        display: none;
+      }
+      .award_accordion_container_mobile {
+        display: block;
+        padding-top: clamp(3rem, 9vw, 7rem);
+        padding-bottom: 4rem;
+        background-color: $color-white;
+        .tab_container_mobile {
+          #accordion_container_mobile {
+            // border-bottom: 1px solid rgba(77, 77, 77, 0.25);
+            padding-inline: 2.5rem;
+
+            .accordion_trigger {
+              padding-block: 2.5rem;
+              border: none;
+              border-top: 1px solid rgba(77, 77, 77, 0.25);
+              letter-spacing: 0.35px;
+              font-family: "Jost-Regular", sans-serif;
+              font-size: 1.4rem;
+              text-align: left;
+              background-color: transparent;
+              color: #4d4d4d;
+              width: 100%;
+              cursor: pointer;
+              text-transform: uppercase;
+              text-align: center;
+              // padding-bottom: 1rem;
+
+              &[data-state="open"] {
+                padding-bottom: 0px;
+                color: #af6249;
+              }
+            }
+
+            .accordion_content {
+              overflow: hidden;
+              color: $color-black;
+              padding-top: 1.5rem;
+              margin-bottom: 1.5rem;
+
+              p {
+                font-family: "Roboto-Regular", sans-serif;
+                margin-top: 1rem;
+                font-size: 1.45rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.6;
+              }
+              img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
