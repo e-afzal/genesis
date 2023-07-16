@@ -72,6 +72,7 @@ const Schedule = () => {
                 type="date"
                 min={new Date().toISOString().split("T")[0]}
                 required
+                placeholder="Select Preferred Date"
               />
               <select defaultValue={"select preferred time"} required>
                 <option value="select preferred time" disabled>

@@ -113,6 +113,14 @@ main#main {
           border-bottom: 1px solid #3c3c3c;
           padding-bottom: 7px;
           letter-spacing: 0.55px;
+
+          &::placeholder {
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #5c5c5c;
+            letter-spacing: 0.55px;
+          }
         }
       }
     }
@@ -160,6 +168,9 @@ main#main {
         .schedule_grid {
           grid-template-columns: 1fr;
           row-gap: 5.5rem;
+        }
+        .schedule_grid input[type="date"] {
+          width: 100%;
         }
       }
     }
