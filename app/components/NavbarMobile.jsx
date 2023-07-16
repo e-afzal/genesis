@@ -31,7 +31,7 @@ const NavbarMobile = () => {
     {
       title: "request a quote",
       imageUrl: "/icons/request-a-quote.svg",
-      url: "/",
+      url: "/shop/request-quote",
     },
     {
       title: "schedule a test drive",
