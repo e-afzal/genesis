@@ -27,11 +27,11 @@ const Navbar = () => {
       imageUrl: "/icons/search-inventory.svg",
       url: "/",
     },
-    {
-      title: "build your own",
-      imageUrl: "/icons/build-your-own.svg",
-      url: "/",
-    },
+    // {
+    //   title: "build your own",
+    //   imageUrl: "/icons/build-your-own.svg",
+    //   url: "/",
+    // },
     {
       title: "request a quote",
       imageUrl: "/icons/request-a-quote.svg",
@@ -42,11 +42,11 @@ const Navbar = () => {
       imageUrl: "/icons/schedule-a-test-drive.svg",
       url: "/shop/schedule-test-drive",
     },
-    {
-      title: "shop parts and accessories",
-      imageUrl: "/icons/shop-parts.svg",
-      url: "/",
-    },
+    // {
+    //   title: "shop parts and accessories",
+    //   imageUrl: "/icons/shop-parts.svg",
+    //   url: "/",
+    // },
     {
       title: "genesis certified",
       imageUrl: "/icons/genesis-certified.svg",
@@ -58,18 +58,18 @@ const Navbar = () => {
     {
       title: "special offers",
       imageUrl: "/icons/special-offers.svg",
-      url: "/",
+      url: "/shop/special-offers",
     },
-    {
-      title: "estimate trade-in value",
-      imageUrl: "/icons/estimate-trade-in-value.svg",
-      url: "/",
-    },
-    {
-      title: "genesis finance",
-      imageUrl: "/icons/genesis-finance.svg",
-      url: "/",
-    },
+    // {
+    //   title: "estimate trade-in value",
+    //   imageUrl: "/icons/estimate-trade-in-value.svg",
+    //   url: "/",
+    // },
+    // {
+    //   title: "genesis finance",
+    //   imageUrl: "/icons/genesis-finance.svg",
+    //   url: "/",
+    // },
   ];
 
   const brandMenuItems = [
@@ -284,7 +284,7 @@ const Navbar = () => {
             <ul className={styles.offers_list}>
               {offerMenuItems.map((item, index) => (
                 <li key={index} className={styles.offers_list_item}>
-                  <Link href={"#"}>
+                  <Link href={item.url}>
                     <Image
                       className={styles.offer_icon}
                       src={item.imageUrl}

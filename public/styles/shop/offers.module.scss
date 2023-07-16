@@ -1,0 +1,172 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+
+  // SECTION: SHOWCASE
+  section#showcase {
+    height: min(625px, calc(100vh - 6rem));
+    display: flex;
+    align-items: center;
+    background: url("/images/shop/certified/showcase.jpg") no-repeat 45%
+      center/cover;
+
+    .showcase_content {
+      padding-left: 5rem;
+      h2 {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.8rem, 7vw, 4rem);
+        text-transform: uppercase;
+        max-width: 25ch;
+        letter-spacing: 0.55px;
+        line-height: 1.25;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: clamp(1.35rem, 3vw, 1.5rem);
+        line-height: 1.5;
+        // width: 41vw;
+        max-width: 45ch;
+      }
+    }
+  }
+
+  //   SECTION: PROMOTION CARDS
+  section#promotions {
+    padding-top: clamp(2.5rem, 6.5vw, 5rem);
+    padding-bottom: clamp(5rem, 8.5vw, 10rem);
+    .cards_container {
+      display: flex;
+      row-gap: 5rem;
+      flex-direction: column;
+      padding-inline: clamp(2.5rem, 7.5vw, 5rem);
+      .card_container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        .card_image {
+          background-color: $color-white;
+          display: flex;
+          align-items: center;
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+        .card_content {
+          background-color: #121212;
+          border-radius: 8.5px;
+          padding-inline: 3.5rem;
+          padding-block: 2.5rem;
+          .card_title_box {
+            border-bottom: 1px solid #1e1e1e;
+            // padding-top: 2.5rem;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            h2.card_title {
+              font-family: "Jost-Light", sans-serif;
+              font-size: clamp(2.4rem, 5vw, 3.6rem);
+              color: #cd9a81;
+              text-transform: uppercase;
+              letter-spacing: 0.25px;
+            }
+            p.card_price {
+              font-family: "Roboto-Regular", sans-serif;
+              font-size: 1.35rem;
+              letter-spacing: 0.4px;
+              color: #ccc;
+              text-transform: uppercase;
+            }
+          }
+          .card_financing_details {
+            ul.financing_details_container {
+              li {
+                font-family: "Jost-Light", sans-serif;
+                font-size: 1.45rem;
+                margin-bottom: 0.85rem;
+                // margin-bottom: 1.25rem;
+              }
+            }
+            p.offer_expiration {
+              padding-top: 1.5rem;
+              margin-top: 1.5rem;
+              border-top: 1px solid #1e1e1e;
+              font-family: "Roboto-Regular", sans-serif;
+              font-size: 1.25rem;
+              letter-spacing: 0.4px;
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// MEDIA QUERY: SHOWCASE
+@media screen and (max-width: 1200px) {
+  main#main {
+    section#showcase {
+      background-image: url("/images/shop/certified/showcase_mobile.jpg");
+      justify-content: center;
+      align-items: flex-end;
+      .showcase_content {
+        padding-left: 0;
+        padding-bottom: 3.5rem;
+        h2 {
+          padding-inline: 2rem;
+          max-width: 23ch;
+          text-align: center;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY: PROMOTION CARDS
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#promotions {
+      .cards_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(298.1px, 1fr));
+        column-gap: 3.5rem;
+        .card_container {
+          display: grid;
+          grid-template-columns: 1fr;
+          align-content: flex-start;
+
+          .card_image {
+            // height: 167.68px;
+            // width: 298.1px;
+          }
+
+          .card_content {
+            border-radius: 0;
+            .card_title_box {
+              h2.card_title {
+                font-size: 2.4rem;
+                margin-bottom: 3.5px;
+              }
+            }
+            .card_financing_details ul.financing_details_container li {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,16 +6,18 @@ import styles from "@/public/styles/shop/certified.module.scss";
 // COMPONENTS
 import Navbar from "@/app/components/Navbar";
 import NavbarMobile from "@/app/components/NavbarMobile";
+import AccordionDesktop from "@/app/components/shop/certified/AccordionDesktop";
+import AccordionMobile from "@/app/components/shop/certified/AccordionMobile";
+import WarrantyAccordionMobile from "@/app/components/shop/certified/WarrantyAccordionMobile";
+import WarrantyAccordionDesktop from "@/app/components/shop/certified/WarrantyAccordionDesktop";
 import Footer from "@/app/components/Footer";
+
+// DATA
 import models from "@/app/data/models";
 
 // ASSET IMPORT
 import coverage from "@/public/images/shop/certified/coverage_comprehensive.jpg";
 import powertrain from "@/public/images/shop/certified/powertrain_coverage.jpg";
-import AccordionDesktop from "@/app/components/shop/certified/AccordionDesktop";
-import AccordionMobile from "@/app/components/shop/certified/AccordionMobile";
-import WarrantyAccordionMobile from "@/app/components/shop/certified/WarrantyAccordionMobile";
-import WarrantyAccordionDesktop from "@/app/components/shop/certified/WarrantyAccordionDesktop";
 
 const Certified = () => {
   const modelYears = [2023, 2022, 2021, 2020, 2019];
