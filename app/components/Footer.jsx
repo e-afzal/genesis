@@ -20,7 +20,7 @@ const Footer = () => {
     { title: "request a quote", url: "/shop/request-quote" },
     { title: "schedule a test drive", url: "/shop/schedule-test-drive" },
     { title: "shop parts and accessories", url: "/" },
-    { title: "genesis certified", url: "/" },
+    { title: "genesis certified", url: "/shop/genesis-certified" },
     { title: "special offers", url: "/" },
     { title: "estimate trade-in value", url: "/" },
     { title: "genesis finance", url: "/" },

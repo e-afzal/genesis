@@ -178,7 +178,7 @@ export default function Home() {
                 and exceptional ownership benefits designed to enhance not only
                 the way you drive, but the way you live.
               </p>
-              <Link href={"/"} className={styles.facets_model_link}>
+              <Link href={"/owners"} className={styles.facets_model_link}>
                 explore owner benefits
               </Link>
             </div>

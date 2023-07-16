@@ -50,7 +50,7 @@ const Navbar = () => {
     {
       title: "genesis certified",
       imageUrl: "/icons/genesis-certified.svg",
-      url: "/",
+      url: "/shop/genesis-certified",
     },
   ];
 

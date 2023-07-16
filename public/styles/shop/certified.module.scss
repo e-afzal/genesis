@@ -1,0 +1,758 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+
+  // SECTION: SHOWCASE
+  section#showcase {
+    height: min(625px, calc(100vh - 6rem));
+    display: flex;
+    align-items: center;
+    background: url("/images/shop/certified/showcase.jpg") no-repeat 45%
+      center/cover;
+
+    .showcase_content {
+      padding-left: 5rem;
+      h2 {
+        font-family: "Jost-Light", sans-serif;
+        font-size: clamp(2.8rem, 7vw, 4rem);
+        text-transform: uppercase;
+        max-width: 25ch;
+        letter-spacing: 0.55px;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: clamp(1.35rem, 3vw, 1.5rem);
+        line-height: 1.5;
+        // width: 41vw;
+        max-width: 45ch;
+      }
+    }
+  }
+
+  // SECTION: SEARCH INVENTORY - FILTERS
+  section#search {
+    padding-inline: clamp(2.5rem, 7.5vw, 5rem);
+    padding-block: 5rem;
+    background-color: #141414;
+    h3.search_title {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2rem, 5vw, 2.4rem);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+      .form_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3.5rem;
+        max-width: 850px;
+        margin-inline: auto;
+        .form_control {
+          label {
+            color: #6f6f6f;
+            font-size: 1.35rem;
+            font-family: "Roboto-Regular", sans-serif;
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+          }
+          input {
+            width: 100%;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 7px;
+            letter-spacing: 0.55px;
+            margin-top: 1rem;
+
+            &[type="email"],
+            &[type="number"] {
+              display: block;
+              // margin-top: 5.5rem;
+            }
+
+            &[type="number"] {
+              -moz-appearance: textfield;
+            }
+
+            &::placeholder {
+              letter-spacing: 0.55px;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+          select {
+            margin-top: 1rem;
+            display: block;
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 7px;
+            width: 100%;
+            color: #fff;
+            background-color: #141414;
+            letter-spacing: 0.25px;
+
+            option {
+              background-color: #141414;
+              font-family: "Jost-Light", sans-serif;
+              color: #fff;
+            }
+          }
+        }
+      }
+      button.submit_button {
+        border: none;
+        background-color: $color-white;
+        padding: 1.5rem 5rem;
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.45rem;
+        text-transform: uppercase;
+        display: block;
+        margin-inline: auto;
+        margin-top: 5rem;
+        cursor: pointer;
+        letter-spacing: 0.55px;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  // SECTION: BENEFITS OF GENESIS CERTIFIED
+  h2.benefits_main_title {
+    font-family: "Jost-Light", sans-serif;
+    font-size: clamp(2.4rem, 5vw, 2.8rem);
+    color: #cd9a81;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    padding-top: 5rem;
+    text-align: center;
+    background-color: #111;
+  }
+  // BENEFIT: WARRANTY
+  section#warranty {
+    margin-inline: auto;
+    max-width: 1920px;
+    background-color: #111;
+    padding-top: clamp(5.5rem, 10.5vw, 10rem);
+    padding-bottom: clamp(7rem, 10vw, 12rem);
+    .context_container {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      padding-right: 5.5rem;
+      align-items: center;
+
+      .context_content {
+        order: 2;
+        h3.context_title {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2rem, 5vw, 2.4rem);
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+          letter-spacing: 0.35px;
+        }
+        p.context_body {
+          font-size: 1.4rem;
+          color: #ccc;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 1.65;
+          letter-spacing: 0px;
+        }
+      }
+      .context_image_box {
+        order: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // BENEFIT: POWERTRAIN WARRANTY
+  section#powertrain {
+    margin-inline: auto;
+    max-width: 1920px;
+    background-color: #111;
+    padding-top: clamp(5.5rem, 10.5vw, 10rem);
+    padding-bottom: clamp(7rem, 10vw, 12rem);
+    .context_container {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding-left: 5.5rem;
+      align-items: center;
+
+      .context_content {
+        order: 1;
+        h3.context_title {
+          font-family: "Jost-Light", sans-serif;
+          text-transform: uppercase;
+          color: #cd9a81;
+          margin-bottom: 1.2rem;
+          line-height: 3rem;
+          letter-spacing: 0.35px;
+          font-size: clamp(2rem, 5vw, 2.4rem);
+        }
+        p.context_body {
+          font-size: 1.4rem;
+          color: #ccc;
+          font-family: "Roboto-Regular", sans-serif;
+          line-height: 1.65;
+          letter-spacing: 0px;
+        }
+      }
+      .context_image_box {
+        order: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        img {
+          max-width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  // SECTION: CERTIFICATION ELIGIBILITY - ACCORDION
+  section#eligibility {
+    .eligibility_accordion_container {
+      padding-block: clamp(9rem, 12vw, 12rem);
+      background-color: #fff;
+      .tab_container_desktop {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding-left: 5.5rem;
+        .tab_content {
+          .eligibility_title {
+            text-transform: uppercase;
+            font-family: "Jost-Light", sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
+            color: #000;
+            margin-bottom: 1rem;
+          }
+          order: 1;
+        }
+        .tab_image_box {
+          order: 2;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          width: 100%;
+          img.accordion_image {
+            max-width: 80%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      #accordion_container_desktop {
+        .accordion_trigger {
+          border: none;
+          letter-spacing: 0.35px;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.45rem;
+          text-align: left;
+          background-color: transparent;
+          color: #4d4d4d;
+          width: 100%;
+          cursor: pointer;
+          padding-bottom: 1rem;
+          text-transform: uppercase;
+
+          &[data-state="open"] {
+            padding-bottom: 0px;
+            color: #af6249;
+          }
+        }
+
+        .accordion_content {
+          overflow: hidden;
+          font-family: "Roboto-Regular", sans-serif;
+          color: $color-black;
+          padding-top: 1rem;
+          margin-bottom: 1.5rem;
+
+          p {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+          }
+        }
+
+        .last_item_container {
+          border-bottom: 1px solid #242424;
+        }
+      }
+    }
+    .eligibility_accordion_container_mobile {
+      display: none;
+    }
+  }
+
+  // SECTION: WARRANTY COVERAGES - ACCORDION
+  section#warranty_coverage {
+    background-color: #fff;
+    .warranty_accordion_container {
+      padding-block: clamp(9rem, 12vw, 12rem);
+      padding-top: 0;
+      .tab_container_desktop {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        padding-right: 5.5rem;
+        .tab_content {
+          .warranty_title {
+            text-transform: uppercase;
+            font-family: "Jost-Light", sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
+            color: #000;
+            margin-bottom: 1rem;
+          }
+          order: 2;
+        }
+        .tab_image_box {
+          order: 1;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          img.accordion_image {
+            max-width: 80%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      #accordion_container_desktop {
+        .accordion_trigger {
+          border: none;
+          letter-spacing: 0.35px;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.45rem;
+          text-align: left;
+          background-color: transparent;
+          color: #4d4d4d;
+          width: 100%;
+          cursor: pointer;
+          padding-bottom: 1rem;
+          text-transform: uppercase;
+
+          &[data-state="open"] {
+            padding-bottom: 0px;
+            color: #af6249;
+          }
+        }
+
+        .accordion_content {
+          overflow: hidden;
+          font-family: "Roboto-Regular", sans-serif;
+          color: $color-black;
+          padding-top: 1rem;
+          margin-bottom: 1.5rem;
+
+          p {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+          }
+        }
+
+        .last_item_container {
+          border-bottom: 1px solid #242424;
+        }
+      }
+    }
+    .warranty_accordion_container_mobile {
+      display: none;
+    }
+  }
+
+  // SECTION: GET UPDATES - FORM
+  section#updates {
+    padding-top: clamp(3rem, 8.5vw, 10rem);
+    padding-bottom: clamp(5rem, 6vw, 7rem);
+    background-color: $color-grey-body;
+    padding-inline: 3rem;
+
+    h2.update_title {
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
+      color: #a36b4f;
+      text-transform: uppercase;
+    }
+
+    form.update_form {
+      margin-top: clamp(5.5rem, 9.5vw, 9rem);
+      max-width: 800px;
+      margin-inline: auto;
+
+      input {
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+
+        &[type="email"],
+        &[type="number"] {
+          display: block;
+          width: 100%;
+          margin-top: 5.5rem;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+
+        &::placeholder {
+          letter-spacing: 0.55px;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .name_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+      }
+    }
+
+    p.form_condition {
+      max-width: 800px;
+      margin-inline: auto;
+      color: #999;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 2rem;
+    }
+
+    button.form_button {
+      border: none;
+      background-color: $color-white;
+      padding: 1.5rem 5rem;
+      font-family: "Jost-Regular", sans-serif;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      display: block;
+      margin-inline: auto;
+      margin-top: 5rem;
+      cursor: pointer;
+      letter-spacing: 0.55px;
+      border-radius: 3px;
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// MEDIA QUERY: SHOWCASE
+@media screen and (max-width: 1200px) {
+  main#main {
+    section#showcase {
+      background-image: url("/images/shop/certified/showcase_mobile.jpg");
+      justify-content: center;
+      align-items: flex-end;
+      .showcase_content {
+        padding-left: 0;
+        padding-bottom: 3.5rem;
+        h2 {
+          padding-inline: 2rem;
+          max-width: 23ch;
+          line-height: 1.3;
+          text-align: center;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  main#main {
+    section#showcase {
+      background-position: 42% center;
+    }
+  }
+}
+
+// MEDIA QUERY - SEARCH INVENTORY
+@media screen and (max-width: 675px) {
+  main#main {
+    section#search {
+      form {
+        display: block;
+        .form_grid {
+          grid-template-columns: 1fr;
+          justify-content: flex-start;
+          row-gap: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main#main {
+    section#search {
+      form {
+        button.submit_button {
+          width: 100%;
+          margin-top: 7rem;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY: BENEFITS - WARRANTY & POWERTRAIN
+@media screen and (max-width: 1024px) {
+  main#main {
+    section#warranty,
+    section#powertrain {
+      padding-inline: clamp(2rem, 5vw, 3.5rem);
+      .context_container {
+        padding-right: 0;
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        row-gap: clamp(3rem, 5vw, 4rem);
+
+        .context_image_box img {
+          border-radius: 8.5px;
+          height: 100%;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    section#warranty {
+      padding-top: 5rem;
+    }
+
+    section#powertrain {
+      .context_container {
+        .context_image_box {
+          order: 1;
+        }
+        .context_content {
+          order: 2;
+        }
+      }
+    }
+
+    section#powertrain {
+      padding-top: 0;
+    }
+  }
+}
+
+// MEDIA QUERY: CERTIFICATION ELIGIBILITY
+@media screen and (max-width: 810px) {
+  main#main {
+    section#eligibility {
+      .eligibility_accordion_container {
+        display: none;
+      }
+      .eligibility_accordion_container_mobile {
+        display: block;
+        padding-top: clamp(3rem, 9vw, 7rem);
+        padding-bottom: 4rem;
+        background-color: $color-white;
+
+        h2.eligibility_title_mobile {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #111;
+          text-transform: uppercase;
+          letter-spacing: 0.25px;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+
+        .tab_container_mobile {
+          #accordion_container_mobile {
+            padding-inline: 2.5rem;
+
+            .accordion_trigger {
+              padding-block: 2.5rem;
+              border: none;
+              border-top: 1px solid rgba(77, 77, 77, 0.25);
+              letter-spacing: 0.35px;
+              font-family: "Jost-Regular", sans-serif;
+              font-size: 1.4rem;
+              text-align: left;
+              background-color: transparent;
+              color: #4d4d4d;
+              width: 100%;
+              cursor: pointer;
+              text-transform: uppercase;
+              text-align: center;
+              // padding-bottom: 1rem;
+
+              &[data-state="open"] {
+                padding-bottom: 0px;
+                color: #af6249;
+              }
+            }
+
+            .accordion_content {
+              overflow: hidden;
+              color: $color-black;
+              padding-top: 1.5rem;
+              margin-bottom: 1.5rem;
+
+              p {
+                font-family: "Roboto-Regular", sans-serif;
+                margin-top: 1rem;
+                font-size: 1.45rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.6;
+              }
+              img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY: WARRANTY COVERAGES
+@media screen and (max-width: 810px) {
+  main#main {
+    section#warranty_coverage {
+      .warranty_accordion_container {
+        display: none;
+      }
+      .warranty_accordion_container_mobile {
+        display: block;
+        padding-top: clamp(3rem, 9vw, 7rem);
+        padding-bottom: 4rem;
+        background-color: $color-white;
+
+        h2.warranty_title_mobile {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.8rem);
+          color: #111;
+          text-transform: uppercase;
+          letter-spacing: 0.25px;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+
+        .tab_container_mobile {
+          #accordion_container_mobile {
+            padding-inline: 2.5rem;
+
+            .accordion_trigger {
+              padding-block: 2.5rem;
+              border: none;
+              border-top: 1px solid rgba(77, 77, 77, 0.25);
+              letter-spacing: 0.35px;
+              font-family: "Jost-Regular", sans-serif;
+              font-size: 1.4rem;
+              text-align: left;
+              background-color: transparent;
+              color: #4d4d4d;
+              width: 100%;
+              cursor: pointer;
+              text-transform: uppercase;
+              text-align: center;
+              // padding-bottom: 1rem;
+
+              &[data-state="open"] {
+                padding-bottom: 0px;
+                color: #af6249;
+              }
+            }
+
+            .accordion_content {
+              overflow: hidden;
+              color: $color-black;
+              padding-top: 1.5rem;
+              margin-bottom: 1.5rem;
+
+              p {
+                font-family: "Roboto-Regular", sans-serif;
+                margin-top: 1rem;
+                font-size: 1.45rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.6;
+              }
+              img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY - UPDATES
+@media screen and (max-width: 450px) {
+  main#main {
+    section#updates {
+      form.update_form {
+        .name_grid {
+          grid-template-columns: 1fr;
+          row-gap: 5.5rem;
+        }
+      }
+    }
+  }
+}

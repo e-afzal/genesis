@@ -46,7 +46,7 @@ const NavbarMobile = () => {
     {
       title: "genesis certified",
       imageUrl: "/icons/genesis-certified.svg",
-      url: "/",
+      url: "/shop/genesis-certified",
     },
   ];
 
