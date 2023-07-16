@@ -95,7 +95,6 @@ const Schedule = () => {
             in order to purchase any products or services. Carrier charges may
             apply. Message and data rates may apply.
           </p>
-
           <button className={styles.form_button}>schedule test drive</button>
         </section>
       </main>
