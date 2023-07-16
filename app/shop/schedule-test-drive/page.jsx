@@ -1,5 +1,5 @@
 // STYLES
-import styles from "@/public/styles/shop/quote.module.scss";
+import styles from "@/public/styles/shop/schedule.module.scss";
 
 // COMPONENTS
 import Navbar from "@/app/components/Navbar";
@@ -9,18 +9,20 @@ import Footer from "@/app/components/Footer";
 // DATA
 import models from "@/app/data/models";
 
-const Quote = () => {
+const Schedule = () => {
+  const timeOfDay = ["morning", "afternoon", "evening"];
   return (
     <body>
       <Navbar />
       <NavbarMobile />
       <main id={styles.main}>
-        {/* SECTION: UPDATES */}
-        <section id={styles.updates}>
-          <h2 className={styles.update_title}>get your price</h2>
+        {/* SECTION: SCHEDULE */}
+        <section id={styles.schedule}>
+          <h2 className={styles.update_title}>schedule a test drive</h2>
           <p className={styles.instructions}>
             Kindly furnish us with the following details and a genesis concierge
-            will contact you shortly to assist in finding your perfect genesis.
+            will contact you shortly to schedule your genesis test drive
+            experience.
           </p>
 
           <form className={styles.update_form}>
@@ -65,6 +67,23 @@ const Quote = () => {
               placeholder="zip code*"
               required
             />
+            <div className={styles.schedule_grid}>
+              <input
+                type="date"
+                min={new Date().toISOString().split("T")[0]}
+                required
+              />
+              <select defaultValue={"select preferred time"} required>
+                <option value="select preferred time" disabled>
+                  select preferred time*
+                </option>
+                {timeOfDay.map((each, index) => (
+                  <option key={index} value={each}>
+                    {each}
+                  </option>
+                ))}
+              </select>
+            </div>
           </form>
 
           <p className={styles.form_condition}>
@@ -76,7 +95,7 @@ const Quote = () => {
             apply. Message and data rates may apply.
           </p>
 
-          <button className={styles.form_button}>send enquiry</button>
+          <button className={styles.form_button}>schedule test drive</button>
         </section>
       </main>
       <Footer />
@@ -84,4 +103,4 @@ const Quote = () => {
   );
 };
 
-export default Quote;
+export default Schedule;

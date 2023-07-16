@@ -1,0 +1,167 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+
+  // SECTION: SCHEDULE
+  section#schedule {
+    padding-top: clamp(3rem, 8.5vw, 10rem);
+    padding-bottom: clamp(5rem, 6vw, 7rem);
+    background-color: $color-grey-body;
+    padding-inline: 3rem;
+
+    h2.update_title {
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
+      color: #a36b4f;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+    }
+
+    p.instructions {
+      text-align: center;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.45rem;
+      color: #ccc;
+      margin-top: 1.5rem;
+      max-width: 65ch;
+      line-height: 1.65;
+      margin-inline: auto;
+    }
+
+    form.update_form {
+      margin-top: clamp(5.5rem, 9.5vw, 9rem);
+      max-width: 800px;
+      margin-inline: auto;
+
+      select {
+        display: block;
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+        width: 100%;
+        color: #5c5c5c;
+        background-color: #141414;
+        letter-spacing: 0.25px;
+
+        option {
+          background-color: #141414;
+          font-family: "Jost-Light", sans-serif;
+          color: #ccc;
+        }
+      }
+
+      input {
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+        letter-spacing: 0.55px;
+
+        &[type="email"],
+        &[type="number"] {
+          display: block;
+          width: 100%;
+          margin-top: 5.5rem;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+
+        &::placeholder {
+          letter-spacing: 0.55px;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .name_grid {
+        margin-top: 5.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+      }
+
+      .schedule_grid {
+        margin-top: 5.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+
+        input[type="date"] {
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          color: #5c5c5c;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #3c3c3c;
+          padding-bottom: 7px;
+          letter-spacing: 0.55px;
+        }
+      }
+    }
+
+    p.form_condition {
+      max-width: 800px;
+      margin-inline: auto;
+      color: #999;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 2rem;
+    }
+
+    button.form_button {
+      border: none;
+      background-color: $color-white;
+      padding: 1.5rem 5rem;
+      font-family: "Jost-Regular", sans-serif;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      display: block;
+      margin-inline: auto;
+      margin-top: 5rem;
+      cursor: pointer;
+      letter-spacing: 0.55px;
+      border-radius: 3px;
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// UPDATES
+@media screen and (max-width: 450px) {
+  main#main {
+    section#schedule {
+      form.update_form {
+        .name_grid,
+        .schedule_grid {
+          grid-template-columns: 1fr;
+          row-gap: 5.5rem;
+        }
+      }
+    }
+  }
+}

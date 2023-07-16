@@ -17,8 +17,8 @@ const Footer = () => {
   const shopLinks = [
     { title: "search inventory", url: "/" },
     { title: "build your own", url: "/" },
-    { title: "request a quote", url: "/" },
-    { title: "schedule a test drive", url: "/" },
+    { title: "request a quote", url: "/shop/request-quote" },
+    { title: "schedule a test drive", url: "/shop/schedule-test-drive" },
     { title: "shop parts and accessories", url: "/" },
     { title: "genesis certified", url: "/" },
     { title: "special offers", url: "/" },

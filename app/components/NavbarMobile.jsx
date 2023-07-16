@@ -36,7 +36,7 @@ const NavbarMobile = () => {
     {
       title: "schedule a test drive",
       imageUrl: "/icons/schedule-a-test-drive.svg",
-      url: "/",
+      url: "/shop/schedule-test-drive",
     },
     {
       title: "shop parts and accessories",
