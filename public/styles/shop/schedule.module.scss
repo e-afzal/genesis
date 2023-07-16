@@ -3,6 +3,11 @@
 main#main {
   margin-top: 7rem;
 
+  // CHANGES DATE PICKER CALENDAR ICON TO "WHITE"
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.42);
+  }
+
   // SECTION: SCHEDULE
   section#schedule {
     padding-top: clamp(3rem, 8.5vw, 10rem);
