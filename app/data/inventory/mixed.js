@@ -12,6 +12,16 @@ const mixedInventory = [
       "Heated Front Seats",
       "18” Alloy Wheels",
     ],
+    dealerDetails: {
+      name: "Genesis Of Jersey City",
+      phone: "888-684-1352",
+      website: "https://www.genesisofjerseycity.com",
+      address: "977 Communipaw Ave, Jersey City, NJ 07304, United States",
+      map: {
+        latitude: 40.72347259521484,
+        longitude: -74.08889770507812,
+      },
+    },
     VIN: "KMTGB4SDXPU191849", //REQD
     DealerCd: "NJ704",
     DlrName: "Genesis Of Jersey City", //REQD
@@ -133,6 +143,16 @@ const mixedInventory = [
     VIN: "KMTFB4SD3PU027533",
     DealerCd: "NJ704",
     DlrName: "Genesis Of Jersey City",
+    dealerDetails: {
+      name: "Genesis Of Jersey City",
+      phone: "888-684-1352",
+      website: "https://www.genesisofjerseycity.com",
+      address: "977 Communipaw Ave, Jersey City, NJ 07304, United States",
+      map: {
+        latitude: 40.72347259521484,
+        longitude: -74.08889770507812,
+      },
+    },
     DlrZipCode: "07304",
     DlrRegion: "EA",
     StockNumber: "KMTFB4SD3PU027533",
@@ -248,12 +268,23 @@ const mixedInventory = [
     VIN: "KMUMADTB0PU101638",
     DealerCd: "CA737",
     DlrName: "Norm Reeves Genesis Of Cerritos",
+    dealerDetails: {
+      name: "Norm Reeves Genesis Of Cerritos",
+      phone: "562-459-6300",
+      website: "https://www.genesisofcerritos.com",
+      address:
+        "10901 183rd St Suite B, Suite B, Cerritos, CA 90703, United States",
+      map: {
+        latitude: 33.8662,
+        longitude: -118.10137,
+      },
+    },
     DlrZipCode: "90703",
     DlrRegion: "WE",
     StockNumber: "KMUMADTB0PU101638",
     FormattedPrice: "$58,385",
     SortablePrice: "58385",
-    Model: "Gv70",
+    Model: "GV70",
     ModelTitle: "2023 GENESIS GV70 2.5T AWD",
     YearModel: "2023 GV70",
     TrimDriveTrain: "2.5T AWD",
@@ -363,6 +394,17 @@ const mixedInventory = [
     VIN: "KMUHCESC6PU131853",
     DealerCd: "CA737",
     DlrName: "Norm Reeves Genesis Of Cerritos",
+    dealerDetails: {
+      name: "Norm Reeves Genesis Of Cerritos",
+      phone: "562-459-6300",
+      website: "https://www.genesisofcerritos.com",
+      address:
+        "10901 183rd St Suite B, Suite B, Cerritos, CA 90703, United States",
+      map: {
+        latitude: 33.8662,
+        longitude: -118.10137,
+      },
+    },
     DlrZipCode: "90703",
     DlrRegion: "WE",
     StockNumber: "KMUHCESC6PU131853",

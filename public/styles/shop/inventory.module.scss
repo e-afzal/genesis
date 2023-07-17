@@ -257,7 +257,7 @@ main#main {
   }
 }
 
-// MEDIA QUERY - SEARCH INVENTORY
+// MEDIA QUERY: SEARCH INVENTORY
 @media screen and (max-width: 675px) {
   main#main {
     section#search {
@@ -286,7 +286,7 @@ main#main {
   }
 }
 
-// MEDIA QUERY - INVENTORY CARDS
+// MEDIA QUERY: INVENTORY CARDS
 @media screen and (max-width: 650px) {
   main#main {
     section#inventory .cards_container a.card_container .card_content {

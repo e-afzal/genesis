@@ -77,7 +77,11 @@ const Inventory = () => {
         <section id={styles.inventory}>
           <div className={styles.cards_container}>
             {mixed.map((model, index) => (
-              <Link href={"#"} key={index} className={styles.card_container}>
+              <Link
+                href={`/shop/search-inventory/${model.VIN}`}
+                key={index}
+                className={styles.card_container}
+              >
                 <div className={styles.card_image}>
                   <Image
                     src={model.images[0]}

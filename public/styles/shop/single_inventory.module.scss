@@ -1,0 +1,276 @@
+@import "../variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+
+  .return_container {
+    background-color: #000;
+    padding-inline: clamp(2.5rem, 6vw, 8rem);
+    padding-block: 2.5rem;
+
+    a.return_link {
+      color: $color-white;
+      font-family: "Jost-Regular", sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.7px;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 15px;
+        width: 15px;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .inventory_main_grid {
+    margin-block: 5rem;
+    padding-inline: clamp(2.5rem, 6vw, 8rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.5rem;
+
+    // SECTION: MODEL DETAILS
+    section#model_details {
+      .model_details_container {
+        .header_flex {
+          border-bottom: 1px solid #2e2e2e;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h2.model_name {
+            font-family: "Jost-Light", sans-serif;
+            font-size: clamp(2.8rem, 5.5vw, 4rem);
+            color: #cd9a81;
+            text-transform: uppercase;
+          }
+          h4.model_price {
+            font-family: "Jost-Light", sans-serif;
+            color: #cd9a81;
+            font-size: 2.2rem;
+          }
+        }
+        img.main_image {
+          margin-top: 2.5rem;
+          object-fit: contain;
+          width: 100%;
+          background-color: $color-white;
+        }
+        .facts_container {
+          margin-top: 2.5rem;
+          .fact_box {
+            display: flex;
+            justify-content: space-between;
+            padding-block: 1.5rem;
+            border-top: 1px solid #505050;
+            span.fact_title {
+              color: #ccc;
+              font-family: "Roboto-Regular", sans-serif;
+              font-size: 1.45rem;
+              text-transform: capitalize;
+            }
+            span.fact_data {
+              text-transform: capitalize;
+              font-size: 1.45rem;
+              letter-spacing: 0.3px;
+              font-family: "Roboto-Regular", sans-serif;
+            }
+          }
+          .msrp_box {
+            display: none;
+          }
+        }
+      }
+    }
+
+    // SECTION: DEALER DETAILS
+    section#dealer_details {
+      .dealer_details_container {
+        background-color: #121212;
+        padding-inline: 2.5rem;
+        padding-bottom: 3.5rem;
+        .dealer_title_box {
+          min-height: 59.2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          h2.dealer_main_title {
+            font-family: "Jost-Light", sans-serif;
+            font-size: clamp(2.4rem, 7vw, 2.8rem);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+          }
+        }
+        .dealer_detail_box {
+          margin-top: 3.5rem;
+          h4 {
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.7rem;
+            border-bottom: 1px solid #2e2e2e;
+            padding-bottom: 5px;
+            margin-bottom: 0.7rem;
+            text-transform: capitalize;
+          }
+          p {
+            font-family: "Roboto-Regular", sans-serif;
+            font-size: 1.45rem;
+            text-transform: capitalize;
+            letter-spacing: 0.55px;
+            color: #ccc;
+          }
+        }
+      }
+      .contact_form {
+        padding-top: 3rem;
+        padding-bottom: clamp(5rem, 6vw, 7rem);
+        background-color: #121212;
+        padding-inline: 3rem;
+        margin-top: clamp(3rem, 8.5vw, 7.5rem);
+
+        h2.update_title {
+          text-align: center;
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 7vw, 2.8rem);
+          color: $color-white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        form.update_form {
+          margin-top: clamp(5.5rem, 9.5vw, 9rem);
+          max-width: 800px;
+          margin-inline: auto;
+
+          input {
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #999;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #3c3c3c;
+            padding-bottom: 7px;
+
+            &[type="email"],
+            &[type="number"] {
+              display: block;
+              width: 100%;
+              margin-top: 5.5rem;
+            }
+
+            &[type="number"] {
+              -moz-appearance: textfield;
+            }
+
+            &::placeholder {
+              letter-spacing: 0.55px;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+
+          .name_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: clamp(2rem, 5vw, 4rem);
+          }
+        }
+
+        p.form_condition {
+          max-width: 800px;
+          margin-inline: auto;
+          color: #999;
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: 1.3rem;
+          margin-top: 2.5rem;
+          line-height: 1.75;
+        }
+
+        button.form_button {
+          border: none;
+          background-color: $color-white;
+          padding: 1.5rem 5rem;
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.45rem;
+          text-transform: uppercase;
+          display: block;
+          margin-inline: auto;
+          margin-top: 5rem;
+          cursor: pointer;
+          letter-spacing: 0.55px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// DEALER DETAILS CONTAINER
+@media screen and (max-width: 1200px) {
+  main#main {
+    .inventory_main_grid {
+      grid-template-columns: 1fr;
+      row-gap: 5.5rem;
+      section#model_details {
+        .model_details_container {
+        }
+      }
+      section#dealer_details {
+        .contact_form {
+          form.update_form {
+            .name_grid {
+              grid-template-columns: 1fr;
+              row-gap: 5.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MAIN PRICE & MSRP BOX
+@media screen and (max-width: 650px) {
+  main#main {
+    .return_container {
+      a.return_link {
+        justify-content: center;
+      }
+    }
+    .inventory_main_grid {
+      section#model_details {
+        .model_details_container {
+          .header_flex {
+            justify-content: center;
+            padding-bottom: 0.65rem;
+            h4.model_price {
+              display: none;
+            }
+          }
+          .facts_container {
+            .msrp_box {
+              display: flex;
+              justify-content: space-between;
+              padding-block: 1.5rem;
+              border-top: 1px solid #505050;
+            }
+          }
+        }
+      }
+    }
+  }
+}
