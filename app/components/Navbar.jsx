@@ -25,7 +25,7 @@ const Navbar = () => {
     {
       title: "search inventory",
       imageUrl: "/icons/search-inventory.svg",
-      url: "/",
+      url: "/shop/search-inventory",
     },
     // {
     //   title: "build your own",

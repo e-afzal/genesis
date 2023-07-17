@@ -21,13 +21,8 @@ const NavbarMobile = () => {
     {
       title: "search inventory",
       imageUrl: "/icons/search-inventory.svg",
-      url: "/",
+      url: "/shop/search-inventory",
     },
-    // {
-    //   title: "build your own",
-    //   imageUrl: "/icons/build-your-own.svg",
-    //   url: "/",
-    // },
     {
       title: "request a quote",
       imageUrl: "/icons/request-a-quote.svg",
@@ -38,16 +33,21 @@ const NavbarMobile = () => {
       imageUrl: "/icons/schedule-a-test-drive.svg",
       url: "/shop/schedule-test-drive",
     },
-    // {
-    //   title: "shop parts and accessories",
-    //   imageUrl: "/icons/shop-parts.svg",
-    //   url: "/",
-    // },
     {
       title: "genesis certified",
       imageUrl: "/icons/genesis-certified.svg",
       url: "/shop/genesis-certified",
     },
+    // {
+    //   title: "build your own",
+    //   imageUrl: "/icons/build-your-own.svg",
+    //   url: "/",
+    // },
+    // {
+    //   title: "shop parts and accessories",
+    //   imageUrl: "/icons/shop-parts.svg",
+    //   url: "/",
+    // }
   ];
 
   const offerMenuItems = [
@@ -281,7 +281,7 @@ const NavbarMobile = () => {
                 <ul className={styles.offers_list}>
                   {offerMenuItems.map((item, index) => (
                     <li key={index} className={styles.offers_list_item}>
-                      <Link href={"#"}>
+                      <Link href={item.url}>
                         <Image
                           className={styles.offer_icon}
                           src={item.imageUrl}

@@ -15,13 +15,13 @@ import logo from "@/public/images/logo-white.svg";
 const Footer = () => {
   //? DOM ELEMENTS
   const shopLinks = [
-    { title: "search inventory", url: "/" },
-    // { title: "build your own", url: "/" },
+    { title: "search inventory", url: "/shop/search-inventory" },
     { title: "request a quote", url: "/shop/request-quote" },
     { title: "schedule a test drive", url: "/shop/schedule-test-drive" },
-    // { title: "shop parts and accessories", url: "/" },
     { title: "genesis certified", url: "/shop/genesis-certified" },
     { title: "special offers", url: "/shop/special-offers" },
+    // { title: "build your own", url: "/" },
+    // { title: "shop parts and accessories", url: "/" },
     // { title: "estimate trade-in value", url: "/" },
     // { title: "genesis finance", url: "/" },
   ];

@@ -6,6 +6,12 @@ const mixedInventory = [
       "/images/shop/inventory/G80/swatch_exterior.png",
       "/images/shop/inventory/G80/swatch_interior.png",
     ],
+    features: [
+      "Blind-Spot Collision-Avoidance Assist",
+      "Navigation System with 14.5” HD Screen",
+      "Heated Front Seats",
+      "18” Alloy Wheels",
+    ],
     VIN: "KMTGB4SDXPU191849", //REQD
     DealerCd: "NJ704",
     DlrName: "Genesis Of Jersey City", //REQD
@@ -18,7 +24,7 @@ const mixedInventory = [
     ModelTitle: "2023 GENESIS G80 3.5T V6 AWD", //REQD
     YearModel: "2023 G80",
     TrimDriveTrain: "3.5T AWD", //REQD
-    ModelYear: "2023",
+    ModelYear: 2023,
     SAPModelCd: "S1472A65",
     TrimDesc: "3.5T",
     Mileage: "New",
@@ -118,6 +124,12 @@ const mixedInventory = [
       "/images/shop/inventory/G90/swatch_exterior_vikBlack.png",
       "/images/shop/inventory/G90/swatch_interior_black.png",
     ],
+    features: [
+      "Power Front Seats w/ Massage Function & Power Bolster",
+      "Bang & Olufsen® 3D Premium Sound",
+      "Nappa Leather Seating Surfaces",
+      "12.3” Digital Instrument Cluster",
+    ],
     VIN: "KMTFB4SD3PU027533",
     DealerCd: "NJ704",
     DlrName: "Genesis Of Jersey City",
@@ -130,7 +142,7 @@ const mixedInventory = [
     ModelTitle: "2023 GENESIS G90 3.5T V6 AWD",
     YearModel: "2023 G90",
     TrimDriveTrain: "3.5T AWD",
-    ModelYear: "2023",
+    ModelYear: 2023,
     SAPModelCd: "T1422A65",
     TrimDesc: "3.5T",
     Mileage: "New",
@@ -227,6 +239,12 @@ const mixedInventory = [
       "/images/shop/inventory/GV70/swatch_exterior_vikBlack.png",
       "/images/shop/inventory/GV70/swatch_interior_ultramarine_blue.png",
     ],
+    features: [
+      "Navigation System with 14.5” HD Screen",
+      "Forward Collision-Avoidance Assist",
+      "Highway Driving Assist",
+      "18” Alloy Wheels",
+    ],
     VIN: "KMUMADTB0PU101638",
     DealerCd: "CA737",
     DlrName: "Norm Reeves Genesis Of Cerritos",
@@ -239,7 +257,7 @@ const mixedInventory = [
     ModelTitle: "2023 GENESIS GV70 2.5T AWD",
     YearModel: "2023 GV70",
     TrimDriveTrain: "2.5T AWD",
-    ModelYear: "2023",
+    ModelYear: 2023,
     SAPModelCd: "U0422A45",
     TrimDesc: "2.5T",
     Mileage: "New",
@@ -336,6 +354,12 @@ const mixedInventory = [
       "/images/shop/inventory/GV80/swatch_exterior_vikBlack.png",
       "/images/shop/inventory/GV80/swatch_interior_beige.png",
     ],
+    features: [
+      "Navigation System with 14.5” HD Screen",
+      "2nd Row Wireless Charging",
+      "Panoramic Sunroof",
+      "20” Alloy Wheels",
+    ],
     VIN: "KMUHCESC6PU131853",
     DealerCd: "CA737",
     DlrName: "Norm Reeves Genesis Of Cerritos",
@@ -348,7 +372,7 @@ const mixedInventory = [
     ModelTitle: "2023 GENESIS GV80 3.5T V6 AWD",
     YearModel: "2023 GV80",
     TrimDriveTrain: "3.5T AWD",
-    ModelYear: "2023",
+    ModelYear: 2023,
     SAPModelCd: "V0462A65",
     TrimDesc: "3.5T",
     Mileage: "New",
@@ -439,3 +463,5 @@ const mixedInventory = [
     distance: "14",
   },
 ];
+
+export default mixedInventory;
