@@ -161,9 +161,10 @@ main#main {
         text-align: center;
         text-transform: uppercase;
         color: #6f6f6f;
-        font-family: "Roboto-Regular", sans-serif;
-        letter-spacing: 0.55px;
+        font-family: "Jost-Regular", sans-serif;
+        letter-spacing: 1px;
       }
+      .range_box,
       .consumption_box,
       .horsepower_box {
         border-right: 1px solid rgba(112, 112, 112, 0.4);
@@ -988,6 +989,9 @@ main#main {
           display: grid;
           grid-template-columns: 1fr;
           width: 100%;
+
+          .item_lease_due,
+          .item_lease_start,
           .item_apr,
           .item_mos,
           .item_bonus {
@@ -996,6 +1000,8 @@ main#main {
             align-items: center;
             padding-block: 1.5rem;
           }
+          .item_lease_due,
+          .item_lease_start,
           .item_apr,
           .item_mos {
             border-bottom: 1px solid #232323;
@@ -1050,6 +1056,7 @@ main#main {
         grid-template-columns: 1fr;
         row-gap: 3.5rem;
         margin-top: 5rem;
+        .range_box,
         .consumption_box,
         .horsepower_box {
           border-right: none;

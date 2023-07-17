@@ -25,8 +25,8 @@ const models = [
     consumption: {
       city: 21,
       highway: 31,
+      horsepower: 252,
     },
-    horsepower: 252,
     msrp: "39,400",
     powertrains: [
       {
@@ -175,8 +175,8 @@ const models = [
     consumption: {
       city: 22,
       highway: 32,
+      horsepower: 300,
     },
-    horsepower: 300,
     msrp: "50,000",
     powertrains: [
       {
@@ -334,8 +334,12 @@ const models = [
       bonus: "$7,500",
       leaseSigningDue: "$5,999",
     },
-    range: 282,
-    horsepower: 365,
+    consumption: {
+      city: null,
+      highway: null,
+      horsepower: 365,
+      range: 282,
+    },
     msrp: "79,825",
     powertrains: [
       {
@@ -427,8 +431,8 @@ const models = [
     consumption: {
       city: 18,
       highway: 26,
+      horsepower: 375,
     },
-    horsepower: 375,
     msrp: "88,400",
     powertrains: [
       {
@@ -525,9 +529,7 @@ const models = [
       leaseStart: "$689",
       leaseSigningDue: "$5,999",
     },
-    consumption: {},
-    range: 248,
-    horsepower: 314,
+    consumption: { city: null, highway: null, range: 248, horsepower: 314 },
     msrp: "59,290",
     powertrains: [
       {
@@ -629,8 +631,8 @@ const models = [
     consumption: {
       city: 22,
       highway: 28,
+      horsepower: 300,
     },
-    horsepower: 300,
     msrp: "43,150",
     powertrains: [
       {
@@ -757,16 +759,16 @@ const models = [
       bonus: "$7,500",
     },
     consumption: {
-      city: 0,
-      highway: 0,
+      city: null,
+      highway: null,
+      range: 236,
+      charging: 18,
+      horsepower: 429,
     },
-    range: 236,
-    charging: 18,
-    horsepower: 429,
-    msrp: "43,150",
+    msrp: "65,850",
     powertrains: [
       {
-        image: "/GV70e/powertrain-1.png",
+        image: "/GV70e/powertrain-1.jpg",
         title: "ELECTRIFIED GV70",
         msrp: "65,850",
         features: [
@@ -854,10 +856,10 @@ const models = [
     consumption: {
       city: 20,
       highway: 24,
+      range: null,
+      charging: null,
+      horsepower: 300,
     },
-    range: 0,
-    charging: 0,
-    horsepower: 300,
     msrp: "57,450",
     powertrains: [
       {

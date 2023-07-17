@@ -3,11 +3,10 @@
 import Image from "next/image";
 
 // SWIPER
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const PowertrainCarousel = ({ styles, powertrains }) => {
-
   return (
     <Swiper
       className={styles.swiper_models_container}
@@ -16,19 +15,19 @@ const PowertrainCarousel = ({ styles, powertrains }) => {
       breakpoints={{
         320: {
           slidesPerView: 1,
-          spaceBetween: 10
+          spaceBetween: 10,
         },
         500: {
           slidesPerView: 2,
-          spaceBetween: 25
+          spaceBetween: 25,
         },
         1280: {
           slidesPerView: 3,
-          spaceBetween: 60
+          spaceBetween: 60,
         },
         1680: {
           slidesPerView: 4,
-          spaceBetween: 75
+          spaceBetween: 75,
         },
       }}
     >
@@ -37,6 +36,9 @@ const PowertrainCarousel = ({ styles, powertrains }) => {
           <SwiperSlide
             key={index}
             className={styles.model_slide}
+            style={{
+              paddingTop: powertrain.title === "ELECTRIFIED GV70" ? 0 : "3rem",
+            }}
           >
             <div className={styles.powertrain_image_container}>
               <Image
@@ -48,11 +50,23 @@ const PowertrainCarousel = ({ styles, powertrains }) => {
               />
             </div>
             <div className={styles.powertrain_content}>
-              <h4 className={styles.powertrain_title}>{powertrain.title}</h4>
-              <p className={styles.powertrain_msrp}>starting msrp ${powertrain.msrp}</p>
+              <h4
+                className={styles.powertrain_title}
+                style={{
+                  paddingTop:
+                    powertrain.title === "ELECTRIFIED GV70" ? "2rem" : "0px",
+                }}
+              >
+                {powertrain.title}
+              </h4>
+              <p className={styles.powertrain_msrp}>
+                starting msrp ${powertrain.msrp}
+              </p>
               <ul className={styles.features_list}>
                 {powertrain.features.map((feature, index) => (
-                  <li key={index} className={styles.feature_list_item}>{feature}</li>
+                  <li key={index} className={styles.feature_list_item}>
+                    {feature}
+                  </li>
                 ))}
               </ul>
             </div>

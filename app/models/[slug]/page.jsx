@@ -103,22 +103,40 @@ const SingleProject = ({ params: { slug } }) => {
 
           {/* SECTION: BY THE NUMBERS */}
           <section id={styles.numbers}>
-            <h2 className={styles.numbers_title}>G70 by the numbers</h2>
+            <h2 className={styles.numbers_title}>
+              {model.modelName} by the numbers
+            </h2>
             <div className={styles.numbers_grid}>
-              <div className={styles.consumption_box}>
-                <h3 className={styles.consumption_facts}>
-                  21<span>city</span> 31<span>hwy</span>
-                </h3>
-                <p className={styles.fuel}>fuel consumption</p>
-                <p className={styles.estimate}>EPA-estimated city/hwy MPG</p>
-              </div>
+              {model.consumption.highway && (
+                <div className={styles.consumption_box}>
+                  <h3 className={styles.consumption_facts}>
+                    {model.consumption.city}
+                    <span>city</span> {model.consumption.highway}
+                    <span>hwy</span>
+                  </h3>
+                  <p className={styles.fuel}>fuel consumption</p>
+                  <p className={styles.estimate}>EPA-estimated city/hwy MPG</p>
+                </div>
+              )}
+              {model.consumption.range && (
+                <div className={styles.range_box}>
+                  <h3 className={styles.miles_figure}>
+                    {model.consumption.range}
+                    <span>miles</span>
+                  </h3>
+                  <p className={styles.range}>EPA-estimated range</p>
+                </div>
+              )}
               <div className={styles.horsepower_box}>
-                <h3 className={styles.power_figure}>252</h3>
+                <h3 className={styles.power_figure}>
+                  {model.consumption.horsepower}
+                </h3>
                 <p className={styles.power}>horsepower</p>
               </div>
               <div className={styles.price_box}>
                 <h3 className={styles.price_number}>
-                  <sup>$</sup>39,400
+                  <sup>$</sup>
+                  {model.price}
                 </h3>
                 <p className={styles.start}>starting msrp</p>
               </div>

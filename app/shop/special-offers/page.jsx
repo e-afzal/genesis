@@ -1,7 +1,7 @@
+import Image from "next/image";
+
 // STYLES
 import styles from "@/public/styles/shop/offers.module.scss";
-
-// ASSET IMPORTS
 
 // COMPONENTS
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,6 @@ import Footer from "@/app/components/Footer";
 
 // DATA
 import offers from "@/app/data/offers";
-import Image from "next/image";
 
 const Offers = () => {
   return (
