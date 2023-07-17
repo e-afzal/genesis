@@ -191,12 +191,13 @@ main#main {
           }
           .card_features {
             h4.feature_title {
-              font-size: 1.45rem;
+              font-size: 1.35rem;
               text-transform: uppercase;
               font-family: "Roboto-Regular", sans-serif;
               color: #ccc;
-              letter-spacing: 0.55px;
+              letter-spacing: 0.35px;
               margin-bottom: 9px;
+              display: none;
             }
             ul.card_features_container {
               margin-top: 1.5rem;

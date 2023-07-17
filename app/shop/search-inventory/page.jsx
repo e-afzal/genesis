@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // STYLES
 import styles from "@/public/styles/shop/inventory.module.scss";
@@ -9,15 +10,12 @@ import NavbarMobile from "@/app/components/NavbarMobile";
 import Footer from "@/app/components/Footer";
 
 // DATA
-import models from "@/app/data/models";
-import offers from "@/app/data/offers";
 import mixed from "@/app/data/inventory/mixed";
-import Link from "next/link";
 
 const Inventory = () => {
   //? Below properties are created for SORT filter to work
   // Below values are numerical since they are based on "ModelYear" property in "mixed.js" file
-  const modelYears = [2023, 2022, 2021, 2020, 2019];
+  const modelYears = ["ALL", 2023, 2022, 2021, 2020, 2019];
   // Below values are based on 'Model' property in "mixed.js" file
   const modelNames = ["G80", "G90", "GV70", "GV80"];
   return (
@@ -50,11 +48,8 @@ const Inventory = () => {
                 />
               </div>
               <div className={styles.form_control}>
-                <label htmlFor="year">year</label>
+                <label>year</label>
                 <select defaultValue={"all"}>
-                  <option value="all" disabled>
-                    all
-                  </option>
                   {modelYears.map((each, index) => (
                     <option key={index} value={each}>
                       {each}
@@ -63,14 +58,12 @@ const Inventory = () => {
                 </select>
               </div>
               <div className={styles.form_control}>
-                <label htmlFor="model">model</label>
-                <select id="model" defaultValue={"all"}>
-                  <option value="all" disabled>
-                    all
-                  </option>
-                  {models.map((model, index) => (
-                    <option key={index} value={model.modelName}>
-                      Genesis {model.modelName}
+                <label>model</label>
+                <select defaultValue={"all"}>
+                  <option value="all">ALL</option>
+                  {modelNames.map((modelName, index) => (
+                    <option key={index} value={modelName}>
+                      Genesis {modelName}
                     </option>
                   ))}
                 </select>
