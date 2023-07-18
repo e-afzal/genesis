@@ -1,0 +1,68 @@
+@import "../variables.module.scss";
+
+#accordion_container {
+  margin-top: 2rem;
+  .accordion_trigger {
+    font-family: "Jost-Light", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2rem);
+    text-align: left;
+    background-color: transparent;
+    color: $color-white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding-block: 2.5rem;
+    border-top: 1px solid #242424;
+    text-transform: uppercase;
+
+    &[data-state="open"] {
+      padding-bottom: 0px;
+    }
+  }
+
+  .accordion_content {
+    overflow: hidden;
+    font-family: "Jost-Light", sans-serif;
+    font-size: 1.6rem;
+    color: $color-white;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+
+    ul.accordion_list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2.5rem;
+      justify-content: space-between;
+      li.accordion_list_items {
+        text-transform: none;
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.45rem;
+        letter-spacing: 0.35px;
+        color: #ccc;
+        padding-bottom: 1.2rem;
+        line-height: 1.65;
+      }
+    }
+  }
+
+  .last_item_container {
+    border-bottom: 1px solid #242424;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #accordion_container {
+    .accordion_content ul.accordion_list {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #accordion_container {
+    .accordion_trigger {
+      line-height: 1.5;
+      padding-block: 2.5rem;
+    }
+  }
+}

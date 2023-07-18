@@ -14,6 +14,7 @@ import mixedInventory from "@/app/data/inventory/mixed";
 
 // ASSETS IMPORT
 import chevron from "@/public/images/chevron-left.svg";
+import AccordionInventory from "@/app/components/shop/inventory/Accordion";
 
 const SingleInventory = ({ params: { slug } }) => {
   // FILTER model based on slug (VIN property in file)
@@ -99,6 +100,15 @@ const SingleInventory = ({ params: { slug } }) => {
                     </span>
                   </div>
                 </div>
+                <h2 className={styles.detailed_title}>
+                  detailed specifications
+                </h2>
+                <AccordionInventory
+                  interior={model.detailedInteriorFeatures}
+                  exterior={model.detailedExteriorFeatures}
+                  mechanic={model.detailedMechanicFeatures}
+                  safety={model.detailedSafetyFeatures}
+                />
               </div>
             </section>
 

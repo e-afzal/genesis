@@ -100,7 +100,7 @@ const Inventory = () => {
                   <div className={styles.card_features}>
                     <h4 className={styles.feature_title}>highlights</h4>
                     <ul className={styles.card_features_container}>
-                      {model.features.map((each, index) => (
+                      {model.featureHighlights.map((each, index) => (
                         <li key={index}>{each}</li>
                       ))}
                     </ul>

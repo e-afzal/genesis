@@ -81,6 +81,14 @@ main#main {
             display: none;
           }
         }
+        h2.detailed_title {
+          margin-top: 7rem;
+          font-family: "Jost-Light", sans-serif;
+          font-size: 2.8rem;
+          color: #cd9a81;
+          text-transform: uppercase;
+          letter-spacing: 0.35px;
+        }
       }
     }
 
@@ -163,6 +171,7 @@ main#main {
 
             &[type="number"] {
               -moz-appearance: textfield;
+              appearance: textfield;
             }
 
             &::placeholder {
@@ -225,10 +234,6 @@ main#main {
     .inventory_main_grid {
       grid-template-columns: 1fr;
       row-gap: 5.5rem;
-      section#model_details {
-        .model_details_container {
-        }
-      }
       section#dealer_details {
         .contact_form {
           form.update_form {
@@ -243,7 +248,7 @@ main#main {
   }
 }
 
-// MAIN PRICE & MSRP BOX
+// MAIN PRICE, MSRP BOX & ACCORDION MAIN TITLE
 @media screen and (max-width: 650px) {
   main#main {
     .return_container {
@@ -268,6 +273,10 @@ main#main {
               padding-block: 1.5rem;
               border-top: 1px solid #505050;
             }
+          }
+          h2.detailed_title {
+            text-align: center;
+            font-size: 2.5rem;
           }
         }
       }
