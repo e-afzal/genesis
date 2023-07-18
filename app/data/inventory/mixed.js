@@ -628,7 +628,7 @@ const mixedInventory = [
     ExtColorDesc: "Vik Black",
     ExtColor: "Black",
     IntColorCd: "VP8",
-    IntColor: "van-beige-with-obs-black",
+    IntColor: "van-beige-with-obsidian-black",
     Cylinders: "6",
     Displacement: "3.5",
     HorsePower: "375",
