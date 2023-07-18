@@ -35,7 +35,11 @@ const HomeCarCarousel = ({ styles }) => {
     >
       {models.map((model, index) => (
         <SwiperSlide key={index} className={styles.model_slide}>
-          <Link href={"#"} key={index} className={`${styles.nav_dialog_card}`}>
+          <Link
+            href={`/models/${model.modelName}`}
+            key={index}
+            className={`${styles.nav_dialog_card}`}
+          >
             <div className={styles.model_content}>
               <Image
                 src={model.image_url}
