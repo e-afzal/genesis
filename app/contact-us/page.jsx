@@ -22,6 +22,7 @@ const Contact = () => {
       <Navbar />
       <NavbarMobile />
       <main id={styles.main}>
+        {/* SECTION: CONTACT FORM */}
         <section id={styles.contact_form}>
           <h2 className={styles.contact_title}>contact us</h2>
           <p className={styles.instructions}>
@@ -102,7 +103,8 @@ const Contact = () => {
           </p>
           <button className={styles.form_button}>submit</button>
         </section>
-        {/* SECONDARY CONTACT OPTIONS */}
+
+        {/* SECTION: SECONDARY CONTACT OPTIONS */}
         <section id={styles.contact_options}>
           <div className={styles.options_grid}>
             <div className={styles.phone_item}>
