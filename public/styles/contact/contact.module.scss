@@ -1,0 +1,248 @@
+@import "../variables.module.scss";
+
+main#main {
+  // SECTION: CONTACT FORM
+  section#contact_form {
+    padding-block: clamp(3rem, 8.5vw, 10rem);
+    background-color: $color-grey-body;
+    padding-inline: 3rem;
+
+    h2.contact_title {
+      text-align: center;
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
+      color: #a36b4f;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+    }
+
+    p.instructions {
+      text-align: center;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.45rem;
+      color: #ccc;
+      margin-top: 1.5rem;
+      max-width: 65ch;
+      line-height: 1.65;
+      margin-inline: auto;
+    }
+
+    form.contact_form {
+      margin-top: clamp(5.5rem, 9.5vw, 9rem);
+      max-width: 800px;
+      margin-inline: auto;
+
+      select {
+        display: block;
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+        width: 100%;
+        color: #5c5c5c;
+        background-color: #141414;
+        letter-spacing: 0.25px;
+
+        option {
+          background-color: #141414;
+          font-family: "Jost-Light", sans-serif;
+          color: #ccc;
+        }
+      }
+
+      input {
+        font-family: "Jost-Regular", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #999;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 7px;
+        letter-spacing: 0.55px;
+
+        &.phone,
+        &.city,
+        &[type="email"] {
+          display: block;
+          width: 100%;
+          margin-top: 5.5rem;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+
+        &::placeholder {
+          letter-spacing: 0.55px;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .name_grid {
+        margin-top: 5.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+      }
+
+      .location {
+        margin-top: 5.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+
+        input[type="date"] {
+          font-family: "Jost-Regular", sans-serif;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          color: #5c5c5c;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #3c3c3c;
+          padding-bottom: 7px;
+          letter-spacing: 0.55px;
+
+          &::placeholder {
+            font-family: "Jost-Regular", sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #5c5c5c;
+            letter-spacing: 0.55px;
+          }
+        }
+      }
+    }
+
+    p.form_condition {
+      max-width: 800px;
+      margin-inline: auto;
+      color: #999;
+      font-family: "Roboto-Regular", sans-serif;
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 2rem;
+    }
+
+    button.form_button {
+      border: none;
+      background-color: $color-white;
+      padding: 1.5rem 5rem;
+      font-family: "Jost-Regular", sans-serif;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      display: block;
+      margin-inline: auto;
+      margin-top: 5rem;
+      cursor: pointer;
+      letter-spacing: 0.55px;
+      border-radius: 3px;
+    }
+  }
+
+  // SECTION: SECONDARY CONTACT OPTIONS
+  section#contact_options {
+    padding-block: clamp(5rem, 6vw, 7rem);
+    padding-inline: clamp(2.5rem, 6.5vw, 5rem);
+
+    .options_grid {
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // column-gap: 2.5rem;
+      column-gap: clamp(2.5rem, 4.5vw, 5rem);
+      margin-inline: auto;
+      .phone_item,
+      .retailer_item,
+      .privacy_item {
+        // border: 1px solid red;
+        h4 {
+          font-family: "Jost-Light", sans-serif;
+          font-size: clamp(2.4rem, 5vw, 2.6rem);
+          color: #a36b4f;
+          text-transform: capitalize;
+          letter-spacing: 0.05px;
+        }
+      }
+
+      p {
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 1.35rem;
+        line-height: 1.55;
+        letter-spacing: 0.15px;
+        color: #ccc;
+      }
+
+      .phone_item {
+        p.number {
+          margin-top: 1rem;
+        }
+        .office_hours {
+          margin-block: 1rem;
+        }
+      }
+      .retailer_item,
+      .privacy_item {
+        a {
+          margin-top: 2rem;
+          display: inline-block;
+          font-size: 1.5rem;
+          color: #fff;
+          text-transform: uppercase;
+          font-family: "Jost-Light", sans-serif;
+          letter-spacing: 1px;
+          text-decoration: underline;
+          text-underline-offset: 0.7rem;
+        }
+        p {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
+
+// CONTACT FORM
+@media screen and (max-width: 450px) {
+  main#main {
+    section#contact_form {
+      form.contact_form {
+        .name_grid,
+        .location {
+          grid-template-columns: 1fr;
+          row-gap: 5.5rem;
+        }
+      }
+      button.form_button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  main#main {
+    section#contact_options {
+      .options_grid {
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+      }
+    }
+  }
+}

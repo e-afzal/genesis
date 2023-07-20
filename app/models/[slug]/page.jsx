@@ -163,7 +163,7 @@ const SingleProject = ({ params: { slug } }) => {
 
             <div className={styles.gallery_grid}>
               {model.gallery.map((each, index) => (
-                <div className={`${styles.gallery_item_container}`}>
+                <div key={index} className={`${styles.gallery_item_container}`}>
                   <div
                     key={index}
                     className={styles.gallery_item}

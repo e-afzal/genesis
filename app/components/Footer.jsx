@@ -93,7 +93,7 @@ const Footer = () => {
             <h4 className={styles.support_links_title}>support</h4>
             <ul className={styles.support_links}>
               <li>
-                <Link href={"/"}>contact us</Link>
+                <Link href={"/contact-us"}>contact us</Link>
               </li>
             </ul>
           </div>
