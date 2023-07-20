@@ -36,7 +36,7 @@ const Footer = () => {
   const miscellaneous_links = [
     { title: "sitemap", url: "/sitemap" },
     { title: "warranty", url: "/warranty" },
-    { title: "terms of use", url: "/" },
+    { title: "terms of use", url: "/terms-of-use" },
     { title: "privacy policy", url: "/" },
   ];
 
