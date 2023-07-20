@@ -35,7 +35,7 @@ const Footer = () => {
   const ownerLinks = [{ title: "my genesis", url: "/owners" }];
   const miscellaneous_links = [
     { title: "sitemap", url: "/sitemap" },
-    { title: "warranty", url: "/" },
+    { title: "warranty", url: "/warranty" },
     { title: "terms of use", url: "/" },
     { title: "privacy policy", url: "/" },
   ];

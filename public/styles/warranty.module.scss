@@ -1,0 +1,73 @@
+@import "./variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+  background-color: #fff;
+
+  h2.warranty_title {
+    background-color: #111;
+    font-family: "Jost-Light", sans-serif;
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    padding-block: 3.5rem;
+    text-align: center;
+  }
+
+  section {
+    max-width: 1500px;
+    margin-inline: auto;
+    padding-inline: clamp(2.5rem, 7.5vw, 10rem);
+    padding-top: 7rem;
+
+    &:last-child {
+      padding-bottom: 7rem;
+    }
+
+    h3 {
+      font-family: "Jost-Light", sans-serif;
+      font-size: clamp(2.4rem, 6.5vw, 2.8rem);
+      color: #111;
+      text-transform: capitalize;
+      border-bottom: 1px solid #cccccc;
+      margin-bottom: 2.5rem;
+      padding-bottom: 5px;
+      letter-spacing: -0.05px;
+    }
+
+    p {
+      font-family: "Roboto-Regular", sans-serif;
+      color: #262626;
+      font-size: 1.5rem;
+      letter-spacing: 0px;
+      line-height: 1.55;
+    }
+
+    ul {
+      margin-top: 2rem;
+      li {
+        font-family: "Roboto-Regular", sans-serif;
+        color: #262626;
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+        line-height: 1.55;
+        margin-bottom: 2rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}
