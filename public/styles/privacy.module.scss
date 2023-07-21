@@ -1,0 +1,94 @@
+@import "./variables.module.scss";
+
+main#main {
+  margin-top: 7rem;
+  background-color: $color-white;
+
+  h2.main_title {
+    font-family: "Jost-Light", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 2.6rem);
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    padding-top: 3.5rem;
+    text-align: center;
+  }
+
+  section {
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline: clamp(2.5rem, 7.5vw, 10rem);
+    padding-top: clamp(3rem, 5.5vw, 7rem);
+    padding-bottom: clamp(5rem, 5.5vw, 7rem);
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: 1.45rem;
+    color: $color-black;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+  ul {
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+    li {
+      list-style-type: disc;
+      margin-bottom: 0.7rem;
+      font-size: 1.45rem;
+      color: $color-black;
+      line-height: 1.6;
+      font-family: sans-serif;
+    }
+  }
+
+  // INTRODUCTION
+  section#introduction {
+    h4 {
+      font-weight: bold;
+      font-family: "Roboto-Regular", sans-serif;
+      color: $color-black;
+      font-size: 1.5rem;
+      letter-spacing: 0.45px;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      span {
+        display: block;
+        font-weight: 100;
+        letter-spacing: 0.35px;
+      }
+    }
+  }
+
+  // SCOPE
+  section#scope,
+  section#additional,
+  section#uncovered,
+  section#outside,
+  section#directly,
+  section#automatic,
+  section#other_sources,
+  section#personal_information,
+  section#disclosures,
+  section#aggregate,
+  section#cookies {
+    padding-top: 0;
+    h4 {
+      font-weight: bold;
+      font-family: "Roboto-Regular", sans-serif;
+      color: $color-black;
+      font-size: 1.5rem;
+      letter-spacing: 0.45px;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// DEFAULT SECTION SPACING - MOBILE
+@media screen and (max-width: 750px) {
+  main#main {
+    margin-top: 6rem;
+  }
+}

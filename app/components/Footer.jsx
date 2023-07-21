@@ -37,7 +37,7 @@ const Footer = () => {
     { title: "sitemap", url: "/sitemap" },
     { title: "warranty", url: "/warranty" },
     { title: "terms of use", url: "/terms-of-use" },
-    { title: "privacy policy", url: "/" },
+    { title: "privacy policy", url: "/privacy-policy-at-a-glance" },
   ];
 
   return (
