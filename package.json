@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
+    "lightgallery": "^2.7.1",
     "next": "^13.4.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

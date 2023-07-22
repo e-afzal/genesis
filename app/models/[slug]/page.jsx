@@ -10,6 +10,7 @@ import NavbarMobile from "@/app/components/NavbarMobile";
 import ModelShowcaseCarousel from "@/app/components/singleModel/ModelShowcase";
 import ModelShowcaseCarouselMobile from "@/app/components/singleModel/ModelShowcaseMobile";
 import PowertrainCarousel from "@/app/components/singleModel/PowertrainCarousel";
+import Lightbox from "@/app/components/model/Lightbox";
 import AccordionDesktop from "@/app/components/singleModel/AccordionDesktop";
 import AccordionMobile from "@/app/components/singleModel/AccordionMobile";
 import Footer from "@/app/components/Footer";
@@ -155,26 +156,12 @@ const SingleProject = ({ params: { slug } }) => {
             </div>
           </section>
 
-          {/* SECTION: GALLERY */}
+          {/* SECTION: GALLERY with LIGHTBOX */}
           <section id={styles.gallery}>
             <h2 className={styles.gallery_title}>
               discover the genesis {model.modelName}
             </h2>
-
-            <div className={styles.gallery_grid}>
-              {model.gallery.map((each, index) => (
-                <div key={index} className={`${styles.gallery_item_container}`}>
-                  <div
-                    key={index}
-                    className={styles.gallery_item}
-                    style={{
-                      backgroundImage: `url(/images/car_models${each})`,
-                    }}
-                  ></div>
-                </div>
-              ))}
-            </div>
-            <Link href={"#"}>explore the full gallery</Link>
+            <Lightbox images={model.gallery} />
           </section>
 
           {/* SECTION: DESIGN */}
