@@ -1,5 +1,5 @@
 // GENERAL STYLES
-import './globals.css';
+import "./globals.css";
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -10,14 +10,14 @@ export const metadata = {
   openGraph: {
     title: "Genesis",
     description: "Genesis automobiles",
-    url: "https://www.essamafzal.com",
+    url: "https://genesis-ead.vercel.app",
     type: "website",
     images: [
       {
         url: "https://www.essamafzal.com/thumbnail.png",
         width: 1366,
         height: 768,
-      }
+      },
     ],
   },
   // <meta name=”robots” content="index, follow">
@@ -29,7 +29,6 @@ export const metadata = {
   //     href: '/favicon-32x32.png',
   //   },
   // ],
-
 };
 
 export default function RootLayout({ children }) {

@@ -18,7 +18,7 @@ const ModelShowcaseCarousel = ({ images, modelName, caption }) => {
       className={styles.swiper_container}
       modules={[Pagination, Autoplay]}
       pagination={{ clickable: true }}
-      // autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 5000 }}
     >
       <SwiperSlide
         className={styles.swiper_slide}

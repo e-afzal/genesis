@@ -870,16 +870,19 @@ main#main {
           margin-top: 2.5rem;
           position: relative;
           letter-spacing: 1.15px;
+          text-decoration: underline;
+          text-underline-offset: 10px;
+          line-height: 2.2;
 
-          &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background-color: $color-black;
-            bottom: -5px;
-            left: 0;
-          }
+          // &::after {
+          //   content: "";
+          //   position: absolute;
+          //   width: 100%;
+          //   height: 1px;
+          //   background-color: $color-black;
+          //   bottom: -5px;
+          //   left: 0;
+          // }
         }
       }
       .concierge_image_box {

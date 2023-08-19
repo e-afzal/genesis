@@ -393,7 +393,7 @@ const SingleProject = ({ params: { slug } }) => {
                   Connect with a Genesis Concierge today to make finding your
                   perfect Genesis straightforward and enjoyable.
                 </p>
-                <Link href={"#"}>discover concierge services</Link>
+                <a href={"/brand/cares"}>discover concierge services</a>
               </div>
 
               {/* IMAGE BOX */}

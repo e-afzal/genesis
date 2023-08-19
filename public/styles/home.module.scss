@@ -1,13 +1,13 @@
 @import "./variables.module.scss";
 
 .main {
+  margin-top: 7rem;
   section {
     background-color: #fff;
   }
 
   // SHOWCASE CAROUSEL
   section#showcase {
-    margin-top: 7rem;
     background-color: $color-grey;
     .swiper_container {
       overflow: hidden;

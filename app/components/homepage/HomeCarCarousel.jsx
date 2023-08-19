@@ -45,8 +45,11 @@ const HomeCarCarousel = ({ styles }) => {
                 src={model.image_url}
                 className={styles.card_model_image}
                 alt={model.modelName}
-                width={330}
-                height={186}
+                width={500}
+                height={282}
+                priority
+                // width={330}
+                // height={186}
               />
               <span className={styles.car_year}>{model.year}</span>
               <h3 className={styles.car_model_name}>{model.modelName}</h3>

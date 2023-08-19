@@ -51,7 +51,7 @@ const HomeCarousel = () => {
       className={styles.swiper_container}
       modules={[Pagination, Autoplay]}
       pagination={{ clickable: true }}
-      // autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 5000 }}
     >
       {carouselModels.map((each, index) => (
         <SwiperSlide key={index} className={styles.swiper_slide}>
